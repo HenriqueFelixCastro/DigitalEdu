@@ -1,7 +1,6 @@
 import React from "react";
+import { Masthead, Footer } from "@carbon/ibmdotcom-react";
 
-import Masthead from "./components/Masthead";
-import Footer from "./components/Footer";
 import AppHeader from "./components/AppHeader";
 
 const App = () => {

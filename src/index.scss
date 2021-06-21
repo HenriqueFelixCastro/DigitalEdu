@@ -1,13 +1,18 @@
 $feature-flags: (
   grid-columns-16: true,
+  enable-css-custom-properties: true,
 );
 
 @import "carbon-components/scss/globals/scss/styles.scss";
 @import "carbon-components/scss/globals/grid/grid";
+@import "@carbon/ibmdotcom-styles/scss/themes/expressive/index";
 
-li.ibm-masthead-item-menu {
-  display: none;
-}
+@import "@carbon/type/scss/font-face/mono";
+@import "@carbon/type/scss/font-face/sans";
+@include carbon--font-face-mono();
+@include carbon--font-face-sans();
+@import "@carbon/ibmdotcom-styles/scss/components/masthead/index";
+@import "@carbon/ibmdotcom-styles/scss/components/footer/index";
 
 .bx--header {
   position: unset;

@@ -1,5 +1,10 @@
 import React from "react";
+import TechnologiesHero from "./TechnologiesHero";
 
-const TechnologiesPage = () => <div>WIP - TechnologiesPage</div>;
+const TechnologiesPage = () => (
+  <>
+    <TechnologiesHero />
+  </>
+);
 
 export default TechnologiesPage;

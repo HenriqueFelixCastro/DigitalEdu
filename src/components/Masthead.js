@@ -3,8 +3,8 @@ import { Masthead } from "@carbon/ibmdotcom-react";
 
 const mastheadLinks = [
   {
-    title: "Technologies",
-    url: "/technologies/ai",
+    title: "Digital Content",
+    url: "/digital-content/ai",
     hasMenu: true,
     hasMegapanel: false,
     menuSections: [
@@ -12,7 +12,7 @@ const mastheadLinks = [
         menuItems: [
           {
             title: "Artificial Intelligence",
-            url: "/technologies/ai",
+            url: "/digital-content/ai",
           },
         ],
       },

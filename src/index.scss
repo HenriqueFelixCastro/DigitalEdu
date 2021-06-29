@@ -17,3 +17,44 @@ $feature-flags: (
 .bx--masthead {
   position: unset;
 }
+
+// Set color to tab buttons
+.bx--tabs--scrollable .bx--tabs--scrollable__nav-link {
+  color: white;
+  width: 100%;
+  border-bottom: 8px solid #111111; // Same color as background so all tabs don't change the height
+  padding: 3vh 0;
+}
+
+// Color white when a tab is active
+.bx--tabs--scrollable
+  .bx--tabs--scrollable__nav-item--selected
+  .bx--tabs--scrollable__nav-link,
+.bx--tabs--scrollable
+  .bx--tabs--scrollable__nav-item--selected
+  .bx--tabs--scrollable__nav-link:focus,
+.bx--tabs--scrollable
+  .bx--tabs--scrollable__nav-item--selected
+  .bx--tabs--scrollable__nav-link:active {
+  color: white;
+  border-bottom: 8px solid var(--cds-border-interactive, #0f62fe);
+}
+
+.bx--tabs--scrollable .bx--tabs--scrollable__nav-link:focus,
+.bx--tabs--scrollable .bx--tabs--scrollable__nav-link:active {
+  outline: 0;
+}
+
+// We will not use the tab content feature from Tab
+// Hidden prop not working
+.bx--tab-content {
+  padding: 0;
+}
+
+// Color white when hovering the tabs
+.bx--tabs--scrollable
+  .bx--tabs--scrollable__nav-item:hover
+  .bx--tabs--scrollable__nav-link {
+  color: white;
+  border-bottom: 8px solid var(--cds-border-interactive, #0f62fe);
+}

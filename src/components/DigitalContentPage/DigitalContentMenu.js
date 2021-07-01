@@ -1,5 +1,7 @@
 import React from "react";
 import { Tab, Tabs, Grid, Row, Column } from "carbon-components-react";
+import { digitalContentSelected } from "../../actions/ui";
+import { connect } from "react-redux";
 
 const stylesheet = {
   menu: {
@@ -11,7 +13,10 @@ const stylesheet = {
   },
 };
 
-const DigitalContentMenu = () => {
+const handleDigitalContentMenuClick = (digitalContentSelected, label) =>
+  digitalContentSelected(label);
+
+const DigitalContentMenu = (props) => {
   return (
     <div style={stylesheet.menu}>
       <Grid>
@@ -23,6 +28,12 @@ const DigitalContentMenu = () => {
                 style={stylesheet.tab}
                 id="ia"
                 label="Artificial Intelligence"
+                onClick={() =>
+                  handleDigitalContentMenuClick(
+                    props.digitalContentSelected,
+                    "Artificial Intelligence"
+                  )
+                }
               />
               <Tab
                 style={stylesheet.tab}
@@ -42,4 +53,4 @@ const DigitalContentMenu = () => {
   );
 };
 
-export default DigitalContentMenu;
+export default connect(null, { digitalContentSelected })(DigitalContentMenu);

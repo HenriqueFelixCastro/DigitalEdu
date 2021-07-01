@@ -37,7 +37,7 @@ const stylesheet = {
   },
 };
 
-const TechnologiesHero = () => (
+const DigitalContentHero = () => (
   <>
     <div style={stylesheet.hero}>
       <Grid>
@@ -81,4 +81,4 @@ const TechnologiesHero = () => (
   </>
 );
 
-export default TechnologiesHero;
+export default DigitalContentHero;

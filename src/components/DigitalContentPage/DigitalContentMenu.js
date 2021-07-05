@@ -2,6 +2,7 @@ import React from "react";
 import { Tab, Tabs, Grid, Row, Column } from "carbon-components-react";
 import { digitalContentSelected } from "../../actions/ui";
 import { connect } from "react-redux";
+import { DIGITAL_CONTENT_AVAILABLE } from "../../actions/actionTypes";
 
 const stylesheet = {
   menu: {
@@ -23,7 +24,17 @@ const DigitalContentMenu = (props) => {
         <Row>
           <Column>
             <Tabs>
-              <Tab style={stylesheet.tab} id="cloud" label="Cloud Computing" />
+              <Tab
+                style={stylesheet.tab}
+                id="cloud"
+                label="Cloud Computing"
+                onClick={() =>
+                  handleDigitalContentMenuClick(
+                    props.digitalContentSelected,
+                    DIGITAL_CONTENT_AVAILABLE.CLOUD_COMPUTING
+                  )
+                }
+              />
               <Tab
                 style={stylesheet.tab}
                 id="ia"
@@ -31,7 +42,7 @@ const DigitalContentMenu = (props) => {
                 onClick={() =>
                   handleDigitalContentMenuClick(
                     props.digitalContentSelected,
-                    "Artificial Intelligence"
+                    DIGITAL_CONTENT_AVAILABLE.ARTIFICIAL_INTELLIGENCE
                   )
                 }
               />
@@ -39,11 +50,23 @@ const DigitalContentMenu = (props) => {
                 style={stylesheet.tab}
                 id="data-science"
                 label="Data Science"
+                onClick={() =>
+                  handleDigitalContentMenuClick(
+                    props.digitalContentSelected,
+                    DIGITAL_CONTENT_AVAILABLE.DATA_SCIENCE
+                  )
+                }
               />
               <Tab
                 style={stylesheet.tab}
                 id="quantum"
                 label="Quantum Computing"
+                onClick={() =>
+                  handleDigitalContentMenuClick(
+                    props.digitalContentSelected,
+                    DIGITAL_CONTENT_AVAILABLE.QUANTUM_COMPUTING
+                  )
+                }
               />
             </Tabs>
           </Column>

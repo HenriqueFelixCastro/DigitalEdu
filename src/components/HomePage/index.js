@@ -1,5 +1,18 @@
 import React from "react";
+import { Grid } from "carbon-components-react";
 
-const HomePage = () => <div>WIP - HomePage</div>;
+import DigitalContentBanner from "./DigitalContentBanner";
+
+const stylesheet = {
+  homePage: {
+    padding: "0",
+  },
+};
+
+const HomePage = () => (
+  <Grid fullWidth style={stylesheet.homePage}>
+    <DigitalContentBanner />
+  </Grid>
+);
 
 export default HomePage;

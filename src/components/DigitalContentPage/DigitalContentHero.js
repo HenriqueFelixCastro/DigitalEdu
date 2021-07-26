@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Row, Column, Link } from "carbon-components-react";
+import { Grid, Row, Column, Link, Tile } from "carbon-components-react";
 import { ArrowRight16 } from "@carbon/icons-react";
 
 const stylesheet = {
@@ -41,15 +41,24 @@ const DigitalContentHero = () => (
   <>
     <div style={stylesheet.hero}>
       <Grid>
-        <Row>
+        <Row narrow>
           <Column sm={4} md={2} lg={7}>
             <h2 style={stylesheet.hero.title}>
               Learn about technologies lorem ipsum lorem ipsum
             </h2>
           </Column>
+          <Column>
+            <p>Our latest content: </p>
+            <Tile></Tile>
+          </Column>
+          <Column>
+            <p>&nbsp;</p>
+            <Tile></Tile>
+          </Column>
         </Row>
       </Grid>
     </div>
+
     <div style={stylesheet.subHero}>
       <Grid>
         <Row>

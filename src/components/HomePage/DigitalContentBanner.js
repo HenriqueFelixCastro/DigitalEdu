@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Row, Column } from "carbon-components-react";
 import {
   CloudComputing,

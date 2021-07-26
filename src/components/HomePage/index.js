@@ -1,8 +1,9 @@
 import React from "react";
-<<<<<<< HEAD
 import { Grid } from "carbon-components-react";
 
 import DigitalContentBanner from "./DigitalContentBanner";
+import JobMarketBanner from "./JobMarketBanner";
+import Hero from "./Hero";
 
 const stylesheet = {
   homePage: {
@@ -11,14 +12,13 @@ const stylesheet = {
 };
 
 const HomePage = () => (
-  <Grid fullWidth style={stylesheet.homePage}>
-    <DigitalContentBanner />
-  </Grid>
+  <>
+    <Hero />
+    <Grid fullWidth style={stylesheet.homePage}>
+      <DigitalContentBanner />
+      <JobMarketBanner />
+    </Grid>
+  </>
 );
-=======
-import Hero from "./Hero";
-
-const HomePage = () => <Hero />;
->>>>>>> eebc246 (Added video content)
 
 export default HomePage;

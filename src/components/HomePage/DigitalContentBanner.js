@@ -33,6 +33,12 @@ const stylesheet = {
       paddingTop: "176px",
     },
   },
+  lastCard: {
+    paddingTop: "40px",
+    paddingBottom: "40px",
+    borderLeft: "1px solid #707070",
+    borderRight: "1px solid #707070",
+  },
 };
 
 const DigitalContentBanner = () => {
@@ -63,10 +69,11 @@ const DigitalContentBanner = () => {
         <Devops />
         <p style={stylesheet.card.label}>Quantum Computing</p>
       </Column>
-      <Column style={stylesheet.card}>
+      <Column style={stylesheet.lastCard}>
         <Idea />
         <p style={stylesheet.card.label}>Other technologies</p>
       </Column>
+      <Column lg={1}>{/* Empty for adding margin in the right */}</Column>
     </Row>
   );
 };

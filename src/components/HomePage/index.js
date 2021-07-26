@@ -5,6 +5,7 @@ import DigitalContentBanner from "./DigitalContentBanner";
 import JobMarketBanner from "./JobMarketBanner";
 import LunaBanner from "./LunaBanner";
 import Hero from "./Hero";
+import QuickLinks from "./QuickLinks";
 
 const stylesheet = {
   homePage: {
@@ -19,6 +20,7 @@ const HomePage = () => (
       <DigitalContentBanner />
       <JobMarketBanner />
       <LunaBanner />
+      <QuickLinks />
     </Grid>
   </>
 );

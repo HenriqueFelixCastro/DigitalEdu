@@ -3,6 +3,7 @@ import { Grid } from "carbon-components-react";
 
 import DigitalContentBanner from "./DigitalContentBanner";
 import JobMarketBanner from "./JobMarketBanner";
+import LunaBanner from "./LunaBanner";
 import Hero from "./Hero";
 
 const stylesheet = {
@@ -17,6 +18,7 @@ const HomePage = () => (
     <Grid fullWidth style={stylesheet.homePage}>
       <DigitalContentBanner />
       <JobMarketBanner />
+      <LunaBanner />
     </Grid>
   </>
 );

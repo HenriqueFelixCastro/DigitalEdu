@@ -3,12 +3,11 @@ import { Row, Column } from "carbon-components-react";
 import { ContentBlockSimple, Image } from "@carbon/ibmdotcom-react";
 
 const stylesheet = {
-  jobMarketBanner: {
+  lunaBanner: {
     background: "#161616 0% 0% no-repeat padding-box",
     color: "#FFFFFF",
   },
   title: {
-    paddingTop: "40px",
     label: {
       font: "bold 20px/27px IBM Plex Sans",
       borderTop: "2px solid #707070",
@@ -18,27 +17,28 @@ const stylesheet = {
     },
   },
   content: {
-    paddingTop: "40px",
+    paddingTop: "30px",
+    borderTop: "1px solid #707070",
   },
 };
 
 const cta = {
   cta: {
-    href: "/job-market",
+    href: "/luna",
   },
   style: "text",
   type: "local",
-  copy: "Explore",
+  copy: "Discover Luna",
 };
 
-const JobMarketBanner = () => (
-  <Row style={stylesheet.jobMarketBanner}>
-    <Column style={stylesheet.title} lg={{ span: 4, offset: 1 }}>
+const LunaBanner = () => (
+  <Row style={stylesheet.lunaBanner}>
+    <Column lg={{ span: 4, offset: 1 }}>
       <div>
-        <p style={stylesheet.title.label}>Job Market</p>
+        <p style={stylesheet.title.label}>Luna</p>
       </div>
     </Column>
-    <Column style={stylesheet.content} lg={11}>
+    <Column lg={11} style={stylesheet.content}>
       <Row>
         <Column lg={7}>
           <ContentBlockSimple
@@ -51,8 +51,8 @@ const JobMarketBanner = () => (
         </Column>
         <Column>
           <Image
-            defaultSrc={`${process.env.PUBLIC_URL}/img/students-meeting.png`}
-            alt="Job Market"
+            defaultSrc={`${process.env.PUBLIC_URL}/img/health-student.png`}
+            alt="Luna"
           />
         </Column>
         <Column lg={1}>{/* Empty for adding margin in the right */}</Column>
@@ -61,4 +61,4 @@ const JobMarketBanner = () => (
   </Row>
 );
 
-export default JobMarketBanner;
+export default LunaBanner;

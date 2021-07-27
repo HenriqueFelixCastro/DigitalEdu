@@ -67,3 +67,26 @@ $feature-flags: (
 .bx--content-item__copy p {
   color: #fff;
 }
+
+.bx--row {
+  margin: 0;
+}
+
+// Fixes a problem with Masthead that increased website width
+.bx--header::after,
+.bx--masthead__l0 bx-header::after {
+  width: 10px;
+}
+
+.bx--masthead__l0::after {
+  max-width: 100%;
+}
+
+.bx--masthead__l1-inner-container::after {
+  width: 10px;
+}
+
+.bx--masthead__l1::after,
+:host(dds-masthead-l1)::after {
+  width: 99vw;
+}

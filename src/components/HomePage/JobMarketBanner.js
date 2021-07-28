@@ -24,7 +24,7 @@ const stylesheet = {
 
 const cta = {
   cta: {
-    href: "/job-market",
+    href: `${process.env.PUBLIC_URL}/#job-market/`,
   },
   style: "text",
   type: "local",

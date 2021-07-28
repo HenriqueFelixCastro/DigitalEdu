@@ -4,7 +4,7 @@ import { Masthead } from "@carbon/ibmdotcom-react";
 const mastheadLinks = [
   {
     title: "Digital Content",
-    url: "/digital-content/ai",
+    url: `${process.env.PUBLIC_URL}/#digital-content/ai`,
     hasMenu: true,
     hasMegapanel: false,
     menuSections: [
@@ -12,7 +12,7 @@ const mastheadLinks = [
         menuItems: [
           {
             title: "Artificial Intelligence",
-            url: "/digital-content/ai",
+            url: `${process.env.PUBLIC_URL}/#digital-content/ai`,
           },
         ],
       },
@@ -20,21 +20,21 @@ const mastheadLinks = [
   },
   {
     title: "Job Market",
-    url: "/job-market",
+    url: `${process.env.PUBLIC_URL}/#job-market`,
     hasMenu: false,
     hasMegapanel: false,
     menuSections: [],
   },
   {
     title: "Industry Cases",
-    url: "/industry-cases",
+    url: `${process.env.PUBLIC_URL}/#industry-cases`,
     hasMenu: false,
     hasMegapanel: false,
     menuSections: [],
   },
   {
     title: "Luna.",
-    url: "/luna",
+    url: `${process.env.PUBLIC_URL}/#luna`,
     hasMenu: false,
     hasMegapanel: false,
     menuSections: [],
@@ -45,7 +45,7 @@ const mastheadProps = {
   navigation: "default",
   platform: {
     name: "Global University Programs - Americas",
-    url: "/",
+    url: `${process.env.PUBLIC_URL}`,
   },
   hasProfile: true,
   searchProps: {

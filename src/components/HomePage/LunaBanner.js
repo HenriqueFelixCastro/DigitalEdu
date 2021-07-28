@@ -24,7 +24,7 @@ const stylesheet = {
 
 const cta = {
   cta: {
-    href: "/luna",
+    href: `${process.env.PUBLIC_URL}/#luna`,
   },
   style: "text",
   type: "local",

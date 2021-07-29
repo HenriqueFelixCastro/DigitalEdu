@@ -14,7 +14,7 @@ const pStyle = {
   font: "normal normal 600 26px/47px IBM Plex Sans",
   background: "#FFFFFF 0% 0% no-repeat padding-box",
   height: "48px",
-  paddingLeft: "21%",
+  paddingLeft: "5%",
   paddingTop: "5%",
 };
 

@@ -84,9 +84,42 @@ $feature-flags: (
 
 .bx--masthead__l1-inner-container::after {
   width: 10px;
+  background-color: #000;
 }
 
 .bx--masthead__l1::after,
 :host(dds-masthead-l1)::after {
   width: 99vw;
+}
+
+.bx--masthead__l1-inner-container {
+  background: #000;
+}
+
+.bx--masthead__l1-inner-container::before {
+  background: #000;
+}
+
+.bx--masthead__l1-name {
+  background-color: #000;
+}
+
+.bx--masthead.bx--masthead--sticky__l1 div:nth-child(2) {
+  background-color: #000;
+}
+
+.bx--masthead__l1-name-title a {
+  color: #fff;
+}
+
+:host(dds-top-nav-item) a.bx--header__menu-item,
+:host(dds-top-nav-menu) a.bx--header__menu-item,
+:host(dds-megamenu-top-nav-menu) a.bx--header__menu-item,
+.bx--header__nav a.bx--header__menu-item {
+  color: #fff;
+}
+
+.bx--masthead__l1::after,
+:host(dds-masthead-l1)::after {
+  display: none;
 }

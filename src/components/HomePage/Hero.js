@@ -1,29 +1,27 @@
 import React from "react";
 import { Grid, Row, Column, Link } from "carbon-components-react";
-import { XAxis16, Subtract32 } from "@carbon/icons-react";
+import { XAxis24, Subtract32 } from "@carbon/icons-react";
 
 const stylesheet = {
   hero: {
-    padding: "5% 0",
-    backgroundColor: "#FFFFFF",
-    color: "#000000",
+    padding: "3% 0",
+    backgroundColor: "#000",
+    color: "#FFF",
     letterSpacing: "0",
     title: {
       font: "normal normal 300 64px/84px IBM Plex Sans",
+      bold: {
+        fontWeight: "400",
+      },
     },
-    subTitle: {
-      rowStyle: {
-        paddingTop: "2%",
-        paddingLeft: "1%",
-      },
-      colummStyle: {
-        paddingLeft: "3%",
-      },
-      pStyle: {
-        paddingLeft: "2%",
-      },
-      pStyle2: {
-        paddingRight: "75%",
+    navMenu: {
+      paddingTop: "2%",
+      button: {
+        display: "flex",
+        text: {
+          paddingLeft: "5%",
+          font: "normal normal normal 22px/29px IBM Plex Sans",
+        },
       },
     },
   },
@@ -51,29 +49,30 @@ const Hero = () => (
   <>
     <div style={stylesheet.hero}>
       <Grid>
-        <Row>
-          <Column sm={4} md={2} lg={7}>
-            <h1 style={stylesheet.hero.title}>We are the</h1>
-            <h1 style={stylesheet.hero.title}>intersection</h1>
-            <h1 style={stylesheet.hero.title}>between</h1>
+        <Row condensed>
+          <Column sm={4} md={2} lg={5}>
             <h1 style={stylesheet.hero.title}>
-              <strong>IBM</strong> and the
-            </h1>
-            <h1 style={stylesheet.hero.title}>
-              <strong>Academia.</strong>
+              We are the intersection between{" "}
+              <span style={stylesheet.hero.title.bold}>IBM</span> and the{" "}
+              <span style={stylesheet.hero.title.bold}>Academia</span>
             </h1>
           </Column>
         </Row>
-
-        <Row style={stylesheet.hero.subTitle.rowStyle}>
-          <XAxis16 />
-          <p style={stylesheet.hero.subTitle.pStyle}>About Us</p>
-          <Column style={stylesheet.hero.subTitle.colummStyle}>
-            <XAxis16 />
+        <Row condensed style={stylesheet.hero.navMenu}>
+          <Column sm={4} md={2} lg={5}>
+            <Row>
+              <Column lg={5} style={stylesheet.hero.navMenu.button}>
+                <XAxis24 />
+                <p style={stylesheet.hero.navMenu.button.text}>About Us</p>
+              </Column>
+              <Column style={stylesheet.hero.navMenu.button}>
+                <XAxis24 />
+                <p style={stylesheet.hero.navMenu.button.text}>
+                  IBM Academic Initiative
+                </p>
+              </Column>
+            </Row>
           </Column>
-          <p style={stylesheet.hero.subTitle.pStyle2}>
-            IBM Academic Initiative
-          </p>
         </Row>
       </Grid>
     </div>

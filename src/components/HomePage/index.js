@@ -19,7 +19,6 @@ const HomePage = () => (
     <Grid fullWidth style={stylesheet.homePage}>
       <DigitalContentBanner />
       <JobMarketBanner />
-      <LunaBanner />
       <QuickLinks />
     </Grid>
   </>

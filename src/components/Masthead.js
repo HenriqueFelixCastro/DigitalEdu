@@ -25,26 +25,12 @@ const mastheadLinks = [
     hasMegapanel: false,
     menuSections: [],
   },
-  {
-    title: "Industry Cases",
-    url: `${process.env.PUBLIC_URL}/#industry-cases`,
-    hasMenu: false,
-    hasMegapanel: false,
-    menuSections: [],
-  },
-  {
-    title: "Luna.",
-    url: `${process.env.PUBLIC_URL}/#luna`,
-    hasMenu: false,
-    hasMegapanel: false,
-    menuSections: [],
-  },
 ];
 
 const mastheadProps = {
   navigation: "default",
   platform: {
-    name: "Global University Programs - Americas",
+    name: "Home",
     url: `${process.env.PUBLIC_URL}`,
   },
   hasProfile: true,
@@ -55,7 +41,6 @@ const mastheadProps = {
   mastheadL1Data: {
     navigationL1: mastheadLinks,
   },
-  selectedMenuItem: "any text to remove highlight selected option",
 };
 
 const AppMasthead = () => {

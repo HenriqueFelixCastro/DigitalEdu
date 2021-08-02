@@ -1,91 +1,62 @@
 import React from "react";
-import { Tile, Link, Grid, Row, Column } from "carbon-components-react";
-import { ArrowRight16 } from "@carbon/icons-react";
+import { Grid, Row, Column } from "carbon-components-react";
+import { CTA, Image } from "@carbon/ibmdotcom-react";
 
 const stylesheet = {
-  academicTitle: {
-    fontWeight: "bold",
-    paddingLeft: "2%",
-    paddingTop: "2%",
-    font: "normal normal normal 32px / 42px IBM Plex Sans",
-    color: "#FFFFFF",
-    flexDirection: "row",
-  },
-  academicP: {
-    paddingTop: "2%",
-    paddingRight: "45%",
-    top: "4796px",
-    font: "normal normal medium 16px/20px IBM Plex Sans",
-    color: "#FFFFFF",
-    marginleft: "auto",
-    marginright: "auto",
-  },
-  subHero: {
-    paddingTop: "4%",
-    paddingBottom: "4%",
-    minHeight: "250px",
-    backgroundColor: "#000000",
-    title: {
-      color: "#FFF",
-      font: "normal normal normal 16px/20px IBM Plex Sans",
-    },
-    link: {
-      display: "flex",
-      alignItems: "center",
-      width: "100%",
-      paddingTop: "4%",
-      icon: {
-        marginRight: "1%",
-        marginLeft: "2%",
-      },
-    },
-  },
-  rowStyle: {
-    padding: "10% 0",
+  academicInitiativeBanner: {
+    padding: "10vh 0",
     background: `url("/img/academicinitiative.png") center center / cover no-repeat transparent`,
     backgroundSize: "cover",
-    maxWidth: "100%",
-    height: "96vh",
   },
-  columnStyle: {
-    // paddingLeft: "15%",
-  },
-  columnStyle2: { paddingLeft: "15%" },
-  tileStyle: {
-    background: "#000000 0% 0% no-repeat padding-box",
-    width: "760px",
-    height: "442px",
-  },
-  tileStyle2: {
-    background: `url("/img/academicinitiativewoman.png") center center / cover no-repeat transparent`,
-    width: "730px",
-    height: "442px",
+  academicInitiativeText: {
+    background: "#161616 0% 0% no-repeat padding-box",
+    color: "#fff",
+    padding: "6%",
+    minHeight: "100%",
+    title: {
+      font: "normal normal 600 26px/34px IBM Plex Sans",
+    },
+    content: {
+      font: "normal normal 300 16px/20px IBM Plex Sans",
+      padding: "4vh 0",
+    },
   },
 };
 
 const DigitalContentAcademic = () => (
-  <Row style={stylesheet.rowStyle}>
-    <Column style={stylesheet.columnStyle} lg={{ span: 4, offset: 1 }}>
-      <Tile style={stylesheet.tileStyle}>
-        <h1 style={stylesheet.academicTitle}>IBM Academic Initiative</h1>
-        <p style={stylesheet.academicP}>
-          You can now close this browser tab You can now close this browser tab
-          and go back to your application and go back to your application. .
-        </p>
-        <Link
-          style={stylesheet.subHero.link}
-          href="https://www.ibm.com/academic"
-          target="_blank"
-        >
-          <ArrowRight16 style={stylesheet.subHero.link.icon} />
-          Explore free technology
-        </Link>
-      </Tile>
-    </Column>
-    <Column style={stylesheet.columnStyle2}>
-      <Tile style={stylesheet.tileStyle2}></Tile>
-    </Column>
-  </Row>
+  <div style={stylesheet.academicInitiativeBanner}>
+    <Grid condensed>
+      <Row id="academic-initiative">
+        <Column>
+          <div style={stylesheet.academicInitiativeText}>
+            <h1 style={stylesheet.academicInitiativeText.title}>
+              IBM Academic Initiative
+            </h1>
+            <p style={stylesheet.academicInitiativeText.content}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Stay on top of the latest in technology and
+              education
+            </p>
+            <CTA
+              type="local"
+              copy="Explore free technology"
+              href="https://www.ibm.com/academic"
+            />
+          </div>
+        </Column>
+        <Column>
+          <Image
+            defaultSrc={`${process.env.PUBLIC_URL}/img/academicinitiativewoman.png`}
+            alt="Academic Initiative"
+          />
+        </Column>
+      </Row>
+    </Grid>
+  </div>
 );
 
 export default DigitalContentAcademic;

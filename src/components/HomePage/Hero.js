@@ -1,6 +1,6 @@
 import React from "react";
-import { Grid, Row, Column, Link } from "carbon-components-react";
-import { XAxis24, Subtract32 } from "@carbon/icons-react";
+import { Grid, Row, Column } from "carbon-components-react";
+import { XAxis24 } from "@carbon/icons-react";
 
 const stylesheet = {
   hero: {
@@ -10,12 +10,13 @@ const stylesheet = {
     letterSpacing: "0",
     title: {
       font: "normal normal 300 64px/84px IBM Plex Sans",
-      bold: {
-        fontWeight: "400",
-      },
+    },
+    subtitle: {
+      paddingTop: "6vh",
+      font: "normal normal 300 21px/28px IBM Plex Sans",
     },
     navMenu: {
-      paddingTop: "2%",
+      paddingTop: "6vh",
       button: {
         display: "flex",
         text: {
@@ -26,21 +27,12 @@ const stylesheet = {
     },
   },
   subHero: {
-    paddingTop: "4%",
-    paddingBottom: "4%",
-    minHeight: "250px",
-    backgroundColor: "#000000",
+    backgroundColor: "#11100E 0% 0% no-repeat padding-box",
+    marginTop: "6vh",
+    minHeight: "180px",
+    alignItems: "center",
     title: {
-      color: "#FFF",
-      font: "normal normal normal 16px/20px IBM Plex Sans",
-    },
-    colummStyle: {
-      color: "#FFF",
-      paddingRight: "50%",
-    },
-    pStyle: {
-      color: "#FFF",
-      font: "normal normal normal 13px/20px IBM Plex Sans",
+      font: "normal normal 20px/27px IBM Plex Sans",
     },
   },
 };
@@ -50,16 +42,18 @@ const Hero = () => (
     <div style={stylesheet.hero}>
       <Grid>
         <Row condensed>
-          <Column sm={4} md={2} lg={5}>
+          <Column sm={4} md={2} lg={7}>
             <h1 style={stylesheet.hero.title}>
-              We are the intersection between{" "}
-              <span style={stylesheet.hero.title.bold}>IBM</span> and the{" "}
-              <span style={stylesheet.hero.title.bold}>Academia</span>
+              Boost your digital learning experience with us.
             </h1>
+            <h2 style={stylesheet.hero.subtitle}>
+              Prepare your class with digital content, read about the job
+              market, explore business cases and much more.
+            </h2>
           </Column>
         </Row>
         <Row condensed style={stylesheet.hero.navMenu}>
-          <Column sm={4} md={2} lg={5}>
+          <Column sm={4} md={2} lg={7}>
             <Row>
               <Column lg={5} style={stylesheet.hero.navMenu.button}>
                 <XAxis24 />
@@ -74,27 +68,19 @@ const Hero = () => (
             </Row>
           </Column>
         </Row>
-      </Grid>
-    </div>
-    <div style={stylesheet.subHero}>
-      <Grid>
-        <Row>
-          <Column>
+        <Row style={stylesheet.subHero}>
+          <Column lg={4}>
             <h1 style={stylesheet.subHero.title}>
               IBM <strong>Global University Programs</strong>
             </h1>
-            <Subtract32 />
           </Column>
-          <Column style={stylesheet.subHero.colummStyle}>
-            <p style={stylesheet.subHero.pStyle}>
-              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-              ipsum Lorem ipsum
+          <Column lg={{ span: 9, offset: 1 }}>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
             </p>
-          </Column>
-        </Row>
-        <Row>
-          <Column>
-            <p style={stylesheet.subHero.colummStyle}>Latin America</p>
           </Column>
         </Row>
       </Grid>

@@ -5,7 +5,7 @@ import { CTA, Image } from "@carbon/ibmdotcom-react";
 const stylesheet = {
   academicInitiativeBanner: {
     padding: "10vh 0",
-    background: `url("/img/academicinitiative.png") center center / cover no-repeat transparent`,
+    background: `url("${process.env.PUBLIC_URL}/img/academicinitiative.png") center center / cover no-repeat transparent`,
     backgroundSize: "cover",
   },
   academicInitiativeText: {

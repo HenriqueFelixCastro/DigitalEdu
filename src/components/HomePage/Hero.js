@@ -1,11 +1,12 @@
 import React from "react";
 import { Grid, Row, Column } from "carbon-components-react";
 import { XAxis24 } from "@carbon/icons-react";
+import { HashLink } from "react-router-hash-link";
 
 const stylesheet = {
   hero: {
     padding: "3% 0",
-    backgroundColor: "#000",
+    background: `url("/img/hero home.png") center center / cover no-repeat transparent`,
     color: "#FFF",
     letterSpacing: "0",
     title: {
@@ -57,24 +58,28 @@ const Hero = () => (
             <Row>
               <Column lg={5} style={stylesheet.hero.navMenu.button}>
                 <XAxis24 />
-                <p style={stylesheet.hero.navMenu.button.text}>About Us</p>
+                <HashLink smooth to="/#about-us">
+                  <p style={stylesheet.hero.navMenu.button.text}>About Us</p>
+                </HashLink>
               </Column>
               <Column style={stylesheet.hero.navMenu.button}>
                 <XAxis24 />
-                <p style={stylesheet.hero.navMenu.button.text}>
-                  IBM Academic Initiative
-                </p>
+                <HashLink smooth to="/#academic-initiative">
+                  <p style={stylesheet.hero.navMenu.button.text}>
+                    IBM Academic Initiative
+                  </p>
+                </HashLink>
               </Column>
             </Row>
           </Column>
         </Row>
-        <Row style={stylesheet.subHero}>
+        <Row condensed style={stylesheet.subHero} id="about-us">
           <Column lg={4}>
             <h1 style={stylesheet.subHero.title}>
               IBM <strong>Global University Programs</strong>
             </h1>
           </Column>
-          <Column lg={{ span: 9, offset: 1 }}>
+          <Column lg={9}>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

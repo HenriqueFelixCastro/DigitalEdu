@@ -1,6 +1,5 @@
 import React from "react";
-import { Grid, Row, Column, Link, Tile } from "carbon-components-react";
-import { ArrowRight16 } from "@carbon/icons-react";
+import { Grid, Row, Column } from "carbon-components-react";
 
 const stylesheet = {
   hero: {

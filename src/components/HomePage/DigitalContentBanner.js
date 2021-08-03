@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Column } from "carbon-components-react";
+import { Grid, Row, Column } from "carbon-components-react";
 import {
   CloudComputing,
   MachineLearning_01,
@@ -18,7 +18,7 @@ const stylesheet = {
   title: {
     paddingTop: "40px",
     paddingBottom: "40px",
-    paddingRight: "2%",
+    paddingLeft: "0",
     label: {
       font: "bold 20px/27px IBM Plex Sans",
       paddingBottom: "2rem",
@@ -43,38 +43,52 @@ const stylesheet = {
 
 const DigitalContentBanner = () => {
   return (
-    <Row style={stylesheet.digitalContentBanner}>
-      <Column style={stylesheet.title} lg={{ span: 4, offset: 1 }}>
-        <div>
-          <p style={stylesheet.title.label}>Digital Content</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-      </Column>
-      <Column style={stylesheet.card}>
-        <CloudComputing />
-        <p style={stylesheet.card.label}>Cloud Computing</p>
-      </Column>
-      <Column style={stylesheet.card}>
-        <MachineLearning_01 />
-        <p style={stylesheet.card.label}>Artificial Intelligence</p>
-      </Column>
-      <Column style={stylesheet.card}>
-        <ChartBubble />
-        <p style={stylesheet.card.label}>Data Science</p>
-      </Column>
-      <Column style={stylesheet.card}>
-        <Devops />
-        <p style={stylesheet.card.label}>Quantum Computing</p>
-      </Column>
-      <Column style={stylesheet.lastCard}>
-        <Idea />
-        <p style={stylesheet.card.label}>Other technologies</p>
-      </Column>
-      <Column lg={1}>{/* Empty for adding margin in the right */}</Column>
-    </Row>
+    <div style={stylesheet.digitalContentBanner}>
+      <Grid>
+        <Row>
+          <Column style={stylesheet.title} lg={4}>
+            <div>
+              <p style={stylesheet.title.label}>Digital Content</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </Column>
+          <Column style={stylesheet.card}>
+            <a href={`${process.env.PUBLIC_URL}/#digital-content/cloud`}>
+              <CloudComputing />
+              <p style={stylesheet.card.label}>Cloud Computing</p>
+            </a>
+          </Column>
+          <Column style={stylesheet.card}>
+            <a href={`${process.env.PUBLIC_URL}/#digital-content/ai`}>
+              {/* eslint-disable-next-line */}
+              <MachineLearning_01 />
+              <p style={stylesheet.card.label}>Artificial Intelligence</p>
+            </a>
+          </Column>
+          <Column style={stylesheet.card}>
+            <a href={`${process.env.PUBLIC_URL}/#digital-content/data-science`}>
+              <ChartBubble />
+              <p style={stylesheet.card.label}>Data Science</p>
+            </a>
+          </Column>
+          <Column style={stylesheet.card}>
+            <a href={`${process.env.PUBLIC_URL}/#digital-content/quantum`}>
+              <Devops />
+              <p style={stylesheet.card.label}>Quantum Computing</p>
+            </a>
+          </Column>
+          <Column style={stylesheet.lastCard}>
+            <a href={`${process.env.PUBLIC_URL}/#digital-content/others`}>
+              <Idea />
+              <p style={stylesheet.card.label}>Other technologies</p>
+            </a>
+          </Column>
+        </Row>
+      </Grid>
+    </div>
   );
 };
 

@@ -6,7 +6,7 @@ import { HashLink } from "react-router-hash-link";
 const stylesheet = {
   hero: {
     padding: "3% 0",
-    background: `url("/img/hero home.png") center center / cover no-repeat transparent`,
+    background: `url("${process.env.PUBLIC_URL}/img/hero home.png") center center / cover no-repeat transparent`,
     color: "#FFF",
     letterSpacing: "0",
     title: {

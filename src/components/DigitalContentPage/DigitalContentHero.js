@@ -3,36 +3,19 @@ import { Grid, Row, Column } from "carbon-components-react";
 
 const stylesheet = {
   hero: {
-    padding: "5% 0",
-    background: `url("${process.env.PUBLIC_URL}/img/digital content.png") center center / cover no-repeat transparent`,
-    color: "#FFFFFF",
+    padding: "3% 0",
+    background: `url("${process.env.PUBLIC_URL}/img/digital-content.png") center center / cover no-repeat transparent`,
+    color: "#FFF",
     letterSpacing: "0",
     title: {
-      font: "normal normal 300 64px/84px IBM Plex Sans",
-      copyright: {
-        fontSize: "32px",
-        verticalAlign: "top",
-      },
+      font: "normal normal 300 65px/85px IBM Plex Sans",
     },
   },
   subHero: {
-    paddingTop: "4%",
-    paddingBottom: "4%",
-    minHeight: "250px",
-    backgroundColor: "#000000",
-    color: "#FFF",
+    marginTop: "16vh",
+    alignItems: "center",
     title: {
-      color: "#FFF",
-      font: "normal normal normal 16px/20px IBM Plex Sans",
-    },
-    link: {
-      display: "flex",
-      alignItems: "center",
-      width: "100%",
-      paddingTop: "4%",
-      icon: {
-        marginRight: "4%",
-      },
+      font: "normal normal 20px/27px IBM Plex Sans",
     },
   },
 };
@@ -41,26 +24,18 @@ const DigitalContentHero = () => (
   <>
     <div style={stylesheet.hero}>
       <Grid>
-        <Row narrow>
+        <Row condensed>
           <Column sm={4} md={2} lg={7}>
-            <h2 style={stylesheet.hero.title}>
-              Read here a call to action about our{" "}
-              <strong> Digital Content </strong> page.
-            </h2>
-          </Column>
-        </Row>
-      </Grid>
-    </div>
-
-    <div style={stylesheet.subHero}>
-      <Grid>
-        <Row>
-          <Column lg={4}>
-            <h1 style={stylesheet.subHero.title}>
-              <strong>Technology Topics</strong>
+            <h1 style={stylesheet.hero.title}>
+              Read here a call to action about our Digital Content page.
             </h1>
           </Column>
-          <Column lg={{ span: 9, offset: 1 }}>
+        </Row>
+        <Row condensed style={stylesheet.subHero}>
+          <Column lg={4}>
+            <h1 style={stylesheet.subHero.title}>Technology Topics</h1>
+          </Column>
+          <Column lg={9}>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

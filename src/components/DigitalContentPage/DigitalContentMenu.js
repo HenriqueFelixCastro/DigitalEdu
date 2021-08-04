@@ -21,8 +21,8 @@ const DigitalContentMenu = (props) => {
   return (
     <div style={stylesheet.menu}>
       <Grid>
-        <Row>
-          <Column>
+        <Row condensed>
+          <Column lg={{ span: 12, offset: 4 }}>
             <Tabs>
               <Tab
                 style={stylesheet.tab}
@@ -65,6 +65,17 @@ const DigitalContentMenu = (props) => {
                   handleDigitalContentMenuClick(
                     props.digitalContentSelected,
                     DIGITAL_CONTENT_AVAILABLE.QUANTUM_COMPUTING
+                  )
+                }
+              />
+              <Tab
+                style={stylesheet.tab}
+                id="other"
+                label="Other Technologies"
+                onClick={() =>
+                  handleDigitalContentMenuClick(
+                    props.digitalContentSelected,
+                    DIGITAL_CONTENT_AVAILABLE.OTHER
                   )
                 }
               />

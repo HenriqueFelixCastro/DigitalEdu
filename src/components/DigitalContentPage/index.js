@@ -1,18 +1,56 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+
 import DigitalContentHero from "./DigitalContentHero";
 import DigitalContentMenu from "./DigitalContentMenu";
-import DigitalContentSearch from "./DigitalContentSearch";
-import DigitalContentVideo from "./DigitalContentVideo";
+import DigitalContentCatalog from "./DigitalContentCatalog";
 import DigitalContentAcademic from "./DigitalContentAcademic";
 
-const DigitalContentPage = () => (
-  <>
-    <DigitalContentHero />
-    <DigitalContentMenu />
-    <DigitalContentSearch />
-    <DigitalContentVideo />
-    <DigitalContentAcademic />
-  </>
-);
+import { digitalContentSelected } from "../../actions/ui";
+import { DIGITAL_CONTENT_AVAILABLE } from "../../actions/actionTypes";
 
-export default DigitalContentPage;
+const DigitalContentPage = ({ pathname, digitalContentSelected }) => {
+  // Loads the desired track if pathname (URL) changes
+  useEffect(() => {
+    let selectedTrack = /[^/]*$/.exec(pathname)[0]; // Gets last substring after last slash
+
+    switch (selectedTrack) {
+      case "cloud":
+        return digitalContentSelected(
+          DIGITAL_CONTENT_AVAILABLE.CLOUD_COMPUTING
+        );
+      case "data-science":
+        return digitalContentSelected(DIGITAL_CONTENT_AVAILABLE.DATA_SCIENCE);
+      case "quantum":
+        return digitalContentSelected(
+          DIGITAL_CONTENT_AVAILABLE.QUANTUM_COMPUTING
+        );
+      case "others":
+        return digitalContentSelected(
+          DIGITAL_CONTENT_AVAILABLE.OTHER_TECHNOLOGIES
+        );
+      default:
+        return digitalContentSelected(
+          DIGITAL_CONTENT_AVAILABLE.ARTIFICIAL_INTELLIGENCE
+        );
+      // AI is default for Reducer and page as well
+    }
+  }, [pathname]);
+
+  return (
+    <>
+      <DigitalContentHero />
+      <DigitalContentMenu />
+      <DigitalContentCatalog />
+      <DigitalContentAcademic />
+    </>
+  );
+};
+
+const mapStateToProps = (state) => ({
+  pathname: state.router.location.pathname,
+});
+
+export default connect(mapStateToProps, { digitalContentSelected })(
+  DigitalContentPage
+);

@@ -11,8 +11,24 @@ const mastheadLinks = [
       {
         menuItems: [
           {
+            title: "Cloud Computing",
+            url: `${process.env.PUBLIC_URL}/#digital-content/cloud`,
+          },
+          {
             title: "Artificial Intelligence",
             url: `${process.env.PUBLIC_URL}/#digital-content/ai`,
+          },
+          {
+            title: "Data Science",
+            url: `${process.env.PUBLIC_URL}/#digital-content/data-science`,
+          },
+          {
+            title: "Quantum Computing",
+            url: `${process.env.PUBLIC_URL}/#digital-content/quantum`,
+          },
+          {
+            title: "Other Technologies",
+            url: `${process.env.PUBLIC_URL}/#digital-content/others`,
           },
         ],
       },

@@ -12,7 +12,6 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/digital-content/:tech" component={DigitalContentPage} />
-        <Route exact path="/luna" component={LunaPage} />
       </Switch>
       <Footer />
     </>

@@ -148,3 +148,12 @@ a {
   .bx--header__menu-item {
   color: #000;
 }
+
+.bx--tableofcontents__content.bx--col-lg-12 {
+  padding: 0;
+}
+
+:host(dds-table-of-contents),
+.bx--tableofcontents {
+  margin-bottom: 5vh;
+}

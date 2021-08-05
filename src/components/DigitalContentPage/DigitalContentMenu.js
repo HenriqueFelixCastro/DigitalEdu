@@ -17,13 +17,28 @@ const stylesheet = {
 const handleDigitalContentMenuClick = (digitalContentSelected, label) =>
   digitalContentSelected(label);
 
+const selectedTrackToTabsId = (selectedTrack) => {
+  switch (selectedTrack) {
+    case DIGITAL_CONTENT_AVAILABLE.ARTIFICIAL_INTELLIGENCE:
+      return 1;
+    case DIGITAL_CONTENT_AVAILABLE.DATA_SCIENCE:
+      return 2;
+    case DIGITAL_CONTENT_AVAILABLE.QUANTUM_COMPUTING:
+      return 3;
+    case DIGITAL_CONTENT_AVAILABLE.OTHER_TECHNOLOGIES:
+      return 4;
+    default:
+      return 0; // Cloud Computing
+  }
+};
+
 const DigitalContentMenu = (props) => {
   return (
     <div style={stylesheet.menu}>
       <Grid>
         <Row condensed>
           <Column lg={{ span: 12, offset: 4 }}>
-            <Tabs>
+            <Tabs selected={selectedTrackToTabsId(props.selectedTrack)}>
               <Tab
                 style={stylesheet.tab}
                 id="cloud"
@@ -75,7 +90,7 @@ const DigitalContentMenu = (props) => {
                 onClick={() =>
                   handleDigitalContentMenuClick(
                     props.digitalContentSelected,
-                    DIGITAL_CONTENT_AVAILABLE.OTHER
+                    DIGITAL_CONTENT_AVAILABLE.OTHER_TECHNOLOGIES
                   )
                 }
               />
@@ -87,4 +102,10 @@ const DigitalContentMenu = (props) => {
   );
 };
 
-export default connect(null, { digitalContentSelected })(DigitalContentMenu);
+const mapStateToProps = (state) => ({
+  selectedTrack: state.ui.content,
+});
+
+export default connect(mapStateToProps, { digitalContentSelected })(
+  DigitalContentMenu
+);

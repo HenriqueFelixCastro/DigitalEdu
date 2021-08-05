@@ -4,7 +4,6 @@ import { Footer } from "@carbon/ibmdotcom-react";
 import Masthead from "./components/Masthead";
 import HomePage from "./components/HomePage";
 import DigitalContentPage from "./components/DigitalContentPage";
-import LunaPage from "./components/LunaPage";
 
 const App = () => {
   return (

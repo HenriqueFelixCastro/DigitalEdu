@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../JobMarketPage/Hero";
+import Hero from "./Hero";
 
 const JobMarketPage = () => (
   <>

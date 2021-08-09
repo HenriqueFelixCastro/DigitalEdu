@@ -5,7 +5,7 @@ import { CTA, Image } from "@carbon/ibmdotcom-react";
 const stylesheet = {
   academicInitiativeBanner: {
     padding: "10vh 0",
-    background: `url("${process.env.PUBLIC_URL}/img/academicinitiative.png") center center / cover no-repeat transparent`,
+    background: `url("${process.env.PUBLIC_URL}/img/academicinitiative.jpg") center center / cover no-repeat transparent`,
     backgroundSize: "cover",
   },
   academicInitiativeText: {
@@ -50,7 +50,7 @@ const DigitalContentAcademic = () => (
         </Column>
         <Column>
           <Image
-            defaultSrc={`${process.env.PUBLIC_URL}/img/academicinitiativewoman.png`}
+            defaultSrc={`${process.env.PUBLIC_URL}/img/academicinitiativewoman.jpg`}
             alt="Academic Initiative"
           />
         </Column>

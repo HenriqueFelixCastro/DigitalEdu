@@ -5,7 +5,7 @@ import { CTA, Image } from "@carbon/ibmdotcom-react";
 const stylesheet = {
   workWithUsBanner: {
     padding: "10vh 0",
-    background: `url("${process.env.PUBLIC_URL}/img/wwu-background.png") center center / cover no-repeat transparent`,
+    background: `url("${process.env.PUBLIC_URL}/img/wwu-background.jpg") center center / cover no-repeat transparent`,
     backgroundSize: "cover",
   },
   workWithUsText: {
@@ -48,7 +48,7 @@ const WorkWithUs = () => (
         </Column>
         <Column>
           <Image
-            defaultSrc={`${process.env.PUBLIC_URL}/img/wwu-image.png`}
+            defaultSrc={`${process.env.PUBLIC_URL}/img/wwu-image.jpg`}
             alt="Work With Us"
           />
         </Column>

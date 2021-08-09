@@ -4,7 +4,7 @@ import { Grid, Row, Column } from "carbon-components-react";
 const stylesheet = {
   hero: {
     padding: "3% 0",
-    background: `url("${process.env.PUBLIC_URL}/img/job-market-hero.png") center center / cover no-repeat transparent`,
+    background: `url("${process.env.PUBLIC_URL}/img/job-market-hero.jpg") center center / cover no-repeat transparent`,
     color: "#FFF",
     letterSpacing: "0",
     title: {

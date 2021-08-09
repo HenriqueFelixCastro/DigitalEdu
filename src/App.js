@@ -4,6 +4,7 @@ import { Footer } from "@carbon/ibmdotcom-react";
 import Masthead from "./components/Masthead";
 import HomePage from "./components/HomePage";
 import DigitalContentPage from "./components/DigitalContentPage";
+import JobMarketPage from "./components/JobMarketPage";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/digital-content/:tech" component={DigitalContentPage} />
+        <Route exact path="/job-market" component={JobMarketPage} />
       </Switch>
       <Footer />
     </>

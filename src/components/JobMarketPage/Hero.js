@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Row, Column, Search } from "carbon-components-react";
+import { Grid, Row, Column } from "carbon-components-react";
 
 const stylesheet = {
   hero: {

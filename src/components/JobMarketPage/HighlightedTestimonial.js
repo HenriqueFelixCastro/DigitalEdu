@@ -57,7 +57,7 @@ const HighlightedTestimonial = () => (
       <Row style={stylesheet.testimonialRow}>
         <Column lg={8}>
           <Image
-            defaultSrc={`${process.env.PUBLIC_URL}/img/health-student.png`}
+            defaultSrc={`${process.env.PUBLIC_URL}/img/health-student.jpg`}
             alt="HighlightedTestimonial"
           />
         </Column>

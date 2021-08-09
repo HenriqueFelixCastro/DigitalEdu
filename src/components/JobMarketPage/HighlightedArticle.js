@@ -71,7 +71,7 @@ const HighlightedArticle = () => (
         </Column>
         <Column lg={8}>
           <Image
-            defaultSrc={`${process.env.PUBLIC_URL}/img/highlited_card.png`}
+            defaultSrc={`${process.env.PUBLIC_URL}/img/highlited_card.jpg`}
             alt="HighlightedArticle"
           />
         </Column>

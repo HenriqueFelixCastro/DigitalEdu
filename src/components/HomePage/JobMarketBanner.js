@@ -60,7 +60,7 @@ const JobMarketBanner = () => (
             </Column>
             <Column style={{ paddingRight: "0" }}>
               <Image
-                defaultSrc={`${process.env.PUBLIC_URL}/img/students-meeting.png`}
+                defaultSrc={`${process.env.PUBLIC_URL}/img/students-meeting.jpg`}
                 alt="Job Market"
               />
             </Column>

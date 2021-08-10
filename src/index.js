@@ -12,7 +12,6 @@ import "./index.scss";
 import createRootReducer from "./reducers";
 
 const history = createHashHistory({
-  basename: `${process.env.PUBLIC_URL}/university/br-pt`,
   hashType: "noslash",
 });
 

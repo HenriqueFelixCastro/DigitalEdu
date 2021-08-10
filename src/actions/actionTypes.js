@@ -8,3 +8,5 @@ export const DIGITAL_CONTENT_AVAILABLE = Object.freeze({
 });
 
 export const DIGITAL_CONTENT_SELECTED = "DIGITAL_CONTENT_SELECTED";
+
+export const BLOG_POST_SELECTED = "BLOG_POST_SELECTED";

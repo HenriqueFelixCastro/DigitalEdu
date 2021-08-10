@@ -35,7 +35,7 @@ const DigitalContentPage = ({ pathname, digitalContentSelected }) => {
         );
       // AI is default for Reducer and page as well
     }
-  }, [pathname]);
+  }, [pathname, digitalContentSelected]);
 
   return (
     <>

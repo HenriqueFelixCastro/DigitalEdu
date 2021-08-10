@@ -1,7 +1,10 @@
-import React from "react";
-import { Row, Column, Tag } from "carbon-components-react";
+import React, { useEffect } from "react";
+import { Row, Column, Tag, Loading } from "carbon-components-react";
 import { Image } from "@carbon/ibmdotcom-react";
 import { Blog24, User24, Rocket24, Time24 } from "@carbon/icons-react";
+import { connect } from "react-redux";
+
+import { blogPostSelected } from "../../actions/ui";
 
 const stylesheet = {
   categoryRow: {
@@ -65,119 +68,129 @@ const stylesheet = {
   },
 };
 
-const ArticleView = () => (
-  <>
-    <Row style={stylesheet.categoryRow}>
-      <Column lg={2}>
-        <div style={stylesheet.categoryColumn}>
-          <Blog24 />
-          <h3 style={stylesheet.categoryColumn.label}>Article</h3>
-        </div>
-      </Column>
-      <Column lg={10}>
-        <div style={stylesheet.categoryColumn}>
-          <h3 style={stylesheet.categoryColumn.label}>Tags:</h3>
-          <Tag style={stylesheet.tag} type="green">
-            Hard Skills
-          </Tag>
-          <Tag style={stylesheet.tag} type="cyan">
-            Trend
-          </Tag>
-        </div>
-      </Column>
-      <Column lg={2}>
-        <div style={stylesheet.categoryColumn}>
-          <Rocket24 />
-          <h3 style={stylesheet.categoryColumn.label}>07 Jul 2021</h3>
-        </div>
-      </Column>
-      <Column lg={2}>
-        <div style={stylesheet.categoryColumn}>
-          <Time24 />
-          <h3 style={stylesheet.categoryColumn.label}>5 minutes</h3>
-        </div>
-      </Column>
-    </Row>
+const ArticleView = ({ blogPost, pathname, blogPostSelected }) => {
+  useEffect(() => {
+    let selectedPostId = /[^/]*$/.exec(pathname)[0]; // Gets last substring after last slash
+    blogPostSelected(selectedPostId);
+  }, [pathname, blogPostSelected]);
 
-    <Row style={stylesheet.imageRow}>
-      <Column>
-        <Image
-          defaultSrc={`${process.env.PUBLIC_URL}/img/highlited_card.jpg`}
-          alt="HighlightedArticle"
-        />
-      </Column>
-    </Row>
+  if (blogPost && Object.keys(blogPost).length === 0) {
+    return (
+      <>
+        <Row style={stylesheet.categoryRow}>
+          <Column lg={2}>
+            <div style={stylesheet.categoryColumn}>
+              <Blog24 />
+              <h3 style={stylesheet.categoryColumn.label}>Article</h3>
+            </div>
+          </Column>
+        </Row>
+        <Row style={stylesheet.articleRow}>
+          <Loading />
+        </Row>
+      </>
+    );
+  }
 
-    <Row style={stylesheet.articleRow}>
-      <Column lg={12}>
-        <h2 style={stylesheet.article.title}>
-          This is the header of an article. Here we need to create a summary
-          about the content, as short as possible.
-        </h2>
-      </Column>
-      <Column lg={12} style={stylesheet.article.paragraphColumn}>
-        <p style={stylesheet.article.paragraphColumn.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <p style={stylesheet.article.paragraphColumn.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <p style={stylesheet.article.paragraphColumn.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-      </Column>
-      <Column lg={12}>
-        <h3 style={stylesheet.article.highlighted}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </h3>
-      </Column>
-      <Column lg={12} style={stylesheet.article.paragraphColumn}>
-        <p style={stylesheet.article.paragraphColumn.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <p style={stylesheet.article.paragraphColumn.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-      </Column>
-    </Row>
+  if (!blogPost) {
+    return (
+      <>
+        <Row style={stylesheet.categoryRow}>
+          <Column lg={2}>
+            <div style={stylesheet.categoryColumn}>
+              <Blog24 />
+              <h3 style={stylesheet.categoryColumn.label}>Article</h3>
+            </div>
+          </Column>
+        </Row>
+        <Row style={stylesheet.articleRow}>Article Not Found</Row>
+      </>
+    );
+  }
 
-    <Row style={stylesheet.authorsRow}>
-      <Column lg={12} style={{ borderTop: "1px solid #707070" }}>
-        <div style={stylesheet.authorsRow.iconColumn}>
-          <User24 />
-          <p style={stylesheet.authorsRow.text}>Authors</p>
-        </div>
-      </Column>
-      <Column lg={12} style={{ paddingTop: "2vh" }}>
-        <p style={stylesheet.authorsRow.name}>Lorem Ipsum</p>
-        <p style={stylesheet.authorsRow.title}>
-          CTO at International Business Machines
-        </p>
-      </Column>
-      <Column lg={12} style={{ paddingTop: "2vh" }}>
-        <p style={stylesheet.authorsRow.name}>Lorem Ipsum</p>
-        <p style={stylesheet.authorsRow.title}>
-          CTO at International Business Machines
-        </p>
-      </Column>
-    </Row>
-  </>
-);
+  return (
+    <>
+      <Row style={stylesheet.categoryRow}>
+        <Column lg={2}>
+          <div style={stylesheet.categoryColumn}>
+            <Blog24 />
+            <h3 style={stylesheet.categoryColumn.label}>Article</h3>
+          </div>
+        </Column>
+        <Column lg={10}>
+          <div style={stylesheet.categoryColumn}>
+            <h3 style={stylesheet.categoryColumn.label}>Tags:</h3>
+            {blogPost.tags.map((tag, idx) => (
+              <Tag style={stylesheet.tag} type={tag.color} key={idx}>
+                {tag.text}
+              </Tag>
+            ))}
+          </div>
+        </Column>
+        <Column lg={2}>
+          <div style={stylesheet.categoryColumn}>
+            <Rocket24 />
+            <h3 style={stylesheet.categoryColumn.label}>{blogPost.date}</h3>
+          </div>
+        </Column>
+        <Column lg={2}>
+          <div style={stylesheet.categoryColumn}>
+            <Time24 />
+            <h3 style={stylesheet.categoryColumn.label}>{blogPost.duration}</h3>
+          </div>
+        </Column>
+      </Row>
 
-export default ArticleView;
+      <Row style={stylesheet.imageRow}>
+        <Column>
+          <Image defaultSrc={blogPost.imageURL} alt={blogPost.title} />
+        </Column>
+      </Row>
+
+      <Row style={stylesheet.articleRow}>
+        <Column lg={12}>
+          <h2 style={stylesheet.article.title}>{blogPost.title}</h2>
+        </Column>
+        <Column lg={12} style={stylesheet.article.paragraphColumn}>
+          {blogPost.paragraphsBeforeHighlight.map((paragraph, idx) => (
+            <p style={stylesheet.article.paragraphColumn.text} key={idx}>
+              {paragraph}
+            </p>
+          ))}
+        </Column>
+        <Column lg={12}>
+          <h3 style={stylesheet.article.highlighted}>{blogPost.highlight}</h3>
+        </Column>
+        <Column lg={12} style={stylesheet.article.paragraphColumn}>
+          {blogPost.paragraphsAfterHighlight.map((paragraph, idx) => (
+            <p style={stylesheet.article.paragraphColumn.text} key={idx}>
+              {paragraph}
+            </p>
+          ))}
+        </Column>
+      </Row>
+
+      <Row style={stylesheet.authorsRow}>
+        <Column lg={12} style={{ borderTop: "1px solid #707070" }}>
+          <div style={stylesheet.authorsRow.iconColumn}>
+            <User24 />
+            <p style={stylesheet.authorsRow.text}>Authors</p>
+          </div>
+        </Column>
+        {blogPost.authors.map((author, idx) => (
+          <Column lg={12} style={{ paddingTop: "2vh" }} key={idx}>
+            <p style={stylesheet.authorsRow.name}>{author.name}</p>
+            <p style={stylesheet.authorsRow.title}>{author.title}</p>
+          </Column>
+        ))}
+      </Row>
+    </>
+  );
+};
+
+const mapStateToProps = (state) => ({
+  blogPost: state.ui.blogPost,
+  pathname: state.router.location.pathname,
+});
+
+export default connect(mapStateToProps, { blogPostSelected })(ArticleView);

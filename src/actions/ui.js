@@ -1,6 +1,7 @@
 import {
   DIGITAL_CONTENT_SELECTED,
   DIGITAL_CONTENT_AVAILABLE,
+  BLOG_POST_SELECTED,
 } from "./actionTypes";
 
 import {
@@ -18,6 +19,8 @@ import {
   QUANTUM_COMPUTING_TUTORIALS,
   OTHER_TECHNOLOGIES_TUTORIALS,
 } from "../database/tutorial";
+
+import { BLOG_POSTS } from "../database/blogPosts";
 
 export const digitalContentSelected = (content) => {
   let videos = null;
@@ -50,6 +53,23 @@ export const digitalContentSelected = (content) => {
       content,
       videos,
       tutorials,
+    },
+  };
+};
+
+export const blogPostSelected = (blogPostId) => {
+  let blogPostFound = null;
+
+  BLOG_POSTS.forEach((blogPost) => {
+    if (blogPost.id === blogPostId) {
+      blogPostFound = blogPost;
+    }
+  });
+
+  return {
+    type: BLOG_POST_SELECTED,
+    payload: {
+      blogPost: blogPostFound,
     },
   };
 };

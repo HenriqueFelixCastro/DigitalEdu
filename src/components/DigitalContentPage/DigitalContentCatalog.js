@@ -6,6 +6,11 @@ import { connect } from "react-redux";
 import VideoCard from "./VideoCard.js";
 import TutorialCard from "./TutorialCard.js";
 
+import {
+  digitalContentSelected,
+  digitalContentFiltered,
+} from "../../actions/ui.js";
+
 const stylesheet = {
   videoSection: {
     margin: "5vh 0",
@@ -54,7 +59,26 @@ const renderTutorialCardColumns = (tutorials) => {
   ));
 };
 
-const DigitalContentVideo = ({ selectedTrack, videos, tutorials }) => (
+const filterCatalog = (
+  value,
+  selectedTrack,
+  digitalContentSelected,
+  digitalContentFiltered
+) => {
+  if (value === "") {
+    // User reseted filter
+    return digitalContentSelected(selectedTrack);
+  }
+  return digitalContentFiltered(value);
+};
+
+const DigitalContentCatalog = ({
+  selectedTrack,
+  videos,
+  tutorials,
+  digitalContentSelected,
+  digitalContentFiltered,
+}) => (
   <>
     <Grid condensed>
       <Row style={stylesheet.videoSection}>
@@ -62,7 +86,17 @@ const DigitalContentVideo = ({ selectedTrack, videos, tutorials }) => (
           <p style={stylesheet.trackTitle}>{selectedTrack}</p>
         </Column>
         <Column lg={11}>
-          <Search size={"xl"} />
+          <Search
+            size={"xl"}
+            onChange={(event) =>
+              filterCatalog(
+                event.target.value,
+                selectedTrack,
+                digitalContentSelected,
+                digitalContentFiltered
+              )
+            }
+          />
         </Column>
       </Row>
     </Grid>
@@ -97,4 +131,7 @@ const mapStateToProps = (state) => ({
   tutorials: state.ui.tutorials,
 });
 
-export default connect(mapStateToProps, null)(DigitalContentVideo);
+export default connect(mapStateToProps, {
+  digitalContentSelected,
+  digitalContentFiltered,
+})(DigitalContentCatalog);

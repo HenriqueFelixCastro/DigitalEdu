@@ -1,6 +1,7 @@
 import {
   DIGITAL_CONTENT_AVAILABLE,
   DIGITAL_CONTENT_SELECTED,
+  DIGITAL_CONTENT_FILTERED,
   BLOG_POST_SELECTED,
   VIDEO_SELECTED,
 } from "../actions/actionTypes";
@@ -23,6 +24,35 @@ const uiReducer = (state = initialState, action) => {
         content: action.payload.content,
         videos: action.payload.videos,
         tutorials: action.payload.tutorials,
+      };
+
+    case DIGITAL_CONTENT_FILTERED:
+      const newVideos = state.videos.filter((video) => {
+        if (video.videoTitle.search(action.payload.value) !== -1) {
+          return true;
+        }
+        if (video.videoDescription.search(action.payload.value) !== -1) {
+          return true;
+        }
+
+        return false;
+      });
+
+      const newTutorials = state.tutorials.filter((tutorial) => {
+        if (tutorial.tutorialTitle.search(action.payload.value) !== -1) {
+          return true;
+        }
+        if (tutorial.tutorialDescription.search(action.payload.value) !== -1) {
+          return true;
+        }
+
+        return false;
+      });
+
+      return {
+        ...state,
+        videos: newVideos,
+        tutorials: newTutorials,
       };
 
     case BLOG_POST_SELECTED:

@@ -1,11 +1,13 @@
 import React from "react";
 import { Grid, Row, Column } from "carbon-components-react";
+import { connect } from "react-redux";
 
 import LateralMenu from "./LateralMenu";
 import ArticleView from "./ArticleView";
+import VideoView from "./VideoView";
 import RelatedContent from "./RelatedContent";
 
-const ContentViewPage = () => (
+const ContentViewPage = ({ pathname }) => (
   <>
     <Grid condensed>
       <Row>
@@ -13,7 +15,8 @@ const ContentViewPage = () => (
           <LateralMenu />
         </Column>
         <Column lg={12}>
-          <ArticleView />
+          {pathname.search("blog") !== -1 && <ArticleView />}
+          {pathname.search("watch") !== -1 && <VideoView />}
         </Column>
       </Row>
       <RelatedContent />
@@ -21,4 +24,8 @@ const ContentViewPage = () => (
   </>
 );
 
-export default ContentViewPage;
+const mapStateToProps = (state) => ({
+  pathname: state.router.location.pathname,
+});
+
+export default connect(mapStateToProps, null)(ContentViewPage);

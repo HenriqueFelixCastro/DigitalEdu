@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { push } from "connected-react-router";
 
 const stylesheet = {
   videoCard: {
@@ -36,7 +38,12 @@ const stylesheet = {
 
 const VideoCard = (props) => {
   return (
-    <div style={stylesheet.videoCard}>
+    <div
+      style={stylesheet.videoCard}
+      onClick={() => {
+        props.push(`${process.env.PUBLIC_URL}/#watch/${props.videoId}`);
+      }}
+    >
       <div style={stylesheet.videoHeader}>
         <p>Video</p>
       </div>
@@ -55,4 +62,4 @@ const VideoCard = (props) => {
   );
 };
 
-export default VideoCard;
+export default connect(null, { push })(VideoCard);

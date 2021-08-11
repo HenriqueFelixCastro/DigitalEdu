@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { push } from "connected-react-router";
 
 import { BLOG_POSTS } from "../../database/blogPosts";
+import { TESTIMONIALS } from "../../database/testimonial";
 
 const stylesheet = {
   container: {
@@ -69,12 +70,27 @@ const filterNonHighlightedPost = (blogPosts) => {
   return nonHighlightedPosts;
 };
 
+const filterNonHighlightedTestimonial = (testimonials) => {
+  let nonHighlightedTestimonials = [];
+
+  testimonials.forEach((testimonial) => {
+    if (!testimonial.isJobMarketHighlight) {
+      nonHighlightedTestimonials.push(testimonial);
+    }
+  });
+
+  return nonHighlightedTestimonials;
+};
+
 const OtherArticles = ({ push }) => {
   const [nonHighlightedPosts, setNonHighlightedPosts] = useState(
     filterNonHighlightedPost(BLOG_POSTS)
   );
+  const [nonHighlightedTestimonials, setNonHighlightedTestimonials] = useState(
+    filterNonHighlightedTestimonial(TESTIMONIALS)
+  );
 
-  if (nonHighlightedPosts.length < 2) {
+  if (nonHighlightedPosts.length < 2 || nonHighlightedTestimonials.length < 1) {
     return <div></div>;
   }
 
@@ -93,17 +109,18 @@ const OtherArticles = ({ push }) => {
             <Row>
               <Column lg={8} style={stylesheet.testimonial}>
                 <h3 style={stylesheet.testimonial.text}>
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  {nonHighlightedTestimonials[0].highlight}
                 </h3>
-                <p style={stylesheet.testimonial.authorName}>Lorem Ipsum</p>
+                <p style={stylesheet.testimonial.authorName}>
+                  {nonHighlightedTestimonials[0].author.name}
+                </p>
                 <p style={stylesheet.testimonial.authorTitle}>
-                  CTO at International Business Machines
+                  {nonHighlightedTestimonials[0].author.title}
                 </p>
               </Column>
               <Column lg={8}>
                 <Image
-                  defaultSrc={`${process.env.PUBLIC_URL}/img/highlited_card.jpg`}
+                  defaultSrc={nonHighlightedTestimonials[0].imageURL}
                   alt="HighlightedArticle"
                 />
               </Column>

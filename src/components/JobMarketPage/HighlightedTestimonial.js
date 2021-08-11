@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Row, Column } from "carbon-components-react";
 import { Image } from "@carbon/ibmdotcom-react";
 import { UserSpeaker24 } from "@carbon/icons-react";
+
+import { TESTIMONIALS } from "../../database/testimonial";
 
 const stylesheet = {
   container: {
@@ -43,51 +45,79 @@ const stylesheet = {
   },
 };
 
-const HighlightedTestimonial = () => (
-  <div style={stylesheet.container}>
-    <Grid condensed>
-      <Row>
-        <Column lg={8}>
-          <div style={stylesheet.sectionTitle}>
-            <UserSpeaker24 />
-            <p style={stylesheet.sectionTitle.label}>Testimonial</p>
-          </div>
-        </Column>
-      </Row>
-      <Row style={stylesheet.testimonialRow}>
-        <Column lg={8}>
-          <Image
-            defaultSrc={`${process.env.PUBLIC_URL}/img/health-student.jpg`}
-            alt="HighlightedTestimonial"
-          />
-        </Column>
-        <Column lg={8} style={stylesheet.testimonialColumn}>
-          <h2 style={stylesheet.testimonialColumn.highlightedPhrase}>
-            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat."
-          </h2>
-          <p style={stylesheet.testimonialColumn.paragraph}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <p style={stylesheet.testimonialColumn.paragraph}>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <p style={stylesheet.testimonialColumn.paragraph}>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </p>
-          <p style={stylesheet.testimonialColumn.authorName}>Lorem Ipsum</p>
-          <p style={stylesheet.testimonialColumn.authorTitle}>
-            CTO at International Business Machines
-          </p>
-        </Column>
-      </Row>
-    </Grid>
-  </div>
-);
+const filterHighlightedTestimonial = (testimonials) => {
+  let highlightedTestimonials = [];
+
+  testimonials.forEach((testimonial) => {
+    if (testimonial.isJobMarketHighlight) {
+      highlightedTestimonials.push(testimonial);
+    }
+  });
+
+  return highlightedTestimonials;
+};
+
+const HighlightedTestimonial = () => {
+  const [highlightedTestimonial, setHighlightedTestimonial] = useState(
+    filterHighlightedTestimonial(TESTIMONIALS)
+  );
+
+  if (highlightedTestimonial.length <= 0) {
+    return (
+      <div style={stylesheet.container}>
+        <Grid condensed>
+          <Row>
+            <Column lg={8}>
+              <div style={stylesheet.sectionTitle}>
+                <UserSpeaker24 />
+                <p style={stylesheet.sectionTitle.label}>Testimonial</p>
+              </div>
+            </Column>
+          </Row>
+          <Row style={stylesheet.testimonialRow}>
+            <h2>Highlighted Testimonial not found</h2>
+          </Row>
+        </Grid>
+      </div>
+    );
+  }
+
+  return (
+    <div style={stylesheet.container}>
+      <Grid condensed>
+        <Row>
+          <Column lg={8}>
+            <div style={stylesheet.sectionTitle}>
+              <UserSpeaker24 />
+              <p style={stylesheet.sectionTitle.label}>Testimonial</p>
+            </div>
+          </Column>
+        </Row>
+        <Row style={stylesheet.testimonialRow}>
+          <Column lg={8}>
+            <Image
+              defaultSrc={highlightedTestimonial[0].imageURL}
+              alt="HighlightedTestimonial"
+            />
+          </Column>
+          <Column lg={8} style={stylesheet.testimonialColumn}>
+            <h2 style={stylesheet.testimonialColumn.highlightedPhrase}>
+              {`"${highlightedTestimonial[0].highlight}"`}
+            </h2>
+            {highlightedTestimonial[0].paragraphs.map((paragraph) => (
+              <p style={stylesheet.testimonialColumn.paragraph}>{paragraph}</p>
+            ))}
+            <p style={stylesheet.testimonialColumn.authorName}>
+              {highlightedTestimonial[0].author.name}
+            </p>
+            <p style={stylesheet.testimonialColumn.authorTitle}>
+              {highlightedTestimonial[0].author.title}
+            </p>
+          </Column>
+        </Row>
+      </Grid>
+    </div>
+  );
+};
 
 export default HighlightedTestimonial;

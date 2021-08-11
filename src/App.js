@@ -13,10 +13,18 @@ const App = () => {
       <Masthead />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/digital-content/:tech" component={DigitalContentPage} />
+        <Route
+          exact
+          path="/digital-content/:tech"
+          component={DigitalContentPage}
+        />
+        <Route
+          exact
+          path="/digital-content/watch/:id"
+          component={ContentViewPage}
+        />
         <Route exact path="/job-market" component={JobMarketPage} />
-        <Route path="/blog/:id" component={ContentViewPage} />
-        <Route path="/watch/:id" component={ContentViewPage} />
+        <Route exact path="/job-market/blog/:id" component={ContentViewPage} />
       </Switch>
       <Footer />
     </>

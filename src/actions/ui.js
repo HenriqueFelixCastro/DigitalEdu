@@ -1,6 +1,7 @@
 import {
   DIGITAL_CONTENT_SELECTED,
   DIGITAL_CONTENT_AVAILABLE,
+  DIGITAL_CONTENT_FILTERED,
   BLOG_POST_SELECTED,
   VIDEO_SELECTED,
 } from "./actionTypes";
@@ -58,6 +59,15 @@ export const digitalContentSelected = (content) => {
   };
 };
 
+export const digitalContentFiltered = (value) => {
+  return {
+    type: DIGITAL_CONTENT_FILTERED,
+    payload: {
+      value,
+    },
+  };
+};
+
 export const blogPostSelected = (blogPostId) => {
   let blogPostFound = null;
 
@@ -81,7 +91,7 @@ export const videoSelected = (videoId) => {
   // videoId is XX-Y
   // XX is Technology Track Y is ID
   if (videoId.length >= 4) {
-    if (videoId.substring(0, 2) == "ai") {
+    if (videoId.substring(0, 2) === "ai") {
       ARTIFICIAL_INTELLIGENCE_VIDEOS.forEach((video) => {
         if (video.id === videoId) {
           videoFound = video;
@@ -89,7 +99,7 @@ export const videoSelected = (videoId) => {
       });
     }
 
-    if (videoId.substring(0, 2) == "ds") {
+    if (videoId.substring(0, 2) === "ds") {
       DATA_SCIENCE_VIDEOS.forEach((video) => {
         if (video.id === videoId) {
           videoFound = video;
@@ -97,7 +107,7 @@ export const videoSelected = (videoId) => {
       });
     }
 
-    if (videoId.substring(0, 2) == "cc") {
+    if (videoId.substring(0, 2) === "cc") {
       CLOUD_COMPUTING_VIDEOS.forEach((video) => {
         if (video.id === videoId) {
           videoFound = video;
@@ -105,7 +115,7 @@ export const videoSelected = (videoId) => {
       });
     }
 
-    if (videoId.substring(0, 2) == "qc") {
+    if (videoId.substring(0, 2) === "qc") {
       QUANTUM_COMPUTING_VIDEOS.forEach((video) => {
         if (video.id === videoId) {
           videoFound = video;
@@ -113,7 +123,7 @@ export const videoSelected = (videoId) => {
       });
     }
 
-    if (videoId.substring(0, 2) == "ot") {
+    if (videoId.substring(0, 2) === "ot") {
       OTHER_TECHNOLOGIES_VIDEOS.forEach((video) => {
         if (video.id === videoId) {
           videoFound = video;

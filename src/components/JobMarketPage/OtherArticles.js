@@ -131,7 +131,7 @@ const OtherArticles = ({ push }) => {
             style={{ borderRight: "1px solid #707070", padding: "0 2vw" }}
             onClick={() => {
               push(
-                `${process.env.PUBLIC_URL}/#blog/${nonHighlightedPosts[0].id}`
+                `${process.env.PUBLIC_URL}/#job-market/blog/${nonHighlightedPosts[0].id}`
               );
             }}
           >
@@ -171,7 +171,7 @@ const OtherArticles = ({ push }) => {
             style={{ padding: "0 2vw" }}
             onClick={() => {
               push(
-                `${process.env.PUBLIC_URL}/#blog/${nonHighlightedPosts[1].id}`
+                `${process.env.PUBLIC_URL}/#job-market/blog/${nonHighlightedPosts[1].id}`
               );
             }}
           >

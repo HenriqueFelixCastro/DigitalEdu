@@ -89,7 +89,9 @@ const HighlightedArticle = ({ push }) => {
             lg={8}
             style={{ display: "flex", flexDirection: "column" }}
             onClick={() => {
-              push(`${process.env.PUBLIC_URL}/#blog/${highlightedPost[0].id}`);
+              push(
+                `${process.env.PUBLIC_URL}/#job-market/blog/${highlightedPost[0].id}`
+              );
             }}
           >
             <div style={stylesheet.category}>

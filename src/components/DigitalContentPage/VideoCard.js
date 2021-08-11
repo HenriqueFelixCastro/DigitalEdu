@@ -41,7 +41,10 @@ const VideoCard = (props) => {
     <div
       style={stylesheet.videoCard}
       onClick={() => {
-        props.push(`${process.env.PUBLIC_URL}/#watch/${props.videoId}`);
+        if (process.env.PUBLIC_URL === ".") {
+          return props.push(`${process.env.PUBLIC_URL}/watch/${props.videoId}`);
+        }
+        return props.push(`/#digital-content/watch/${props.videoId}`);
       }}
     >
       <div style={stylesheet.videoHeader}>

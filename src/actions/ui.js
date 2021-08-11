@@ -2,6 +2,7 @@ import {
   DIGITAL_CONTENT_SELECTED,
   DIGITAL_CONTENT_AVAILABLE,
   BLOG_POST_SELECTED,
+  VIDEO_SELECTED,
 } from "./actionTypes";
 
 import {
@@ -70,6 +71,61 @@ export const blogPostSelected = (blogPostId) => {
     type: BLOG_POST_SELECTED,
     payload: {
       blogPost: blogPostFound,
+    },
+  };
+};
+
+export const videoSelected = (videoId) => {
+  let videoFound = null;
+
+  // videoId is XX-Y
+  // XX is Technology Track Y is ID
+  if (videoId.length >= 4) {
+    if (videoId.substring(0, 2) == "ai") {
+      ARTIFICIAL_INTELLIGENCE_VIDEOS.forEach((video) => {
+        if (video.id === videoId) {
+          videoFound = video;
+        }
+      });
+    }
+
+    if (videoId.substring(0, 2) == "ds") {
+      DATA_SCIENCE_VIDEOS.forEach((video) => {
+        if (video.id === videoId) {
+          videoFound = video;
+        }
+      });
+    }
+
+    if (videoId.substring(0, 2) == "cc") {
+      CLOUD_COMPUTING_VIDEOS.forEach((video) => {
+        if (video.id === videoId) {
+          videoFound = video;
+        }
+      });
+    }
+
+    if (videoId.substring(0, 2) == "qc") {
+      QUANTUM_COMPUTING_VIDEOS.forEach((video) => {
+        if (video.id === videoId) {
+          videoFound = video;
+        }
+      });
+    }
+
+    if (videoId.substring(0, 2) == "ot") {
+      OTHER_TECHNOLOGIES_VIDEOS.forEach((video) => {
+        if (video.id === videoId) {
+          videoFound = video;
+        }
+      });
+    }
+  }
+
+  return {
+    type: VIDEO_SELECTED,
+    payload: {
+      video: videoFound,
     },
   };
 };

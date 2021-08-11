@@ -70,6 +70,7 @@ const stylesheet = {
 
 const ArticleView = ({ blogPost, pathname, blogPostSelected }) => {
   useEffect(() => {
+    window.scrollTo(0, 0);
     let selectedPostId = /[^/]*$/.exec(pathname)[0]; // Gets last substring after last slash
     blogPostSelected(selectedPostId);
   }, [pathname, blogPostSelected]);

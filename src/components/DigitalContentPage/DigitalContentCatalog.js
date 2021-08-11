@@ -35,6 +35,7 @@ const renderVideoCardColumns = (videos) => {
         videoDescription={video.videoDescription}
         videoImg={video.videoImg}
         videoDuration={video.videoDuration}
+        videoId={video.id}
       />
     </Column>
   ));

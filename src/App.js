@@ -12,7 +12,6 @@ const App = () => {
     <>
       <Masthead />
       <Switch>
-        <Route exact path="/" component={HomePage} />
         <Route
           exact
           path="/digital-content/:tech"
@@ -25,6 +24,9 @@ const App = () => {
         />
         <Route exact path="/job-market" component={JobMarketPage} />
         <Route exact path="/job-market/blog/:id" component={ContentViewPage} />
+        <Route path="/about-us" component={HomePage} />
+        <Route path="/academic-initiative" component={HomePage} />
+        <Route path="/" component={HomePage} />
       </Switch>
       <Footer />
     </>

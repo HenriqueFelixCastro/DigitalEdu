@@ -58,13 +58,13 @@ const Hero = () => (
             <Row>
               <Column lg={5} style={stylesheet.hero.navMenu.button}>
                 <XAxis24 />
-                <HashLink smooth to="/#about-us">
+                <HashLink smooth to="/about-us">
                   <p style={stylesheet.hero.navMenu.button.text}>About Us</p>
                 </HashLink>
               </Column>
               <Column style={stylesheet.hero.navMenu.button}>
                 <XAxis24 />
-                <HashLink smooth to="/#academic-initiative">
+                <HashLink smooth to="/academic-initiative">
                   <p style={stylesheet.hero.navMenu.button.text}>
                     IBM Academic Initiative
                   </p>

@@ -48,8 +48,9 @@ const Hero = () => (
               Boost your digital learning experience with us.
             </h1>
             <h2 style={stylesheet.hero.subtitle}>
-              Prepare your class with digital content, read about the job
-              market, explore business cases and much more.
+              Get access to digital content guided by IBM experts, 
+              prepare your classes with real use cases and explore 
+              new ways of collaboration.
             </h2>
           </Column>
         </Row>
@@ -81,10 +82,9 @@ const Hero = () => (
           </Column>
           <Column lg={9}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            We are the intersection of academia and IBM providing technology, 
+            supporting research and creating assets to advance relevant skills 
+            for today’s workforce.
             </p>
           </Column>
         </Row>

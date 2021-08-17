@@ -50,8 +50,8 @@ const DigitalContentBanner = () => {
             <div>
               <p style={stylesheet.title.label}>Digital Content</p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Learn from our experts through "on demand" classes of the most important technologies on the market, 
+              also watch again our most important events for the academy in Americas.
               </p>
             </div>
           </Column>

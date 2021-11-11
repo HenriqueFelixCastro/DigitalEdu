@@ -41,6 +41,14 @@ const mastheadLinks = [
     hasMegapanel: false,
     menuSections: [],
   },
+
+  {
+    title: 'Luna',
+    url: `${process.env.PUBLIC_URL}/#luna`,
+    hasMenu: false,
+    hasMegapanel: false,
+    menuSections: [],
+  }
 ];
 
 const mastheadProps = {

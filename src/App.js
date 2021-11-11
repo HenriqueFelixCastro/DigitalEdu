@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage";
 import DigitalContentPage from "./components/DigitalContentPage";
 import JobMarketPage from "./components/JobMarketPage";
 import ContentViewPage from "./components/ContentViewPage";
+import LunaPage from "./components/LunaPage";
 
 const App = () => {
   return (
@@ -24,11 +25,15 @@ const App = () => {
         />
         <Route exact path="/job-market" component={JobMarketPage} />
         <Route exact path="/job-market/blog/:id" component={ContentViewPage} />
+
+        <Route exact path="/luna" component={LunaPage} />
         <Route path="/about-us" component={HomePage} />
         <Route path="/academic-initiative" component={HomePage} />
         <Route path="/" component={HomePage} />
       </Switch>
+
       <Footer />
+  
     </>
   );
 };

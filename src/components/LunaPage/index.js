@@ -6,8 +6,7 @@ import HighlightedDepoimento from "./HighlightedDepoimento"
 import DigitalContentAcademic from "./DigitalContentAcademic";
 import HighligthedDepoimentoSecond from "./HighlightedDepoimentoSecond";
 
-const LunaPage = () => {
-   return(
+const LunaPage = () => (
       <>
          <HeroLuna />
          <HighlightedUniversities />
@@ -15,7 +14,6 @@ const LunaPage = () => {
          <DigitalContentAcademic />
          <HighligthedDepoimentoSecond />
       </>
-   )
-}
+);
 
 export default LunaPage;

@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage";
 import DigitalContentPage from "./components/DigitalContentPage";
 import JobMarketPage from "./components/JobMarketPage";
 import ContentViewPage from "./components/ContentViewPage";
+import UseCasesPage from "./components/UseCasesPage";
 import LunaPage from "./components/LunaPage";
 
 const App = () => {
@@ -25,8 +26,9 @@ const App = () => {
         />
         <Route exact path="/job-market" component={JobMarketPage} />
         <Route exact path="/job-market/blog/:id" component={ContentViewPage} />
-
+        <Route exact path="/use-cases" component={UseCasesPage} />
         <Route exact path="/luna" component={LunaPage} />
+        
         <Route path="/about-us" component={HomePage} />
         <Route path="/academic-initiative" component={HomePage} />
         <Route path="/" component={HomePage} />

@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import { Grid, Row, Column } from "carbon-components-react";
 
 import "./LunaPage.css"

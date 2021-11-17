@@ -43,7 +43,15 @@ const mastheadLinks = [
   },
 
   {
-    title: 'Luna',
+    title: 'Use Cases',
+    url: `${process.env.PUBLIC_URL}/#use-cases`,
+    hasMenu: false,
+    hasMegapanel: false,
+    menuSections: [],
+  },
+
+  {
+    title: 'Luna.',
     url: `${process.env.PUBLIC_URL}/#luna`,
     hasMenu: false,
     hasMegapanel: false,

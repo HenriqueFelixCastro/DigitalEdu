@@ -40,16 +40,24 @@ const stylesheet = {
     },
   },
   articles: {
+    padding: "1rem 0px",
+
+    articleDetails:{
+      marginTop: "15vh"
+    },
+
     articleTitle: {
       font: "normal normal 300 16px/20px IBM Plex Sans",
       fontWeight: "bold",
-      padding: "3vh 0",
     },
+
     articleInfo: {
       font: "normal normal 300 16px/20px IBM Plex Sans",
     },
     articleTags: {
       padding: "2vh 0",
+      display: "flex",
+
       tag: {
         marginLeft: "0",
         marginRight: "1vw",
@@ -82,6 +90,8 @@ const filterNonHighlightedTestimonial = (testimonials) => {
   return nonHighlightedTestimonials;
 };
 
+
+
 const OtherArticles = ({ push }) => {
   const [nonHighlightedPosts, setNonHighlightedPosts] = useState(
     filterNonHighlightedPost(BLOG_POSTS)
@@ -94,118 +104,202 @@ const OtherArticles = ({ push }) => {
     return <div></div>;
   }
 
+  console.log(nonHighlightedPosts);
+
   return (
     <div style={stylesheet.container}>
       <Grid>
-        <Row condensed>
-          <Column
-            lg={8}
-            style={{ borderRight: "1px solid #707070", paddingRight: "2vw" }}
-          >
-            <div style={stylesheet.category}>
-              <UserSpeaker24 />
-              <p style={stylesheet.category.label}>History</p>
-            </div>
-            <Row>
-              <Column lg={8} style={stylesheet.testimonial}>
-                <h3 style={stylesheet.testimonial.text}>
-                  {nonHighlightedTestimonials[0].highlight}
-                </h3>
-                <p style={stylesheet.testimonial.authorName}>
-                  {nonHighlightedTestimonials[0].author.name}
-                </p>
-                <p style={stylesheet.testimonial.authorTitle}>
-                  {nonHighlightedTestimonials[0].author.title}
-                </p>
-              </Column>
-              <Column lg={8}>
-                <Image
-                  defaultSrc={nonHighlightedTestimonials[0].imageURL}
-                  alt="HighlightedArticle"
-                />
-              </Column>
-            </Row>
-          </Column>
-          <Column
-            lg={4}
-            style={{ borderRight: "1px solid #707070", padding: "0 2vw" }}
-            onClick={() => {
-              push(
-                `${process.env.PUBLIC_URL}/#use-cases/blog/${nonHighlightedPosts[0].id}`
-              );
-            }}
-          >
-            <div style={stylesheet.category}>
-              <Blog24 />
-              <p style={stylesheet.category.label}>Article</p>
-            </div>
-            <Image
-              defaultSrc={nonHighlightedPosts[0].imageURL}
-              alt="HighlightedArticle"
-            />
-            <p style={stylesheet.articles.articleTitle}>
-              {nonHighlightedPosts[0].title}
-            </p>
-            {nonHighlightedPosts[0].authors.map((author, idx) => (
-              <p style={stylesheet.articles.articleInfo} key={idx}>
-                {author.name}
-              </p>
-            ))}
-            <p style={stylesheet.articles.articleInfo}>
-              {nonHighlightedPosts[0].date}
-            </p>
-            <div style={stylesheet.articles.articleTags}>
-              {nonHighlightedPosts[0].tags.map((tag, idx) => (
-                <Tag
-                  style={stylesheet.articles.articleTags.tag}
-                  type={tag.color}
-                  key={idx}
-                >
-                  {tag.text}
-                </Tag>
-              ))}
-            </div>
-          </Column>
-          <Column
-            lg={4}
-            style={{ padding: "0 2vw" }}
-            onClick={() => {
-              push(
-                `${process.env.PUBLIC_URL}/#use-cases/blog/${nonHighlightedPosts[1].id}`
-              );
-            }}
-          >
-            <div style={stylesheet.category}>
-              <Blog24 />
-              <p style={stylesheet.category.label}>Article</p>
-            </div>
-            <Image
-              defaultSrc={nonHighlightedPosts[1].imageURL}
-              alt="HighlightedArticle"
-            />
-            <p style={stylesheet.articles.articleTitle}>
-              {nonHighlightedPosts[1].title}
-            </p>
-            {nonHighlightedPosts[1].authors.map((author, idx) => (
-              <p style={stylesheet.articles.articleInfo} key={idx}>
-                {author.name}
-              </p>
-            ))}
-            <p style={stylesheet.articles.articleInfo}>
-              {nonHighlightedPosts[1].date}
-            </p>
-            <div style={stylesheet.articles.articleTags}>
-              {nonHighlightedPosts[1].tags.map((tag, idx) => (
-                <Tag
-                  style={stylesheet.articles.articleTags.tag}
-                  type={tag.color}
-                  key={idx}
-                >
-                  {tag.text}
-                </Tag>
-              ))}
-            </div>
-          </Column>
+        <Row>
+            <Column lg={4} style={{paddingRight: ".8rem", borderRight: "solid #707070 1px", paddingLeft: "0"}} >
+                <div style={stylesheet.category}>
+                <Blog24 />
+                  <p style={stylesheet.category.label}>Industry Cases</p>
+                </div>
+
+                <Row>
+                    <Image
+                        defaultSrc={nonHighlightedTestimonials[0].imageURL}
+                        alt="HighlightedArticle"
+                    />
+
+                    <Column style={stylesheet.articles}>
+
+                        <div style={stylesheet.articles.articleDetails}>
+                          <p style={stylesheet.articles.articleTitle}>
+                              {nonHighlightedPosts[0].title}
+                          </p>
+                          <p>
+                              {nonHighlightedPosts[0].date}
+                          </p>
+                        </div>
+
+
+                        <div style={stylesheet.articles.articleTags}>
+                            {nonHighlightedPosts[0].tags.map((tag, idx) => (
+                            <Tag
+                                style={stylesheet.articles.articleTags.tag}
+                                type={tag.color}
+                                key={idx}
+                            >
+                                {tag.text}
+                            </Tag>
+                            ))}
+
+                            {nonHighlightedPosts[1].tags.map((tag, idx) => (
+                            <Tag
+                                style={stylesheet.articles.articleTags.tag}
+                                type={tag.color}
+                                key={idx}
+                            >
+                                {tag.text}
+                            </Tag>
+                            ))}
+                        </div>
+                    </Column>
+                </Row>
+            </Column>
+      
+            <Column lg={4} style={{paddingRight: ".8rem", borderRight: "solid #707070 1px"}}>
+                <div style={stylesheet.category}>
+                <Blog24 />
+                <p style={stylesheet.category.label}>Article</p>
+                </div>
+
+                <Row>
+                    <Image
+                        defaultSrc={nonHighlightedTestimonials[0].imageURL}
+                        alt="HighlightedArticle"
+                    />
+
+                    <Column style={stylesheet.articles}>
+
+                        <div style={stylesheet.articles.articleDetails}>
+                          <p style={stylesheet.articles.articleTitle}>
+                              {nonHighlightedPosts[0].title}
+                          </p>
+                          <p>
+                              {nonHighlightedPosts[0].date}
+                          </p>
+                        </div>
+
+                        <div style={stylesheet.articles.articleTags}>
+                            {nonHighlightedPosts[0].tags.map((tag, idx) => (
+                            <Tag
+                                style={stylesheet.articles.articleTags.tag}
+                                type={tag.color}
+                                key={idx}
+                            >
+                                {tag.text}
+                            </Tag>
+                            ))}
+
+                            {nonHighlightedPosts[1].tags.map((tag, idx) => (
+                            <Tag
+                                style={stylesheet.articles.articleTags.tag}
+                                type={tag.color}
+                                key={idx}
+                            >
+                                {tag.text}
+                            </Tag>
+                            ))}
+                        </div>
+                    </Column>
+                </Row>
+            </Column>
+
+            <Column lg={4} style={{paddingRight: ".8rem", borderRight: "solid #707070 1px"}}>
+                <div style={stylesheet.category}>
+                <Blog24 />
+                <p style={stylesheet.category.label}>Article</p>
+                </div>
+
+                <Row>
+                    <Image
+                        defaultSrc={nonHighlightedTestimonials[0].imageURL}
+                        alt="HighlightedArticle"
+                    />
+
+                    <Column style={stylesheet.articles}>
+                        <div style={stylesheet.articles.articleDetails}>
+                          <p style={stylesheet.articles.articleTitle}>
+                              {nonHighlightedPosts[0].title}
+                          </p>
+                          <p>
+                              {nonHighlightedPosts[0].date}
+                          </p>
+                        </div>
+
+                        <div style={stylesheet.articles.articleTags}>
+                            {nonHighlightedPosts[0].tags.map((tag, idx) => (
+                            <Tag
+                                style={stylesheet.articles.articleTags.tag}
+                                type={tag.color}
+                                key={idx}
+                            >
+                                {tag.text}
+                            </Tag>
+                            ))}
+
+                            {nonHighlightedPosts[1].tags.map((tag, idx) => (
+                            <Tag
+                                style={stylesheet.articles.articleTags.tag}
+                                type={tag.color}
+                                key={idx}
+                            >
+                                {tag.text}
+                            </Tag>
+                            ))}
+                        </div>
+                    </Column>
+                </Row>
+            </Column>
+
+            <Column lg={4}>
+                <div style={stylesheet.category}>
+                <Blog24 />
+                <p style={stylesheet.category.label}>Industry Cases</p>
+                </div>
+
+                <Row>
+                    <Image
+                        defaultSrc={nonHighlightedTestimonials[0].imageURL}
+                        alt="HighlightedArticle"
+                    />
+
+                    <Column style={stylesheet.articles}>
+                        <div style={stylesheet.articles.articleDetails}>
+                          <p style={stylesheet.articles.articleTitle}>
+                              {nonHighlightedPosts[0].title}
+                          </p>
+                          <p>
+                              {nonHighlightedPosts[0].date}
+                          </p>
+                        </div>
+
+                        <div style={stylesheet.articles.articleTags}>
+                            {nonHighlightedPosts[0].tags.map((tag, idx) => (
+                            <Tag
+                                style={stylesheet.articles.articleTags.tag}
+                                type={tag.color}
+                                key={idx}
+                            >
+                                {tag.text}
+                            </Tag>
+                            ))}
+
+                            {nonHighlightedPosts[1].tags.map((tag, idx) => (
+                            <Tag
+                                style={stylesheet.articles.articleTags.tag}
+                                type={tag.color}
+                                key={idx}
+                            >
+                                {tag.text}
+                            </Tag>
+                            ))}
+                        </div>
+                    </Column>
+                </Row>
+            </Column>
         </Row>
       </Grid>
     </div>

@@ -5,8 +5,8 @@ import UseCasesSeach from "./UseCasesSeach";
 import HighlightedArticle from "./HighlightedArticle";
 import HighlightedTestimonial from "./HighlightedTestimonial";
 import OtherArticles from "./OtherArticles";
+import FinalArticles from "./FinalArticles"
 import WorkWithUs from "./WorkWithUs";
-import QuickLinks from "../HomePage/QuickLinks";
 
 const UseCasesPage = () => (
   <>
@@ -15,8 +15,8 @@ const UseCasesPage = () => (
     <HighlightedArticle />
     <OtherArticles />
     <HighlightedTestimonial />
+    <FinalArticles />
     <WorkWithUs />
-    <QuickLinks />
   </>
 );
 

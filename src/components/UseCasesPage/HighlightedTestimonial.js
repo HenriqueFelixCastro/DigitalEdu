@@ -10,7 +10,7 @@ const stylesheet = {
     background: "#161616",
     color: "#fff",
     borderBottom: "1px solid #707070",
-    padding: "6vh 0",
+    padding: "10vh 0",
   },
   sectionTitle: {
     display: "flex",
@@ -19,6 +19,11 @@ const stylesheet = {
       font: "normal normal normal 18px/23px IBM Plex Sans",
     },
   },
+
+  sectionText:{
+    marginTop: "10vh"
+  },
+
   testimonialRow: {
     marginTop: "2vh",
   },
@@ -85,7 +90,38 @@ const HighlightedTestimonial = () => {
   return (
     <div style={stylesheet.container}>
       <Grid condensed>
-        <Row>
+        <Row style={{display: "flex", justifyContent: "space-between"}}>
+          <Column lg={8}>
+            <div style={stylesheet.sectionTitle}>
+              <UserSpeaker24 />
+              <p style={stylesheet.sectionTitle.label}>History</p>
+            </div>
+
+            <div style={stylesheet.sectionText}>
+              <h2 style={stylesheet.testimonialColumn.highlightedPhrase}>
+                {`"${highlightedTestimonial[0].highlight}"`}
+              </h2>
+              {highlightedTestimonial[0].paragraphs.map((paragraph) => (
+                <p style={stylesheet.testimonialColumn.paragraph}>{paragraph}</p>
+              ))}
+              <p style={stylesheet.testimonialColumn.authorName}>
+                {highlightedTestimonial[0].author.name}
+              </p>
+              <p style={stylesheet.testimonialColumn.authorTitle}>
+                {highlightedTestimonial[0].author.title}
+              </p>
+            </div>
+          </Column>
+
+          <Column lg={7}>
+            <Image
+              defaultSrc={highlightedTestimonial[0].imageURL}
+              alt="HighlightedTestimonial"
+            />
+          </Column>
+        </Row>
+
+        {/* <Row>
           <Column lg={8}>
             <div style={stylesheet.sectionTitle}>
               <UserSpeaker24 />
@@ -114,7 +150,7 @@ const HighlightedTestimonial = () => {
               {highlightedTestimonial[0].author.title}
             </p>
           </Column>
-        </Row>
+        </Row> */}
       </Grid>
     </div>
   );

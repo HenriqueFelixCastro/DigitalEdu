@@ -11,7 +11,7 @@ const stylesheet = {
     },
 
     text: {
-        marginTop: "3rem",
+        marginTop: "2rem",
         font: "normal normal normal 16px/20px IBM Plex Sans",
                        
         textBr: {
@@ -22,7 +22,7 @@ const stylesheet = {
                 
         nameTitle: {
             font: "normal normal 600 16px/18px IBM Plex Sans",
-            marginTop: "4rem"
+            marginTop: "2.5rem"
         },
                 
         jobTitle: {
@@ -31,7 +31,7 @@ const stylesheet = {
                 
         cite: {
             font: "italic normal 300 42px/55px IBM Plex Sans",
-            marginTop: "2rem"
+            marginTop: ".5rem"
         }
     },
     
@@ -48,12 +48,6 @@ const stylesheet = {
         },
     },
 
-    depoimentoRow: {
-        marginTop: "4vh",
-        display: "flex",
-        flexDirection: "row"
-    },
-
     depoimentoColumn: {
         background: "#1F7E48 0% 0% no-repeat padding-box",
         color: "#fff",
@@ -61,7 +55,10 @@ const stylesheet = {
     },
 }
 
-const HighlightedDepoimento = () => {
+const HighlightedDepoimento = (props) => {
+
+    console.log(props.invert);
+
     return(
         <>
             <div style={stylesheet.container}>
@@ -74,16 +71,16 @@ const HighlightedDepoimento = () => {
                         </Column>
                     </Row>
 
-                    <Row style={stylesheet.depoimentoRow}>
+                    <Row style={{flexDirection: props.invert, marginTop: "4vh"}}>
 
-                        <Column sm={5} lg={8}>
+                        <Column lg={8}>
                             <Image
-                                defaultSrc={"../img/health-student.jpg"}
+                                defaultSrc={props.urlImg}
                                 alt="HighlightedTestimonial"
                             />
                         </Column>
 
-                        <Column sm={5} lg={8} style={stylesheet.depoimentoColumn}>
+                        <Column lg={8} style={stylesheet.depoimentoColumn}>
                             <h2 style={stylesheet.text.cite}>
                                 "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                             </h2>

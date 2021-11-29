@@ -8,7 +8,7 @@ const stylesheet = {
     color: "#FFF",
     letterSpacing: "0",
     title: {
-      font: "normal normal 300 65px/85px IBM Plex Sans",
+      font: "normal normal 300 55px/85px IBM Plex Sans",
     },
   },
   subHero: {
@@ -27,20 +27,19 @@ const DigitalContentHero = () => (
         <Row condensed>
           <Column sm={4} md={2} lg={7}>
             <h1 style={stylesheet.hero.title}>
-              Read here a call to action about our Digital Content page.
+              Learn and practice technology by leveraging IBM resources.
             </h1>
           </Column>
         </Row>
         <Row condensed style={stylesheet.subHero}>
           <Column lg={4}>
-            <h1 style={stylesheet.subHero.title}>Technology Topics</h1>
+            <h1 style={stylesheet.subHero.title}>Topics</h1>
           </Column>
           <Column lg={9}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              IBM DigitalEdu offers access to videos and tutorials of the most
+              relevant technologies in the market so that students obtain the most
+              important skills that the industry demands.
             </p>
           </Column>
         </Row>

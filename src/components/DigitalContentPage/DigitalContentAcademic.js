@@ -33,13 +33,13 @@ const DigitalContentAcademic = () => (
               IBM Academic Initiative
             </h1>
             <p style={stylesheet.academicInitiativeText.content}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Stay on top of the latest in technology and
-              education
+            The IBM Academic Initiative enables students to graduate with direct hands-on experience
+            on technologies that will help them in their chosen career.
+            <br/>
+            <br/>
+            Through a self-service portal we provide students and faculty at accredited academic
+            institutions with access to select IBM resources at no-charge for classroom and non-commercial
+            research purposes.
             </p>
             <CTA
               type="local"

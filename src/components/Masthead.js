@@ -3,7 +3,7 @@ import { Masthead } from "@carbon/ibmdotcom-react";
 
 const mastheadLinks = [
   {
-    title: "Digital Content",
+    title: "Topics",
     url: `${process.env.PUBLIC_URL}/#digital-content/ai`,
     hasMenu: true,
     hasMegapanel: false,
@@ -27,7 +27,7 @@ const mastheadLinks = [
             url: `${process.env.PUBLIC_URL}/#digital-content/quantum`,
           },
           {
-            title: "Other Technologies",
+            title: "Other",
             url: `${process.env.PUBLIC_URL}/#digital-content/others`,
           },
         ],
@@ -35,7 +35,7 @@ const mastheadLinks = [
     ],
   },
   {
-    title: "Job Market",
+    title: "Skills",
     url: `${process.env.PUBLIC_URL}/#job-market`,
     hasMenu: false,
     hasMegapanel: false,

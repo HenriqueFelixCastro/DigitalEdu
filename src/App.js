@@ -11,7 +11,7 @@ import LunaPage from "./components/LunaPage";
 
 const App = () => {
   return (
-    <>
+    <div style={{background: "#161616"}}>
       <Masthead />
       <Switch>
         <Route
@@ -36,7 +36,7 @@ const App = () => {
 
       <Footer />
   
-    </>
+    </div>
   );
 };
 

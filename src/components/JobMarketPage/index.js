@@ -6,7 +6,6 @@ import HighlightedArticle from "./HighlightedArticle";
 import HighlightedTestimonial from "./HighlightedTestimonial";
 import OtherArticles from "./OtherArticles";
 import WorkWithUs from "./WorkWithUs";
-import QuickLinks from "../HomePage/QuickLinks";
 
 const JobMarketPage = () => (
   <>
@@ -16,7 +15,6 @@ const JobMarketPage = () => (
     <OtherArticles />
     <HighlightedTestimonial />
     <WorkWithUs />
-    <QuickLinks />
   </>
 );
 

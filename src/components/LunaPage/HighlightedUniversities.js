@@ -54,7 +54,7 @@ const stylesheet = {
 
     rowText: {
         marginBottom: "1rem"
-    }
+    },
 }
 
 
@@ -83,21 +83,21 @@ const HighlightedUniversities = () => {
 
                             <Column sm={4} md={8} lg={5} style={stylesheet.rowCards.columnCard}>
                                 <CardProject 
-                                    image={"../img/highlited_card.jpg"}
+                                    image={"../img/luna/Group 10664 - 2.png"}
                                     title={"Project 1"}
                                 />
                             </Column>
 
                             <Column sm={4} md={8} lg={5} style={stylesheet.rowCards.columnCard}>
                                 <CardProject 
-                                    image={"../img/highlited_card.jpg"}
+                                    image={"../img/luna/Group 10733 - 2.png"}
                                     title={"Project 2"}
                                 />
                             </Column>
 
                             <Column sm={4} md={8} lg={5} style={stylesheet.rowCards.columnCard}>
                                 <CardProject 
-                                    image={"../img/highlited_card.jpg"}
+                                    image={"../img/luna/Group 10734 - 2.png"}
                                     title={"Project 3"}
                                 />
                             </Column>

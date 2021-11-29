@@ -3,8 +3,6 @@ $feature-flags: (
   enable-css-custom-properties: true,
 );
 
-@import '@carbon/colors/scss/colors';
-
 @import "carbon-components/scss/globals/scss/styles.scss";
 @import "carbon-components/scss/globals/grid/grid";
 @import "@carbon/ibmdotcom-styles/scss/themes/expressive/index";

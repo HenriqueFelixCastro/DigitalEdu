@@ -17,6 +17,7 @@ const stylesheet = {
   },
   trackTitleColumn: {
     minHeight: "100%",
+    color: "#fff",
     marginBottom: "0.5px",
     borderBottom: "1px solid #8d8d8d",
   },

@@ -10,9 +10,10 @@ const LunaPage = () => (
       <>
          <HeroLuna />
          <HighlightedUniversities />
-         <HighlightedDepoimento />
+         <HighlightedDepoimento invert={"row"} urlImg={"../img/luna/Group 10662 - 2.png"} />
          <DigitalContentAcademic />
-         <HighligthedDepoimentoSecond />
+         <HighlightedDepoimento invert={"row-reverse"} urlImg={"../img/luna/Group 10737 - 2.png"}
+         />
       </>
 );
 

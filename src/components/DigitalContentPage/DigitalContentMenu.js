@@ -86,7 +86,7 @@ const DigitalContentMenu = (props) => {
               <Tab
                 style={stylesheet.tab}
                 id="other"
-                label="Other Technologies"
+                label="Other"
                 onClick={() =>
                   handleDigitalContentMenuClick(
                     props.digitalContentSelected,

@@ -48,10 +48,10 @@ const DigitalContentBanner = () => {
         <Row>
           <Column style={stylesheet.title} lg={4}>
             <div>
-              <p style={stylesheet.title.label}>Digital Content</p>
+              <p style={stylesheet.title.label}>Topics</p>
               <p>
-              Learn from our experts through "on demand" classes of the most important technologies on the market, 
-              also watch again our most important events for the academy in Americas.
+              Learn from our experts through "on demand" classes of the most important technologies on the market,
+              and watch our events for the academy in Americas.
               </p>
             </div>
           </Column>
@@ -83,7 +83,7 @@ const DigitalContentBanner = () => {
           <Column style={stylesheet.lastCard}>
             <a href={`${process.env.PUBLIC_URL}/#digital-content/others`}>
               <Idea />
-              <p style={stylesheet.card.label}>Other technologies</p>
+              <p style={stylesheet.card.label}>Other</p>
             </a>
           </Column>
         </Row>

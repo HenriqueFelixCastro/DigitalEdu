@@ -10,7 +10,7 @@ const stylesheet = {
     color: "#FFF",
     letterSpacing: "0",
     title: {
-      font: "normal normal 300 64px/84px IBM Plex Sans",
+      font: "normal normal 300 54px/84px IBM Plex Sans",
     },
     subtitle: {
       paddingTop: "6vh",
@@ -45,47 +45,12 @@ const Hero = () => (
         <Row condensed>
           <Column sm={4} md={2} lg={7}>
             <h1 style={stylesheet.hero.title}>
-              Boost your digital learning experience with us.
+              Boost your digital learning experience with the new IBM DigitalEdu.
             </h1>
             <h2 style={stylesheet.hero.subtitle}>
-              Get access to digital content guided by IBM experts, 
-              prepare your classes with real use cases and explore 
-              new ways of collaboration.
+              Prepare your class with digital content, read about skills in the job
+              market, explore business cases and much more.
             </h2>
-          </Column>
-        </Row>
-        <Row condensed style={stylesheet.hero.navMenu}>
-          <Column sm={4} md={2} lg={7}>
-            <Row>
-              <Column lg={5} style={stylesheet.hero.navMenu.button}>
-                <XAxis24 />
-                <HashLink smooth to="/about-us">
-                  <p style={stylesheet.hero.navMenu.button.text}>About Us</p>
-                </HashLink>
-              </Column>
-              <Column style={stylesheet.hero.navMenu.button}>
-                <XAxis24 />
-                <HashLink smooth to="/academic-initiative">
-                  <p style={stylesheet.hero.navMenu.button.text}>
-                    IBM Academic Initiative
-                  </p>
-                </HashLink>
-              </Column>
-            </Row>
-          </Column>
-        </Row>
-        <Row condensed style={stylesheet.subHero} id="about-us">
-          <Column lg={4}>
-            <h1 style={stylesheet.subHero.title}>
-              IBM <strong>Global University Programs</strong>
-            </h1>
-          </Column>
-          <Column lg={9}>
-            <p>
-            We are the intersection of academia and IBM providing technology, 
-            supporting research and creating assets to advance relevant skills 
-            for today’s workforce.
-            </p>
           </Column>
         </Row>
       </Grid>

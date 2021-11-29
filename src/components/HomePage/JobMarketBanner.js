@@ -38,7 +38,7 @@ const JobMarketBanner = () => (
       <Row condensed>
         <Column style={stylesheet.title} lg={4}>
           <div>
-            <p style={stylesheet.title.label}>Job Market</p>
+            <p style={stylesheet.title.label}>Skills</p>
           </div>
         </Column>
         <Column style={stylesheet.content} lg={12}>

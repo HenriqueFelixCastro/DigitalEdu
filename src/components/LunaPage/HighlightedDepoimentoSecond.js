@@ -12,7 +12,7 @@ const stylesheet = {
     },
 
     text: {
-        marginTop: "3rem",
+        marginTop: "2rem",
         font: "normal normal normal 16px/20px IBM Plex Sans",
                        
         textBr: {
@@ -23,7 +23,7 @@ const stylesheet = {
                 
         nameTitle: {
             font: "normal normal 600 16px/18px IBM Plex Sans",
-            marginTop: "4rem"
+            marginTop: "2.5rem"
         },
                 
         jobTitle: {
@@ -32,7 +32,7 @@ const stylesheet = {
                 
         cite: {
             font: "italic normal 300 42px/55px IBM Plex Sans",
-            marginTop: "2rem"
+            marginTop: ".5rem"
         }
     },
     
@@ -79,7 +79,7 @@ const HighligthedDepoimentoSecond = () => {
 
                         <Column sm={5} lg={8}>
                             <Image
-                                defaultSrc={"../img/health-student.jpg"}
+                                defaultSrc={"../img/luna/Group 10737 - 2.png"}
                                 alt="HighlightedTestimonial"
                             />
                         </Column>

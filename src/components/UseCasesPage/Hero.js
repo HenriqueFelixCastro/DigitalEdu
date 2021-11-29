@@ -20,7 +20,7 @@ const Hero = () => (
         <Row condensed>
           <Column sm={4} md={2} lg={7}>
             <h1 style={stylesheet.hero.title}>
-              Read here a call to action about our <strong>UseCases</strong>{" "}
+              Read here a call to action about our <strong>Use Cases</strong>{" "}
               blog and page.
             </h1>
           </Column>

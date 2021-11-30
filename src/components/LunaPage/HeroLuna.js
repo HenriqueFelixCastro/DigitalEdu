@@ -19,11 +19,13 @@ const stylesheet = {
       textAlign: "left",
 
         title: {
-          font: "normal normal medium 65px/85px IBM Plex Sans",
+          font: "normal normal medium 20px/85px IBM Plex Sans",
+          fontSize: "3.5rem",
+          fontWeight: "bold",
         },
 
         subtitle: {
-          font: "normal normal 300 65px/85px IBM Plex Sans",
+          font: "normal normal 300 60px/85px IBM Plex Sans",
         },
 
         titleLuna: {
@@ -47,7 +49,7 @@ const HeroLuna = () => {
           <Grid condensed>
                 <Row style={stylesheet}>
                     <Column sm={3} md={4} lg={6}>
-                      <h1 style={stylesheet.text.title}><strong>Discover Luna.</strong>{" "}</h1>
+                      <h1 style={stylesheet.text.title}>Discover Luna.{" "}</h1>
                       <h2 style={stylesheet.text.subtitle}>Loren ipsum dolor sit amet.</h2>
                     </Column>
                 </Row>

@@ -20,7 +20,7 @@ const stylesheet = {
     display: "flex",
     padding: "6vh 0",
     height: "15%",
-    paddingBottom: "4vh",
+    paddingBottom: "10vh",
     label: {
       paddingLeft: "2%",
       font: "normal normal normal 18px/23px IBM Plex Sans",

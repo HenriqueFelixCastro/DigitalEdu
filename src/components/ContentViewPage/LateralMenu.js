@@ -4,7 +4,7 @@ import { XAxis16 } from "@carbon/icons-react";
 
 const stylesheet = {
   div: {
-    background: "#FFFFFF 0% 0% no-repeat padding-box",
+    background: "rgba(22,22,22,.1) 0% 0% no-repeat padding-box",
     borderBottom: "1px solid #707070",
     padding: "6vh 0",
   },
@@ -35,13 +35,6 @@ const stylesheet = {
 
 const LateralMenu = () => (
   <div style={{ borderRight: "1px solid #707070", height: "100%" }}>
-    <div style={stylesheet.div}>
-      <p style={stylesheet.homeLink}>Home</p>
-      <div style={stylesheet.contentParent}>
-        <XAxis16 />
-        <p style={stylesheet.contentParent.label}>Job Market</p>
-      </div>
-    </div>
     <div style={stylesheet.div}>
       <p style={stylesheet.sectionTitle}>Tags</p>
       <div>

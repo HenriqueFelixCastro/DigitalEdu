@@ -5,21 +5,20 @@ import { connect } from "react-redux";
 import LateralMenu from "./LateralMenu";
 import ArticleView from "./ArticleView";
 import VideoView from "./VideoView";
-import RelatedContent from "./RelatedContent";
 
 const ContentViewPage = ({ pathname }) => (
+
   <>
     <Grid condensed>
       <Row>
         <Column lg={4}>
-          <LateralMenu />
+          <LateralMenu teste={pathname}/>
         </Column>
         <Column lg={12}>
           {pathname.search("blog") !== -1 && <ArticleView />}
           {pathname.search("watch") !== -1 && <VideoView />}
         </Column>
       </Row>
-      <RelatedContent />
     </Grid>
   </>
 );

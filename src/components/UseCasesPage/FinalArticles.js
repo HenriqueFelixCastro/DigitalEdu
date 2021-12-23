@@ -18,9 +18,9 @@ const stylesheet = {
   },
   category: {
     display: "flex",
-    padding: "6vh 0",
-    height: "15%",
-    paddingBottom: "10vh",
+    alignItems: "center",
+    padding: "5vh 0",
+    height: "20%",
     label: {
       paddingLeft: "2%",
       font: "normal normal normal 18px/23px IBM Plex Sans",
@@ -120,7 +120,7 @@ const FinalArticle = ({ push }) => {
     <div style={stylesheet.container}>
       <Grid>
         <Row >
-            <Column lg={8} style={{paddingRight: ".8rem", borderRight: "solid #707070 1px", paddingBottom: "2rem", paddingLeft: "0"}} >
+            <Column lg={8} style={{paddingRight: ".8rem", borderRight: "solid #707070 1px", paddingBottom: "8vh", paddingLeft: "0"}} >
                 <div style={stylesheet.category}>
                 <UserSpeaker24 />
                   <p style={stylesheet.category.label}>History</p>
@@ -152,7 +152,7 @@ const FinalArticle = ({ push }) => {
                 </Row>
             </Column>
       
-            <Column lg={4} style={{paddingRight: ".8rem", borderRight: "solid #707070 1px", paddingBottom: "2rem"}}>
+            <Column lg={4} style={{paddingRight: ".8rem", borderRight: "solid #707070 1px", paddingBottom: "8vh"}}>
                 <div style={stylesheet.category}>
                 <Blog24 />
                 <p style={stylesheet.category.label}>Article</p>
@@ -200,7 +200,7 @@ const FinalArticle = ({ push }) => {
                 </Row>
             </Column>
 
-            <Column lg={4} style={{paddingRight: ".8rem", paddingBottom: "2rem"}}>
+            <Column lg={4} style={{paddingRight: ".8rem", paddingBottom: "8vh"}}>
                 <div style={stylesheet.category}>
                 <Blog24 />
                 <p style={stylesheet.category.label}>Article</p>

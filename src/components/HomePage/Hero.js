@@ -13,7 +13,7 @@ const stylesheet = {
       font: "normal normal 300 54px/84px IBM Plex Sans",
     },
     subtitle: {
-      paddingTop: "6vh",
+      paddingTop: "9vh",
       font: "normal normal 300 21px/28px IBM Plex Sans",
     },
     navMenu: {

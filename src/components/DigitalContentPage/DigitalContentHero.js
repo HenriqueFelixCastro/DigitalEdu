@@ -8,11 +8,12 @@ const stylesheet = {
     color: "#FFF",
     letterSpacing: "0",
     title: {
-      font: "normal normal 300 55px/85px IBM Plex Sans",
+      font: "normal normal 300 60px/85px IBM Plex Sans",
+      marginBottom: "5vh"
     },
   },
   subHero: {
-    marginTop: "16vh",
+    margin: "7vh 0vh",
     alignItems: "center",
     title: {
       font: "normal normal 20px/27px IBM Plex Sans",

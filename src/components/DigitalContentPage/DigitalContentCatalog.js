@@ -12,6 +12,7 @@ import {
 } from "../../actions/ui.js";
 
 const stylesheet = {
+
   videoSection: {
     margin: "5vh 0",
   },
@@ -34,20 +35,23 @@ const stylesheet = {
 };
 
 const renderVideoCardColumns = (videos) => {
+
   return videos.map((video) => (
-    <Column lg={5}>
+    <Column lg={5} style={{margin: "2vh 0"}}>
       <VideoCard
         videoTitle={video.videoTitle}
         videoDescription={video.videoDescription}
         videoImg={video.videoImg}
         videoDuration={video.videoDuration}
         videoId={video.id}
+        videoTags={video.tags}
       />
     </Column>
   ));
 };
 
 const renderTutorialCardColumns = (tutorials) => {
+
   return tutorials.map((tutorial) => (
     <Column lg={5}>
       <TutorialCard

@@ -110,7 +110,7 @@ const OtherArticles = ({ push }) => {
     <div style={stylesheet.container}>
       <Grid>
         <Row>
-            <Column lg={4} style={{paddingRight: ".8rem", borderRight: "solid #707070 1px", paddingLeft: "0"}} >
+            <Column lg={4} style={{paddingRight: ".8rem", borderRight: "solid #707070 1px"}} >
                 <div style={stylesheet.category}>
                 <Blog24 />
                   <p style={stylesheet.category.label}>Industry Cases</p>

@@ -128,10 +128,10 @@ const OtherArticles = ({ push }) => {
           </Column>
           <Column
             lg={4}
-            style={{ borderRight: "1px solid #707070", padding: "0 2vw" }}
+            style={{ borderRight: "1px solid #707070", padding: "0 2vw", cursor: "pointer"}}
             onClick={() => {
               push(
-                `${process.env.PUBLIC_URL}/#job-market/blog/${nonHighlightedPosts[0].id}`
+                `${process.env.PUBLIC_URL}/#skills/blog/${nonHighlightedPosts[0].id}`
               );
             }}
           >
@@ -168,7 +168,7 @@ const OtherArticles = ({ push }) => {
           </Column>
           <Column
             lg={4}
-            style={{ padding: "0 2vw" }}
+            style={{ padding: "0 2vw", cursor: 'pointer'}}
             onClick={() => {
               push(
                 `${process.env.PUBLIC_URL}/#job-market/blog/${nonHighlightedPosts[1].id}`

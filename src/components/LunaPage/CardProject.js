@@ -11,7 +11,8 @@ const stylesheet = {
 
     cardInfo: {
         backgroundColor: "#262626",
-        padding: "3rem 1rem"
+        padding: "3rem 1rem",
+        height: "min(35vh, 200px)",
     },
 
     text: {
@@ -33,12 +34,11 @@ const stylesheet = {
 const CardProject = (props) => {
     return(
         <>
-            <div>
+            <div style={stylesheet.card}>
                 <img src={props.image} alt={'rest'} style={stylesheet.image} />
                     <div style={stylesheet.cardInfo}>
                         <h1 style={stylesheet.text.title}>{props.title}</h1>
-                        <p style={stylesheet.text}> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                        <p style={stylesheet.text.textBr} >Stay on top of the latest in technology and education </p>
+                        <p style={stylesheet.text}>{props.text}</p>
                     </div>
             </div>
         </>

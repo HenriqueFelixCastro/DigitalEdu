@@ -31,13 +31,7 @@ const WorkWithUs = () => (
           <div style={stylesheet.workWithUsText}>
             <h1 style={stylesheet.workWithUsText.title}>Work with us!</h1>
             <p style={stylesheet.workWithUsText.content}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Stay on top of the latest in technology and
-              education
+            Deciding to start your career at IBM is an investment in your future. Whether you’re an undergraduate, graduate, or post-graduate, we’ll help you turn your years of study into tangible achievements through a vast array of global career opportunities and development programs.
             </p>
             <CTA
               type="local"

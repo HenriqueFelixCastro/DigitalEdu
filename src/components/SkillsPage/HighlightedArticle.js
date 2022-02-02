@@ -87,10 +87,10 @@ const HighlightedArticle = ({ push }) => {
         <Row>
           <Column
             lg={8}
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{ display: "flex", flexDirection: "column", cursor: 'pointer'}}
             onClick={() => {
               push(
-                `${process.env.PUBLIC_URL}/#job-market/blog/${highlightedPost[0].id}`
+                `${process.env.PUBLIC_URL}/#skills/blog/${highlightedPost[0].id}`
               );
             }}
           >

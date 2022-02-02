@@ -21,7 +21,7 @@ const stylesheet = {
     },
   },
   regularRow: {
-    margin: "3vh 2vw",
+    margin: "2vh 2vw",
   },
   videoTitle: {
     font: "normal normal 300 36px/29px IBM Plex Sans",

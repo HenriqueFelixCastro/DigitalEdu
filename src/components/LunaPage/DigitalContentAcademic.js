@@ -22,9 +22,6 @@ const stylesheet = {
     },
   },
 
-  teste:{
-    color: "red"
-  }
 };
 
 const DigitalContentAcademic = () => (

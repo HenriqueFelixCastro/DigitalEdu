@@ -4,7 +4,6 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    tags: ["AI", "CARRERS"],
     videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
     id: "ai-1",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181069",

@@ -3,6 +3,13 @@ $feature-flags: (
   enable-css-custom-properties: true,
 );
 
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box
+}
+
 @import "carbon-components/scss/globals/scss/styles.scss";
 @import "carbon-components/scss/globals/grid/grid";
 @import "@carbon/ibmdotcom-styles/scss/themes/expressive/index";
@@ -159,11 +166,32 @@ a {
   margin-bottom: 5vh;
 }
 
-.bx--search.bx--search--xl.job-market-search input {
+// Search
+
+.bx--search.bx--search--xl.search-input input {
   background: #161616;
   border-bottom: 0;
   min-height: 72px;
+  color: #ffff;
 }
+
+.bx--search-close{
+  top: auto;
+}
+
+.bx--search-close:before{
+  background-color: transparent;
+}
+
+.bx--search-close svg{
+  color: #fff;
+  fill: #fff;
+}
+.bx--search-close:hover svg{
+  color: #78A9FF;
+  fill: #78A9FF;
+}
+
 
 // CTA color link 
 .bx--link-with-icon__container .bx--link {
@@ -173,3 +201,14 @@ a {
 .bx--link-with-icon__container .bx--link:hover {
   color: #5984cf;
 }
+
+.bx--btn--ghost svg{
+  color: #fff;
+  fill: #fff;
+}
+
+.bx--btn--ghost:hover svg{
+  color: #161616;
+  fill: #161616;
+}
+

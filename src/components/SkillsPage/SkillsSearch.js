@@ -19,7 +19,7 @@ const stylesheet = {
   },
 };
 
-const JobMarketSearch = () => (
+const SkillsSearch = () => (
   <div style={stylesheet.container}>
     <Grid narrow>
       <Row>
@@ -27,7 +27,7 @@ const JobMarketSearch = () => (
           <Search
             size={"xl"}
             placeholder={"Search topics, titles, tags and authors"}
-            className="job-market-search"
+            className="search-input"
           />
         </Column>
         <Column lg={8}>
@@ -50,4 +50,4 @@ const JobMarketSearch = () => (
   </div>
 );
 
-export default JobMarketSearch;
+export default SkillsSearch;

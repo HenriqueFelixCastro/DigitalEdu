@@ -31,6 +31,7 @@ const stylesheet = {
     flex: "1",
     display: "flex",
     flexDirection: "row",
+    cursor: "pointer"
   },
   articleInfo: {
     font: "normal normal 300 16px/20px IBM Plex Sans",

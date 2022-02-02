@@ -12,8 +12,6 @@ const LunaPage = () => (
          <HighlightedUniversities />
          <HighlightedDepoimento invert={"row"} urlImg={"../img/luna/Group 10662 - 2.png"} />
          <DigitalContentAcademic />
-         <HighlightedDepoimento invert={"row-reverse"} urlImg={"../img/luna/Group 10737 - 2.png"}
-         />
       </>
 );
 

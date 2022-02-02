@@ -1,5 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
+
+import { Context } from './Context'
 
 import DigitalContentHero from "./DigitalContentHero";
 import DigitalContentMenu from "./DigitalContentMenu";
@@ -8,8 +10,14 @@ import DigitalContentAcademic from "./DigitalContentAcademic";
 
 import { digitalContentSelected } from "../../actions/ui";
 import { DIGITAL_CONTENT_AVAILABLE } from "../../actions/actionTypes";
+import Viewer from "./Viewer";
 
 const DigitalContentPage = ({ pathname, digitalContentSelected }) => {
+
+  const [dataVideo, setDataVideo] = useState("");
+  const [visibleViewer, setVisibleViewer] = useState("hidden");
+  const [topValue, setTopValue] = useState("");
+
   // Loads the desired track if pathname (URL) changes
   useEffect(() => {
     let selectedTrack = /[^/]*$/.exec(pathname)[0]; // Gets last substring after last slash
@@ -39,10 +47,13 @@ const DigitalContentPage = ({ pathname, digitalContentSelected }) => {
 
   return (
     <>
+    <Context.Provider value={{dataVideo, setDataVideo, visibleViewer, setVisibleViewer, topValue, setTopValue}}>
+      <Viewer />
       <DigitalContentHero />
       <DigitalContentMenu />
       <DigitalContentCatalog />
       <DigitalContentAcademic />
+    </Context.Provider>
     </>
   );
 };

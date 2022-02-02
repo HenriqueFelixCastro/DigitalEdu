@@ -1,6 +1,5 @@
 import React from "react";
 import { Tag } from "carbon-components-react";
-import { XAxis16 } from "@carbon/icons-react";
 
 const stylesheet = {
   div: {
@@ -21,7 +20,7 @@ const stylesheet = {
   sectionTitle: {
     font: "normal normal medium 14px/18px IBM Plex Sans",
     fontWeight: "bold",
-    color: "#000",
+    color: "#707070",
     paddingBottom: "2vh",
   },
   tagDiv: {

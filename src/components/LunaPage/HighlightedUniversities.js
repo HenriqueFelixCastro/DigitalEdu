@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Row, Column } from "carbon-components-react";
+import { CTA } from "@carbon/ibmdotcom-react";
 
 import "./LunaPage.css"
 import CardProject from "./CardProject"
@@ -21,7 +22,7 @@ const stylesheet = {
     text: {
         font: "normal normal normal 14px/18px IBM Plex Sans",
         opacity: "1",
-        marginTop: "2rem",
+        margin: "2rem 0",
 
         titleColumn: {
             font: "normal normal 600 22px/29px IBM Plex Sans",
@@ -67,45 +68,45 @@ const HighlightedUniversities = () => {
                     <Row style={stylesheet.container.elements}>
 
                         <Column sm={8} md={8} lg={4} style={stylesheet.rowText}>
-                            
                             <hr style={stylesheet.divisor}></hr>
-                            
-                            <h2 style={stylesheet.text.titleColumn}>Universities</h2>
-                            
-                            <p style={stylesheet.text}>
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                <p style={stylesheet.text.textBr} >Stay on top of the larowCards in technology and education </p>
-                            </p>
+                            <h2 style={stylesheet.text.titleColumn}>Collaboration</h2>
+                            <p style={stylesheet.text}> LUNA works divided in squads in which we defined different objectives as our first engagement, each squad has a leadership and members that work on different projects according with our objectives.</p>
+                            <CTA
+                                $inverse-link
+                                type="external"
+                                copy="Join LUNA"
+                                href="http://ibm.biz/lunaregistration"/>
                         </Column>
 
 
-                        <Column sm={5} md={8} lg={11} style={stylesheet.rowCards} className="rowCards">
-
+                        <Column sm={16} md={8} lg={11} style={stylesheet.rowCards} className="rowCards">
                             <Column sm={4} md={8} lg={5} style={stylesheet.rowCards.columnCard}>
                                 <CardProject 
                                     image={"../img/luna/Group 10664 - 2.png"}
-                                    title={"Project 1"}
+                                    title={"Technology"}
+                                    text={"Learn how to use IBM tools and software and create problem-solving challenges for students using technology."}
                                 />
                             </Column>
 
                             <Column sm={4} md={8} lg={5} style={stylesheet.rowCards.columnCard}>
                                 <CardProject 
                                     image={"../img/luna/Group 10733 - 2.png"}
-                                    title={"Project 2"}
+                                    title={"Healthcare"}
+                                    text={"Learn and teach how to apply technology in healthcare and leverage"}
                                 />
                             </Column>
 
                             <Column sm={4} md={8} lg={5} style={stylesheet.rowCards.columnCard}>
                                 <CardProject 
                                     image={"../img/luna/Group 10734 - 2.png"}
-                                    title={"Project 3"}
+                                    title={"Business"}
+                                    text={"Learn and teach how to implement technology to handle and understand digital transformation in a business perspective through real cases."}
                                 />
                             </Column>
                         </Column>
                         
                     </Row>
-                </Grid>
-                
+                </Grid>  
             </div>
         </>
     )

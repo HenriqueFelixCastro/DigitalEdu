@@ -25,7 +25,7 @@ const stylesheet = {
         },
 
         subtitle: {
-          font: "normal normal 300 60px/85px IBM Plex Sans",
+          font: "normal normal 300 50px/65px IBM Plex Sans",
         },
 
         titleLuna: {
@@ -34,7 +34,7 @@ const stylesheet = {
     },
 
     containerSecondLine: {
-      marginTop: "4rem",
+      marginTop: "15vh",
       display: "flex",
       justifyContent: "space-between",
     }
@@ -50,7 +50,7 @@ const HeroLuna = () => {
                 <Row style={stylesheet}>
                     <Column sm={3} md={4} lg={6}>
                       <h1 style={stylesheet.text.title}>Discover Luna.{" "}</h1>
-                      <h2 style={stylesheet.text.subtitle}>Loren ipsum dolor sit amet.</h2>
+                      <h2 style={stylesheet.text.subtitle}>Latinamerica Universities Alliance.</h2>
                     </Column>
                 </Row>
 
@@ -61,7 +61,7 @@ const HeroLuna = () => {
                   </Column>
 
                   <Column sm={3} md={5} lg={11}>
-                    <p style={stylesheet.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p style={stylesheet.text}>Work and link with Latin American universities, taking advantage of IBM resources and the talent of professors to develop high-impact projects to bring new opportunities for future professionals.</p>
                   </Column>
               
               </Row>

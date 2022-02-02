@@ -36,7 +36,7 @@ const mastheadLinks = [
   },
   {
     title: "Skills",
-    url: `${process.env.PUBLIC_URL}/#job-market`,
+    url: `${process.env.PUBLIC_URL}/#skills`,
     hasMenu: false,
     hasMegapanel: false,
     menuSections: [],

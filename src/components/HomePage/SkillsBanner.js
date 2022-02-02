@@ -23,10 +23,10 @@ const stylesheet = {
     paddingRight: "0",
     paddingLeft: "0",
     header: {
-      font: "normal normal 300 56px/72px IBM Plex Sans",
+      font:  "bold 30px/37px IBM Plex Sans",
     },
     paragraph: {
-      padding: "2vh 0",
+      padding: "4vh 0",
       font: "normal normal 300 14px/18px IBM Plex Sans",
     },
   },
@@ -45,23 +45,21 @@ const JobMarketBanner = () => (
           <Row narrow>
             <Column lg={6}>
               <h2 style={stylesheet.content.header}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing.
+              Academia and industry face significant challenges in developing and enabling professionals ready for digital transformation.
               </h2>
               <p style={stylesheet.content.paragraph}>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Stay on top of
-                the latest in technology and education
+              The skills gap has become the most important challenge that industry and academia must face in collaboration to develop better prepared graduates, with practical experience and knowledge of the market.
               </p>
               <CTA
                 type="local"
                 copy="Explore"
-                href={`${process.env.PUBLIC_URL}/#job-market`}
+                href={`${process.env.PUBLIC_URL}/#skills`}
               />
             </Column>
             <Column style={{ paddingRight: "0" }}>
               <Image
                 defaultSrc={`${process.env.PUBLIC_URL}/img/students-meeting.jpg`}
-                alt="Job Market"
+                alt="Skills"
               />
             </Column>
           </Row>

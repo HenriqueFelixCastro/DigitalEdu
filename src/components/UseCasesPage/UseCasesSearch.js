@@ -28,7 +28,7 @@ const UseCasesSearch = () => (
           <Search
             size={"xl"}
             placeholder={"Search topics, titles, tags and authors"}
-            className="job-market-search"
+            className="search-input"
           />
         </Column>
         <Column lg={8}>

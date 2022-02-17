@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Context } from './Context';
 import { connect } from "react-redux";
 import { push } from "connected-react-router";
+import { PlayOutline32  } from '@carbon/icons-react';
 
 const stylesheet = {
   videoCard: {
@@ -53,6 +54,20 @@ const stylesheet = {
     height: '100%',
     cursor: 'pointer',
     background: 'transparent'
+  },
+
+  imageVideo:{
+    display: "flex",
+    position: "relative",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+
+  iconPlayVideo:{
+    width: "45%",
+    height: "45%",
+    position: 'absolute',
+    color: "rgba(255,255,255, .9)"
   }
 
 };
@@ -66,41 +81,26 @@ const VideoCard = (props) => {
       style={stylesheet.videoCard}
       onClick={() => {
           setDataVideo(props)
-          console.log(props)
           setTimeout(() => {
             setVisibleViewer("visible");
             window.scrollTo(0, topValue + 180)
           },2000)
-
-        // if (process.env.PUBLIC_URL === ".") {
-        //   return props.push(`${process.env.PUBLIC_URL}/watch/${props.videoId}`);
-        // }
-        // return props.push(`/#digital-content/watch/${props.videoId}`);
       }}
     >
       <div style={stylesheet.videoHeader}>
         <p>Video</p>
       </div>
 
-      <img
-        width={"100%"}
-        height={"auto"}
-        src={props.videoImg}
-        alt={props.videoTitle}
-      />
-
-      {/* <div style={stylesheet.cardIframe}>
-        <iframe 
-          width="100%" 
-          height="100%"
-          title={props.videoTitle}
-          src={props.videoUrl} 
-          />
-        <div className="block-iframe-container" style={stylesheet.blockIframeContainer}></div>
-      </div> */}
-
-   
-
+      <div style={stylesheet.imageVideo}>
+        <img
+          width={"100%"}
+          height={"auto"}
+          src={props.videoImg}
+          alt={props.videoTitle}
+        />
+        <PlayOutline32 style={stylesheet.iconPlayVideo}/>
+      </div>
+    
       <div style={stylesheet.videoBorder}>
         <p style={stylesheet.videoTitle}>{props.videoTitle}</p>
         <p style={stylesheet.videoDescription}>{props.videoDescription}</p>

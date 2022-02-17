@@ -13,9 +13,6 @@ function Viewer() {
 
     const stylesheet = {
         componentViewerVideo: {
-            width: '90%',
-            height: '95vh',
-            left: '5%',
             background: 'black',
             color: 'white',
 
@@ -23,18 +20,22 @@ function Viewer() {
 
             top: `${topValue + 195}px`,
             zIndex: '111',
-            border: 'solid whitesmoke 2px',
+            border: 'solid rgba(255,255,255, .9) 2px',
 
             visibility: `${visibleViewer}`,
 
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
+
+            width: '90%',
+            height: '95vh',
+            left: "5%"
         },
 
         componentViewerVideoDetails: {
             width: '100%',
             heigth: '20%',
-            borderBottom: 'solid white 2px',
+            borderBottom: 'solid rgba(255,255,255, .9) 2px',
             padding: '0 1rem',
 
             display: 'flex',
@@ -45,19 +46,23 @@ function Viewer() {
         title: {
             textAlign: 'center',
             color: '#fff',
-            font: "normal normal 600 18px/34px IBM Plex Sans",
+            font: "normal normal 600 14px/34px IBM Plex Sans",
         },
     }
 
     const closeViewerVideo = () => {
-        // QUANDO A TELA FECHAR, O VÍDEO VAI PARAR DE RODAR
+        // QUANDO A TELA FECHAR, O VÍDEO VAI PARAR TAMBÉM
         iframeRef.current.src = ''
         iframeRef.current.src = videoUrl
         setVisibleViewer("hidden");
     }
 
+    const videoReady = () => {
+        console.log("tá pronto...")
+    }
+
     return (
-        <div style={stylesheet.componentViewerVideo}>
+        <div style={stylesheet.componentViewerVideo} className="component-viewer-video">
             <div style={stylesheet.componentViewerVideoDetails}>
                 <h1 style={stylesheet.title}>{videoTitle}</h1>
                 <Button 
@@ -72,11 +77,14 @@ function Viewer() {
                 height="100%"
                 title={videoTitle}
                 src={videoUrl}
+                scrolling='no'
                 className="component-video"
                 ref={iframeRef}
                 allowFullScreen
-            />
-            
+                webkitallowfullscreen
+                frameBorder="0"
+                onLoad={videoReady()}
+            /> 
         </div>
     )
 }

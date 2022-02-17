@@ -27,6 +27,10 @@ const mastheadLinks = [
             url: `${process.env.PUBLIC_URL}/#digital-content/quantum`,
           },
           {
+            title: "Academic Week",
+            url: `${process.env.PUBLIC_URL}/#digital-content/academic-week`,
+          },
+          {
             title: "Other",
             url: `${process.env.PUBLIC_URL}/#digital-content/others`,
           },

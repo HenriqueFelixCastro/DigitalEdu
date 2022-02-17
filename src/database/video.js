@@ -4,7 +4,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-1",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181069",
   },
@@ -14,7 +14,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-2",
     embedWatsonMediaSrc:" https://video.ibm.com/embed/recorded/131181065",
   },
@@ -24,7 +24,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-3",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131206594",
   },
@@ -34,7 +34,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-4",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181071",
   },
@@ -44,7 +44,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-5",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181068",
   },
@@ -54,7 +54,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-6",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181072",
   },
@@ -64,7 +64,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-7",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181073",
   },
@@ -74,7 +74,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-8",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181070",
   },
@@ -84,7 +84,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-9",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181066",
   },
@@ -94,7 +94,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-10",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181067",
   },
@@ -104,7 +104,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-11",
     embedWatsonMediaSrc: "https://video.ibm.com/recorded/127578035",
   },
@@ -113,7 +113,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-12",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181077",
   },
@@ -123,7 +123,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-13",
     embedWatsonMediaSrc: "https://video.ibm.com/recorded/127578044",
   },
@@ -133,7 +133,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-14",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181075",
   },
@@ -143,7 +143,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-15",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181086",
   },
@@ -153,7 +153,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-16",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181080",
   },
@@ -163,7 +163,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-17",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181082",
   },
@@ -173,7 +173,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-18",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181081",
   },
@@ -183,7 +183,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-19",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181078",
   },
@@ -193,7 +193,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-20",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131181079",
   },
@@ -203,7 +203,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-21",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184711",
   },
@@ -213,7 +213,7 @@ export const ARTIFICIAL_INTELLIGENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail AI.png`,
     id: "ai-22",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184712",
   },
@@ -225,7 +225,7 @@ export const DATA_SCIENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail DS.png`,
     id: "ds-1",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184720",
   },
@@ -234,7 +234,7 @@ export const DATA_SCIENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail DS.png`,
     id: "ds-2",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184721",
   },
@@ -243,7 +243,7 @@ export const DATA_SCIENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail DS.png`,
     id: "ds-3",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184723",
   },
@@ -252,7 +252,7 @@ export const DATA_SCIENCE_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail DS.png`,
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184722",
   },
 ];
@@ -263,7 +263,7 @@ export const CLOUD_COMPUTING_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Cloud.png`,
     id: "cc-1",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184718",
   },
@@ -272,7 +272,7 @@ export const CLOUD_COMPUTING_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Cloud.png`,
     id: "cc-2",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184719",
   },
@@ -281,7 +281,7 @@ export const CLOUD_COMPUTING_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Cloud.png`,
     id: "cc-3",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184715",
   },
@@ -290,7 +290,7 @@ export const CLOUD_COMPUTING_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Cloud.png`,
     id: "cc-4",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184714",
   },
@@ -299,7 +299,7 @@ export const CLOUD_COMPUTING_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Cloud.png`,
     id: "cc-5",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184713",
   },
@@ -308,7 +308,7 @@ export const CLOUD_COMPUTING_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Cloud.png`,
     id: "cc-6",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184716",
   },
@@ -317,7 +317,7 @@ export const CLOUD_COMPUTING_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Cloud.png`,
     id: "cc-7",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184717",
   },
@@ -329,7 +329,7 @@ export const QUANTUM_COMPUTING_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Blockchain.png`,
     id: "qc-1",
     embedWatsonMediaSrc: `${process.env.PUBLIC_URL}/video/Teste.mp4`,
   },
@@ -338,9 +338,49 @@ export const QUANTUM_COMPUTING_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Blockchain.png`,
     id: "qc-2",
     embedWatsonMediaSrc: `${process.env.PUBLIC_URL}/video/Teste.mp4`,
+  },
+];
+
+
+export const ACADEMIC_WEEK_VIDEOS = [
+  {
+    videoTitle: "Academic Week - Data & AI - Workshop Watson Studio + SPSS",
+    videoDescription:
+      "You can now close this browser tab and go back to your application.",
+    videoDuration: "6m15s",
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail IoT.png`,
+    id: "aw-1",
+    embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131317049",
+  },
+  {
+    videoTitle: "Academic Week - Data & AI - Workshop Cognos",
+    videoDescription:
+      "You can now close this browser tab and go back to your application.",
+    videoDuration: "6m15s",
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail IoT.png`,
+    id: "aw-2",
+    embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131317050",
+  },
+  {
+    videoTitle: "Academic Week - Data & AI - Teoria - Conceitos e Arquiteturas",
+    videoDescription:
+      "You can now close this browser tab and go back to your application.",
+    videoDuration: "6m15s",
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail IoT.png`,
+    id: "aw-3",
+    embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131317046",
+  },
+  {
+    videoTitle: "Academic Week - Data & AI - Teoría,  Conceptos y Arquitectura",
+    videoDescription:
+      "You can now close this browser tab and go back to your application.",
+    videoDuration: "6m15s",
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail IoT.png`,
+    id: "aw-4",
+    embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131317159",
   },
 ];
 
@@ -352,7 +392,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail IoT.png`,
     id: "ot-1",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184778",
   },
@@ -361,7 +401,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail IoT.png`,
     id: "ot-2",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184783",
   },
@@ -370,7 +410,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail IoT.png`,
     id: "ot-3",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184782",
   },
@@ -379,7 +419,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail IoT.png`,
     id: "ot-4",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184781",
   },
@@ -390,7 +430,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Scrum & DevOps.png`,
     id: "ot-5",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184863",
   },
@@ -400,7 +440,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Scrum & DevOps.png`,
     id: "ot-6",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184864",
   },
@@ -410,7 +450,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Scrum & DevOps.png`,
     id: "ot-7",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184865",
   },
@@ -420,7 +460,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Scrum & DevOps.png`,
     id: "ot-8",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184870",
   },
@@ -430,7 +470,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Scrum & DevOps.png`,
     id: "ot-9",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184871",
   },
@@ -440,7 +480,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Scrum & DevOps.png`,
     id: "ot-10",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184866",
   },
@@ -450,7 +490,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Scrum & DevOps.png`,
     id: "ot-11",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184867",
   },
@@ -460,7 +500,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Scrum & DevOps.png`,
     id: "ot-12",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184868",
   },
@@ -470,7 +510,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Scrum & DevOps.png`,
     id: "ot-13",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184869",
   },
@@ -480,7 +520,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Scrum & DevOps.png`,
     id: "ot-14",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184859",
   },
@@ -490,7 +530,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Scrum & DevOps.png`,
     id: "ot-15",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184860",
   },
@@ -500,7 +540,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Scrum & DevOps.png`,
     id: "ot-16",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184861",
   },
@@ -510,7 +550,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Scrum & DevOps.png`,
     id: "ot-17",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184862",
   },
@@ -522,7 +562,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Design Thinking.png`,
     id: "ot-18",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184875",
   },
@@ -532,7 +572,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Design Thinking.png`,
     id: "ot-19",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184878",
   },
@@ -542,7 +582,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Design Thinking.png`,
     id: "ot-20",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184876",
   },
@@ -552,7 +592,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Design Thinking.png`,
     id: "ot-21",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184874",
   },
@@ -562,7 +602,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Design Thinking.png`,
     id: "ot-22",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184877",
   },
@@ -572,7 +612,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Design Thinking.png`,
     id: "ot-23",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184879",
   },
@@ -584,7 +624,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Blockchain.png`,
     id: "ot-24",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184897",
   },
@@ -594,7 +634,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Blockchain.png`,
     id: "ot-25",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184896",
   },
@@ -604,7 +644,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Blockchain.png`,
     id: "ot-26",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184898",
   },
@@ -614,7 +654,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Blockchain.png`,
     id: "ot-27",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184892",
   },
@@ -624,7 +664,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Blockchain.png`,
     id: "ot-28",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184891",
   },
@@ -634,7 +674,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Blockchain.png`,
     id: "ot-29",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184890",
   },
@@ -644,7 +684,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Blockchain.png`,
     id: "ot-30",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184895",
   },
@@ -654,7 +694,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Blockchain.png`,
     id: "ot-31",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184893",
   },
@@ -664,7 +704,7 @@ export const OTHER_TECHNOLOGIES_VIDEOS = [
     videoDescription:
       "You can now close this browser tab and go back to your application.",
     videoDuration: "6m15s",
-    videoImg: `${process.env.PUBLIC_URL}/img/RegisterPic.jpg`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Blockchain.png`,
     id: "ot-32",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131184894",
   },

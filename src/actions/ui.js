@@ -11,6 +11,7 @@ import {
   DATA_SCIENCE_VIDEOS,
   CLOUD_COMPUTING_VIDEOS,
   QUANTUM_COMPUTING_VIDEOS,
+  ACADEMIC_WEEK_VIDEOS,
   OTHER_TECHNOLOGIES_VIDEOS,
 } from "../database/video";
 
@@ -43,6 +44,9 @@ export const digitalContentSelected = (content) => {
   if (content === DIGITAL_CONTENT_AVAILABLE.QUANTUM_COMPUTING) {
     videos = QUANTUM_COMPUTING_VIDEOS;
     tutorials = QUANTUM_COMPUTING_TUTORIALS;
+  }
+  if (content === DIGITAL_CONTENT_AVAILABLE.ACADEMIC_WEEK) {
+    videos = ACADEMIC_WEEK_VIDEOS;
   }
   if (content === DIGITAL_CONTENT_AVAILABLE.OTHER_TECHNOLOGIES) {
     videos = OTHER_TECHNOLOGIES_VIDEOS;
@@ -117,6 +121,14 @@ export const videoSelected = (videoId) => {
 
     if (videoId.substring(0, 2) === "qc") {
       QUANTUM_COMPUTING_VIDEOS.forEach((video) => {
+        if (video.id === videoId) {
+          videoFound = video;
+        }
+      });
+    }
+
+    if (videoId.substring(0, 2) === "aw") {
+      ACADEMIC_WEEK_VIDEOS.forEach((video) => {
         if (video.id === videoId) {
           videoFound = video;
         }

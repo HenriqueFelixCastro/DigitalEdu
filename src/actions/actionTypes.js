@@ -4,6 +4,7 @@ export const DIGITAL_CONTENT_AVAILABLE = Object.freeze({
   DATA_SCIENCE: "Data Science",
   CLOUD_COMPUTING: "Cloud Computing",
   QUANTUM_COMPUTING: "Quantum Computing",
+  ACADEMIC_WEEK: "Academic Week",
   OTHER_TECHNOLOGIES: "Other",
 });
 

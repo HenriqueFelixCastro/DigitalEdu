@@ -38,7 +38,7 @@ const DigitalContentMenu = (props) => {
       <Grid>
         <Row condensed>
           <Column lg={{ span: 12, offset: 4 }}>
-            <Tabs selected={selectedTrackToTabsId(props.selectedTrack)}>
+            <Tabs selected={selectedTrackToTabsId(props.selectedTrack)} scrollIntoView={false}>
               <Tab
                 style={stylesheet.tab}
                 id="cloud"
@@ -83,6 +83,19 @@ const DigitalContentMenu = (props) => {
                   )
                 }
               />
+
+              <Tab
+                style={stylesheet.tab}
+                id="academic-week"
+                label="Academic Week"
+                onClick={() =>
+                  handleDigitalContentMenuClick(
+                    props.digitalContentSelected,
+                    DIGITAL_CONTENT_AVAILABLE.ACADEMIC_WEEK
+                  )
+                }
+              />
+
               <Tab
                 style={stylesheet.tab}
                 id="other"

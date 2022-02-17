@@ -54,7 +54,7 @@ const renderVideoCardColumns = (videos) => {
 };
 
 const renderTutorialCardColumns = (tutorials) => {
-  return tutorials.map((tutorial) => (
+  return tutorials ? tutorials.map((tutorial) => (
     <Column lg={5}>
       <TutorialCard
         tutorialTitle={tutorial.tutorialTitle}
@@ -63,7 +63,8 @@ const renderTutorialCardColumns = (tutorials) => {
         tutorialDuration={tutorial.tutorialDuration}
       />
     </Column>
-  ));
+  )) : false;
+  
 };
 
 const filterCatalog = (
@@ -132,10 +133,10 @@ const DigitalContentCatalog = ({
       >
         <a name="videos"></a>
         <h3 style={stylesheet.sectionTitle} id="videos">Videos</h3>
-        <Row narrow>{renderVideoCardColumns(videos)}</Row>
+        <Row narrow style={{position: 'relative'}}>{renderVideoCardColumns(videos)}</Row>
         <a name="tutorials"></a>
-        <h3 style={stylesheet.sectionTitleTutorials}>Tutorials</h3>
-        <Row narrow style={{marginBottom: "5vh"}}>{renderTutorialCardColumns(tutorials)}</Row>
+
+        {tutorials ? <SectionTutorial tutorial={tutorials}/> : null}
       </TableOfContents>
     </div>
   );
@@ -151,3 +152,15 @@ export default connect(mapStateToProps, {
   digitalContentSelected,
   digitalContentFiltered,
 })(DigitalContentCatalog);
+
+
+
+
+const SectionTutorial = (props) => {
+  return(
+    <>
+       <h3 style={stylesheet.sectionTitleTutorials}>Tutorials</h3>
+      <Row narrow style={{marginBottom: "5vh"}}>{renderTutorialCardColumns(props.tutorial)}</Row>
+    </>
+  )
+}

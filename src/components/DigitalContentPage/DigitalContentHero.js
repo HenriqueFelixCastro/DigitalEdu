@@ -38,7 +38,7 @@ const DigitalContentHero = () => (
           </Column>
           <Column lg={9}>
             <p>
-              IBM DigitalEdu offers access to videos and tutorials of the most
+              This page offers access to videos and tutorials of the most
               relevant technologies in the market so that students obtain the most
               important skills that the industry demands.
             </p>

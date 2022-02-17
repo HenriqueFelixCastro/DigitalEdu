@@ -7,10 +7,11 @@ import DigitalContentHero from "./DigitalContentHero";
 import DigitalContentMenu from "./DigitalContentMenu";
 import DigitalContentCatalog from "./DigitalContentCatalog";
 import DigitalContentAcademic from "./DigitalContentAcademic";
+import Viewer from "./Viewer";
 
 import { digitalContentSelected } from "../../actions/ui";
 import { DIGITAL_CONTENT_AVAILABLE } from "../../actions/actionTypes";
-import Viewer from "./Viewer";
+
 
 const DigitalContentPage = ({ pathname, digitalContentSelected }) => {
 

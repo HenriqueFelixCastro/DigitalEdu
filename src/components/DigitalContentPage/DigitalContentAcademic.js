@@ -27,7 +27,7 @@ const DigitalContentAcademic = () => (
   <div style={stylesheet.academicInitiativeBanner}>
     <Grid condensed>
       <Row id="academic-initiative">
-        <Column>
+        <Column lg={8}>
           <div style={stylesheet.academicInitiativeText}>
             <h1 style={stylesheet.academicInitiativeText.title}>
               IBM Academic Initiative
@@ -42,13 +42,13 @@ const DigitalContentAcademic = () => (
             research purposes.
             </p>
             <CTA
-              type="local"
+              type="internal"
               copy="Explore free technology"
-              href="https://www.ibm.com/academic"
+              href="https://www.ibm.com/academic/home"
             />
           </div>
         </Column>
-        <Column>
+        <Column lg={8}>
           <Image
             defaultSrc={`${process.env.PUBLIC_URL}/img/academicinitiativewoman.jpg`}
             alt="Academic Initiative"

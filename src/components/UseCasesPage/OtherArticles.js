@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Grid, Row, Column, Tag } from "carbon-components-react";
 import { Image } from "@carbon/ibmdotcom-react";
-import { Blog24, UserSpeaker24 } from "@carbon/icons-react";
+import { Blog24 } from "@carbon/icons-react";
 import { connect } from "react-redux";
 
 import { push } from "connected-react-router";
@@ -90,8 +90,6 @@ const filterNonHighlightedTestimonial = (testimonials) => {
   return nonHighlightedTestimonials;
 };
 
-
-
 const OtherArticles = ({ push }) => {
   const [nonHighlightedPosts, setNonHighlightedPosts] = useState(
     filterNonHighlightedPost(BLOG_POSTS)
@@ -103,8 +101,6 @@ const OtherArticles = ({ push }) => {
   if (nonHighlightedPosts.length < 2 || nonHighlightedTestimonials.length < 1) {
     return <div></div>;
   }
-
-  console.log(nonHighlightedPosts);
 
   return (
     <div style={stylesheet.container}>

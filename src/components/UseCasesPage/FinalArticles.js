@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Grid, Row, Column, Tag } from "carbon-components-react";
 import { Image } from "@carbon/ibmdotcom-react";
-import { Blog24, UserSpeaker16, UserSpeaker24 } from "@carbon/icons-react";
+import { Blog24, UserSpeaker24 } from "@carbon/icons-react";
 import { connect } from "react-redux";
 
 import { push } from "connected-react-router";

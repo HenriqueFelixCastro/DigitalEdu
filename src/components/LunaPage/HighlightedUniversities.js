@@ -2,7 +2,6 @@ import React from "react";
 import { Grid, Row, Column } from "carbon-components-react";
 import { CTA } from "@carbon/ibmdotcom-react";
 
-import "./LunaPage.css"
 import CardProject from "./CardProject"
 
 const stylesheet = {
@@ -43,16 +42,6 @@ const stylesheet = {
         margin: "0rem 0rem 3rem 0rem",
     },
 
-    rowCards: {
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "center",
-
-        columnCard: {
-            marginLeft: ".1rem"
-        },
-    },
-
     rowText: {
         marginBottom: "1rem"
     },
@@ -67,7 +56,7 @@ const HighlightedUniversities = () => {
                 <Grid condensed>
                     <Row style={stylesheet.container.elements}>
 
-                        <Column sm={8} md={8} lg={4} style={stylesheet.rowText}>
+                        <Column sm={8} md={16} lg={4} style={stylesheet.rowText}>
                             <hr style={stylesheet.divisor}></hr>
                             <h2 style={stylesheet.text.titleColumn}>Collaboration</h2>
                             <p style={stylesheet.text}> LUNA works divided in squads in which we defined different objectives as our first engagement, each squad has a leadership and members that work on different projects according with our objectives.</p>
@@ -78,33 +67,33 @@ const HighlightedUniversities = () => {
                                 href="http://ibm.biz/lunaregistration"/>
                         </Column>
 
+                        <Column md={16} lg={10}>
+                            <Row narrow style={stylesheet.columnCards}>
+                                <Column lg={5}>
+                                    <CardProject 
+                                        image={"../img/luna/Group 10664 - 2.png"}
+                                        title={"Technology"}
+                                        text={"Learn how to use IBM tools and software and create problem-solving challenges for students using technology."}
+                                    />
+                                </Column>
 
-                        <Column sm={16} md={8} lg={11} style={stylesheet.rowCards} className="rowCards">
-                            <Column sm={4} md={8} lg={5} style={stylesheet.rowCards.columnCard}>
-                                <CardProject 
-                                    image={"../img/luna/Group 10664 - 2.png"}
-                                    title={"Technology"}
-                                    text={"Learn how to use IBM tools and software and create problem-solving challenges for students using technology."}
-                                />
-                            </Column>
+                                <Column lg={5}>
+                                    <CardProject 
+                                        image={"../img/luna/Group 10733 - 2.png"}
+                                        title={"Healthcare"}
+                                        text={"Learn and teach how to apply technology in healthcare and leverage"}
+                                    />
+                                </Column>
 
-                            <Column sm={4} md={8} lg={5} style={stylesheet.rowCards.columnCard}>
-                                <CardProject 
-                                    image={"../img/luna/Group 10733 - 2.png"}
-                                    title={"Healthcare"}
-                                    text={"Learn and teach how to apply technology in healthcare and leverage"}
-                                />
-                            </Column>
-
-                            <Column sm={4} md={8} lg={5} style={stylesheet.rowCards.columnCard}>
-                                <CardProject 
-                                    image={"../img/luna/Group 10734 - 2.png"}
-                                    title={"Business"}
-                                    text={"Learn and teach how to implement technology to handle and understand digital transformation in a business perspective through real cases."}
-                                />
-                            </Column>
-                        </Column>
-                        
+                                <Column lg={5}>
+                                    <CardProject 
+                                        image={"../img/luna/Group 10734 - 2.png"}
+                                        title={"Business"}
+                                        text={"Learn and teach how to implement technology to handle and understand digital transformation in a business perspective through real cases."}
+                                    />
+                                </Column>
+                            </Row>
+                        </Column>          
                     </Row>
                 </Grid>  
             </div>

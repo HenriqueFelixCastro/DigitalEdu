@@ -11,8 +11,8 @@ const stylesheet = {
 
     cardInfo: {
         backgroundColor: "#262626",
-        padding: "3rem 1rem",
-        height: "min(35vh, 200px)",
+        padding: "2rem 1rem",
+        height: "min(35vh, 200px)"
     },
 
     text: {

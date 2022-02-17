@@ -2,15 +2,16 @@ import React from "react";
 
 import HeroLuna from "./HeroLuna"
 import HighlightedUniversities from "./HighlightedUniversities"
-import HighlightedDepoimento from "./HighlightedDepoimento"
-import DigitalContentAcademic from "./DigitalContentAcademic";
+import HighlightedTestimonial from "./HighlightedTestimonial"
+import DigitalContentAcademic from "../DigitalContentPage/DigitalContentAcademic";
 import HighligthedDepoimentoSecond from "./HighlightedDepoimentoSecond";
 
 const LunaPage = () => (
       <>
          <HeroLuna />
          <HighlightedUniversities />
-         <HighlightedDepoimento invert={"row"} urlImg={"../img/luna/Group 10662 - 2.png"} />
+         <HighlightedTestimonial />
+         {/* <HighlightedDepoimento invert={"row"} urlImg={"../img/luna/Group 10662 - 2.png"} /> */}
          <DigitalContentAcademic />
       </>
 );

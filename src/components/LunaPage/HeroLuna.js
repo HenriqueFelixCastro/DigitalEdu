@@ -4,7 +4,6 @@ import { Grid, Row, Column } from "carbon-components-react";
 const stylesheet = {
   
     container: {
-      background: "#161616",
       color: "#fff",
       padding: "8vh 0",
       background: `url("${process.env.PUBLIC_URL}/img/digital-content.jpg") center center / cover no-repeat transparent`,
@@ -25,7 +24,7 @@ const stylesheet = {
         },
 
         subtitle: {
-          font: "normal normal 300 50px/65px IBM Plex Sans",
+          font: "normal normal 300 40px/55px IBM Plex Sans",
         },
 
         titleLuna: {
@@ -33,8 +32,12 @@ const stylesheet = {
         },
     },
 
+    containerFirstLine: {
+      height: "50vh",
+    },
+
     containerSecondLine: {
-      marginTop: "15vh",
+      height: "10vh",
       display: "flex",
       justifyContent: "space-between",
     }
@@ -47,7 +50,7 @@ const HeroLuna = () => {
     <>
       <div style={stylesheet.container}>
           <Grid condensed>
-                <Row style={stylesheet}>
+                <Row style={stylesheet.containerFirstLine}>
                     <Column sm={3} md={4} lg={6}>
                       <h1 style={stylesheet.text.title}>Discover Luna.{" "}</h1>
                       <h2 style={stylesheet.text.subtitle}>Latinamerica Universities Alliance.</h2>

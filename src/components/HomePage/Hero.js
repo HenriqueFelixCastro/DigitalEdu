@@ -45,7 +45,7 @@ const Hero = () => (
         <Row condensed>
           <Column sm={4} md={2} lg={7}>
             <h1 style={stylesheet.hero.title}>
-              Boost your digital learning experience with the new IBM DigitalEdu.
+              Boost your digital learning experience with DigitalEdu.
             </h1>
             <h2 style={stylesheet.hero.subtitle}>
               Prepare your class with digital content, read about skills in the job

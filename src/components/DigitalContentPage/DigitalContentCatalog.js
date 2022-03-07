@@ -35,12 +35,25 @@ const stylesheet = {
     font: "normal normal 600 26px/34px IBM Plex Sans",
     paddingTop: "5vh",
   },
-};
+  card_wrap_outer: {
+    display: "flex",
+    flexWrap: "wrap",
+    width: "100%",
+    background: "green"
+  },
 
+  card_wrap_inner:{
+    padding: "12px",
+    display: "flex",
+    flexDirection: "row",
+    width: "100%",
+    background: "pink"
+  },
+};
 
 const renderVideoCardColumns = (videos) => {
   return videos.map((video) => (
-    <Column lg={5} style={{margin: "2vh 0"}}>
+    <Column lg={5} style={{margin: ".5rem", display: "flex", flexDirection: "row", width: "100%"}}>
       <VideoCard
         videoTitle={video.videoTitle}
         videoDescription={video.videoDescription}
@@ -67,18 +80,13 @@ const renderTutorialCardColumns = (tutorials) => {
   
 };
 
-const filterCatalog = (
-  value,
-  selectedTrack,
-  digitalContentSelected,
-  digitalContentFiltered
-) => {
-  if (value === "") {
-    // User reseted filter
-    return digitalContentSelected(selectedTrack);
-  }
-  return digitalContentFiltered(value);
-};
+const filterCatalog = (value, selectedTrack, digitalContentSelected, digitalContentFiltered) => {
+    if(value === ""){
+      return digitalContentSelected(selectedTrack)
+    }else{
+      return digitalContentFiltered(value)
+    }
+}
 
 const DigitalContentCatalog = ({
   selectedTrack,
@@ -118,6 +126,21 @@ const DigitalContentCatalog = ({
           </Column>
         </Row>
       </Grid>
+      
+      <Grid style={{background: "white", padding: "1rem 0"}} condensed>
+        <Row>
+          <Column lg={4}>
+            <h2>Videos</h2>
+          </Column>
+
+          <Column lg={11}>
+            <Row style={{display: "flex", flexDirection: "row", flexWrap: "wrap", width: "100%"}}>
+              {renderVideoCardColumns(videos)}
+            </Row>
+          </Column>
+
+      {/* 
+      WHEN THE TUTORIALS WILL READY
       <TableOfContents
         theme={"white"}
         menuItems={[
@@ -125,6 +148,7 @@ const DigitalContentCatalog = ({
             title: "Videos",
             id: "videos",
           },
+
           {
             title: "Tutorials",
             id: "tutorials",
@@ -133,11 +157,15 @@ const DigitalContentCatalog = ({
       >
         <a name="videos"></a>
         <h3 style={stylesheet.sectionTitle} id="videos">Videos</h3>
-        <Row narrow style={{position: 'relative'}}>{renderVideoCardColumns(videos)}</Row>
-        <a name="tutorials"></a>
 
+        <Row narrow style={{position: 'relative', background: "yellow"}}>{renderVideoCardColumns(videos)}</Row>
+        
+        <a name="tutorials"></a>
         {tutorials ? <SectionTutorial tutorial={tutorials}/> : null}
-      </TableOfContents>
+      </TableOfContents> */}
+
+      </Row>
+      </Grid>
     </div>
   );
 };
@@ -154,12 +182,10 @@ export default connect(mapStateToProps, {
 })(DigitalContentCatalog);
 
 
-
-
 const SectionTutorial = (props) => {
   return(
     <>
-       <h3 style={stylesheet.sectionTitleTutorials}>Tutorials</h3>
+      <h3 style={stylesheet.sectionTitleTutorials}>Tutorials</h3>
       <Row narrow style={{marginBottom: "5vh"}}>{renderTutorialCardColumns(props.tutorial)}</Row>
     </>
   )

@@ -6,11 +6,11 @@ import { PlayOutline32  } from '@carbon/icons-react';
 
 const stylesheet = {
   videoCard: {
-    display: "flex",
+    border: "1px solid #707070",
+    background: "transparent",
+    display: "flex", 
     flexDirection: "column",
-    marginTop: "3vh",
-    flexWrap: "wrap",
-    cursor: "pointer",
+    width: "100%"
   },
 
   videoHeader: {
@@ -19,11 +19,6 @@ const stylesheet = {
     padding: "1vh 1vh",
     paddingLeft: "3%",
     color: "#FFFFFF",
-  },
-  videoBorder: {
-    border: "1px solid #707070",
-    padding: "3%",
-    height: "min(28vh, 200px)",
   },
   videoTitle: {
     font: "normal normal 600 16px/20px IBM Plex Sans",
@@ -60,7 +55,8 @@ const stylesheet = {
     display: "flex",
     position: "relative",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    cursor: "pointer",
   },
 
   iconPlayVideo:{
@@ -76,36 +72,39 @@ const VideoCard = (props) => {
 
   const { setDataVideo, setVisibleViewer, topValue} = useContext(Context);
 
-  return (
-    <div
-      style={stylesheet.videoCard}
-      onClick={() => {
-          setDataVideo(props)
-          setTimeout(() => {
-            setVisibleViewer("visible");
-            window.scrollTo(0, topValue + 180)
-          },2000)
-      }}
-    >
-      <div style={stylesheet.videoHeader}>
-        <p>Video</p>
-      </div>
+  const showViewerVideo = () => {
+    setDataVideo(props)
+      setTimeout(() => {
+        setVisibleViewer("visible");
+        window.scrollTo(0, topValue + 180)
+      },2000)
+  }
 
-      <div style={stylesheet.imageVideo}>
-        <img
-          width={"100%"}
-          height={"auto"}
-          src={props.videoImg}
-          alt={props.videoTitle}
-        />
-        <PlayOutline32 style={stylesheet.iconPlayVideo}/>
-      </div>
-    
-      <div style={stylesheet.videoBorder}>
-        <p style={stylesheet.videoTitle}>{props.videoTitle}</p>
-        <p style={stylesheet.videoDescription}>{props.videoDescription}</p>
-        <p style={stylesheet.videoDuration}>Duration: {props.videoDuration}</p>
-      </div>
+  return (
+    <div style={stylesheet.videoCard}>
+        {/* header */}
+        <div style={stylesheet.videoHeader}>
+          <p>Vídeo</p>
+        </div>
+
+        {/* image */}
+        <div style={stylesheet.imageVideo}
+          onClick={() => showViewerVideo()}>
+          <img
+            width={"100%"}
+            height={"100%"}
+            src={props.videoImg}
+            alt={props.videoTitle}
+          />
+         <PlayOutline32 style={stylesheet.iconPlayVideo}/>
+        </div>
+
+        {/* description */}
+        <div style={{padding: "10px 12px"}}>
+          <p style={stylesheet.videoTitle}>{props.videoTitle}</p>
+          <p style={stylesheet.videoDescription}>{props.videoDescription}</p>
+          <p style={stylesheet.videoDuration}>Duration: {props.videoDuration}</p>
+        </div>
     </div>
   );
 };

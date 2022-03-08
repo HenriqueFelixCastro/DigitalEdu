@@ -11,16 +11,28 @@ const stylesheet = {
     margin: "3vh 2vw",
     borderTop: "1px solid #707070",
     padding: "2vh 0",
+    color: "#fff",
+    display: "flex",
   },
   categoryColumn: {
     display: "flex",
     alignItems: "center",
     height: "100%",
+
     label: {
       font: "normal normal normal 16px/20px IBM Plex Sans",
-      paddingLeft: ".5vw",
+      color: "#fff",
+      paddingLeft: "1vh",
     },
   },
+
+  categoryColumnLastItem: {
+    display: "flex",
+    alignItems: "center",
+    height: "100%",
+    justifyContent: 'flex-end'
+  },
+
   tag: {
     marginLeft: ".5vw",
   },
@@ -29,6 +41,7 @@ const stylesheet = {
   },
   articleRow: {
     margin: "3vh 2vw",
+    color: "#fff",
   },
   article: {
     title: {
@@ -39,6 +52,7 @@ const stylesheet = {
       text: {
         font: "normal normal normal 18px IBM Plex Sans",
         paddingBottom: "2vh",
+        textAlign: "justify"
       },
     },
     highlighted: {
@@ -50,6 +64,7 @@ const stylesheet = {
   authorsRow: {
     margin: "3vh 2vw",
     marginBottom: "10vh",
+    color: "#fff",
     iconColumn: {
       display: "flex",
       alignItems: "center",
@@ -57,7 +72,7 @@ const stylesheet = {
     },
     text: {
       font: "normal normal normal 16px/20px IBM Plex Sans",
-      paddingLeft: "1vw",
+      paddingLeft: "1vw"
     },
     name: {
       font: "normal normal 600 16px/20px IBM Plex Sans",
@@ -69,6 +84,7 @@ const stylesheet = {
 };
 
 const ArticleView = ({ blogPost, pathname, blogPostSelected }) => {
+
   useEffect(() => {
     window.scrollTo(0, 0);
     let selectedPostId = /[^/]*$/.exec(pathname)[0]; // Gets last substring after last slash
@@ -118,7 +134,7 @@ const ArticleView = ({ blogPost, pathname, blogPostSelected }) => {
             <h3 style={stylesheet.categoryColumn.label}>Article</h3>
           </div>
         </Column>
-        <Column lg={10}>
+        <Column lg={8}>
           <div style={stylesheet.categoryColumn}>
             <h3 style={stylesheet.categoryColumn.label}>Tags:</h3>
             {blogPost.tags.map((tag, idx) => (
@@ -128,14 +144,16 @@ const ArticleView = ({ blogPost, pathname, blogPostSelected }) => {
             ))}
           </div>
         </Column>
-        <Column lg={2}>
+
+        <Column lg={3}>
           <div style={stylesheet.categoryColumn}>
             <Rocket24 />
             <h3 style={stylesheet.categoryColumn.label}>{blogPost.date}</h3>
           </div>
         </Column>
-        <Column lg={2}>
-          <div style={stylesheet.categoryColumn}>
+
+        <Column lg={3}>
+          <div style={stylesheet.categoryColumnLastItem}>
             <Time24 />
             <h3 style={stylesheet.categoryColumn.label}>{blogPost.duration}</h3>
           </div>
@@ -159,16 +177,6 @@ const ArticleView = ({ blogPost, pathname, blogPostSelected }) => {
             </p>
           ))}
         </Column>
-        <Column lg={12}>
-          <h3 style={stylesheet.article.highlighted}>{blogPost.highlight}</h3>
-        </Column>
-        <Column lg={12} style={stylesheet.article.paragraphColumn}>
-          {blogPost.paragraphsAfterHighlight.map((paragraph, idx) => (
-            <p style={stylesheet.article.paragraphColumn.text} key={idx}>
-              {paragraph}
-            </p>
-          ))}
-        </Column>
       </Row>
 
       <Row style={stylesheet.authorsRow}>
@@ -182,6 +190,7 @@ const ArticleView = ({ blogPost, pathname, blogPostSelected }) => {
           <Column lg={12} style={{ paddingTop: "2vh" }} key={idx}>
             <p style={stylesheet.authorsRow.name}>{author.name}</p>
             <p style={stylesheet.authorsRow.title}>{author.title}</p>
+            {author.subtitle ? <p style={stylesheet.authorsRow.title}>{author.subtitle}</p> : false }   
           </Column>
         ))}
       </Row>
@@ -195,3 +204,4 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { blogPostSelected })(ArticleView);
+

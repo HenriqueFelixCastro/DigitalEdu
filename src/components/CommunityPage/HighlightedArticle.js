@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { push } from "connected-react-router";
 
 import { BLOG_POSTS } from "../../database/blogPosts";
+import { TAGS } from '../../database/tags'
 
 const stylesheet = {
   container: {
@@ -80,7 +81,6 @@ const HighlightedArticle = ({ push }) => {
       </div>
     );
   }
-
   return (
     <div style={stylesheet.container}>
       <Grid condensed>
@@ -108,14 +108,17 @@ const HighlightedArticle = ({ push }) => {
                 ))}
                 <p style={stylesheet.articleInfo}>{highlightedPost[0].date}</p>
                 <div style={stylesheet.articleTags}>
-                  {highlightedPost[0].tags.map((tag, idx) => (
-                    <Tag
-                      style={stylesheet.articleTags.tag}
-                      type={tag.color}
-                      key={idx}
-                    >
-                      {tag.text}
-                    </Tag>
+
+                  {highlightedPost[0].tags.map(tag => (
+                    TAGS.filter(tagBD => tagBD.text === tag.text).map(tagFinal => (
+                      <Tag
+                        style={stylesheet.articleTags.tag}
+                        type={tagFinal.color}
+                        key={tagFinal.id}
+                      >
+                        {tagFinal.text}
+                      </Tag>
+                    ))
                   ))}
                 </div>
               </div>

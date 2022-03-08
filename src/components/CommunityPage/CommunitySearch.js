@@ -1,6 +1,8 @@
 import React from "react";
 import { Grid, Row, Column, Search, Tag } from "carbon-components-react";
 
+import { TAGS } from '../../database/tags'
+
 const stylesheet = {
   container: {
     backgroundColor: "#161616",
@@ -19,7 +21,7 @@ const stylesheet = {
   },
 };
 
-const SkillsSearch = () => (
+const CommunitySearch = () => (
   <div style={stylesheet.container}>
     <Grid narrow>
       <Row>
@@ -33,16 +35,11 @@ const SkillsSearch = () => (
         <Column lg={8}>
           <div style={stylesheet.tabsDiv}>
             <p style={stylesheet.tabsDiv.label}>Tags:</p>
-            <Tag style={stylesheet.tabsDiv.tabs} type="green">
-              Hard Skills
-            </Tag>
-            <Tag style={stylesheet.tabsDiv.tabs} type="cyan">
-              Trend
-            </Tag>
-            <Tag style={stylesheet.tabsDiv.tabs} type="purple">
-              Careers
-            </Tag>
-            <Tag>Soft Skills</Tag>
+
+            {TAGS.map(tag => (
+                <Tag style={stylesheet.tabsDiv.tabs} type={tag.color}>{tag.text}</Tag>
+            ))}
+
           </div>
         </Column>
       </Row>
@@ -50,4 +47,4 @@ const SkillsSearch = () => (
   </div>
 );
 
-export default SkillsSearch;
+export default CommunitySearch;

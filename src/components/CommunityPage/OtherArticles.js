@@ -8,6 +8,7 @@ import { push } from "connected-react-router";
 
 import { BLOG_POSTS } from "../../database/blogPosts";
 import { TESTIMONIALS } from "../../database/testimonial";
+import {TAGS} from '../../database/tags';
 
 const stylesheet = {
   container: {
@@ -136,15 +137,16 @@ const OtherArticles = ({ push }) => {
                 </p>
 
                 <div style={stylesheet.articles.articleTags}>
-                  {nonHighlightedPosts[0].tags.map((tag, idx) => (
-                    <Tag
-                      style={stylesheet.articles.articleTags.tag}
-                      type={tag.color}
-                      key={idx}
-                    >
-                      {tag.text}
-                    </Tag>
-                    ))}
+                  {nonHighlightedPosts[0].tags.map(tag => (
+                    TAGS.map(tagBd => tagBd.text === tag.text ? 
+                      <Tag style={stylesheet.tag}
+                        type={tagBd.color}
+                        key={tagBd.id}
+                      >
+                      {tagBd.text}
+                      </Tag> : null
+                    ))
+                  )}
                 </div>
               </Column>           
             </Row>

@@ -5,6 +5,7 @@ import { Blog24, User24, Rocket24, Time24 } from "@carbon/icons-react";
 import { connect } from "react-redux";
 
 import { blogPostSelected } from "../../actions/ui";
+import {TAGS} from '../../database/tags';
 
 const stylesheet = {
   categoryRow: {
@@ -137,11 +138,18 @@ const ArticleView = ({ blogPost, pathname, blogPostSelected }) => {
         <Column lg={8}>
           <div style={stylesheet.categoryColumn}>
             <h3 style={stylesheet.categoryColumn.label}>Tags:</h3>
-            {blogPost.tags.map((tag, idx) => (
-              <Tag style={stylesheet.tag} type={tag.color} key={idx}>
-                {tag.text}
-              </Tag>
-            ))}
+
+            {blogPost.tags.map(tag => (
+              TAGS.map(tagBd => tagBd.text === tag.text ? 
+                <Tag style={stylesheet.tag}
+                  type={tagBd.color}
+                  key={tagBd.id}
+                >
+                {tagBd.text}
+                </Tag> : null
+               ))
+            )}
+            
           </div>
         </Column>
 

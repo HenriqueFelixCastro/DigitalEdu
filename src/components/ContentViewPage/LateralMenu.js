@@ -1,6 +1,8 @@
 import React from "react";
 import { Tag } from "carbon-components-react";
 
+import { TAGS } from '../../database/tags'
+
 const stylesheet = {
   div: {
     background: "rgba(22,22,22,.1) 0% 0% no-repeat padding-box",
@@ -20,7 +22,7 @@ const stylesheet = {
   sectionTitle: {
     font: "normal normal medium 14px/18px IBM Plex Sans",
     fontWeight: "bold",
-    color: "#707070",
+    color: "#fff",
     paddingBottom: "2vh",
   },
   tagDiv: {
@@ -36,29 +38,24 @@ const LateralMenu = () => (
   <div style={{ borderRight: "1px solid #707070", height: "100%" }}>
     <div style={stylesheet.div}>
       <p style={stylesheet.sectionTitle}>Tags</p>
-      <div>
-        <Tag style={stylesheet.tagDiv.tag}>Hard Skills</Tag>
-      </div>
-      <div>
-        <Tag style={stylesheet.tagDiv.tag}>Trend</Tag>
-      </div>
-      <div>
-        <Tag style={stylesheet.tagDiv.tag}>Careers</Tag>
-      </div>
-      <div>
-        <Tag style={stylesheet.tagDiv.tag}>Soft Skills</Tag>
-      </div>
+
+      {TAGS.map(tag => (
+        <div key={tag.id}>
+          <Tag style={stylesheet.tagDiv.tag} type={tag.color}>{tag.text}</Tag>
+        </div>
+      ))}
+
     </div>
     <div style={stylesheet.div}>
       <p style={stylesheet.sectionTitle}>Explore</p>
       <div>
-        <Tag style={stylesheet.tagDiv.tag}>Videos</Tag>
+        <Tag style={stylesheet.tagDiv.tag} type="magenta">Videos</Tag>
       </div>
       <div>
-        <Tag style={stylesheet.tagDiv.tag}>Tutorials</Tag>
+        <Tag style={stylesheet.tagDiv.tag} type="teal">Tutorials</Tag>
       </div>
       <div>
-        <Tag style={stylesheet.tagDiv.tag}>Community</Tag>
+        <Tag style={stylesheet.tagDiv.tag} type="warm-gray">Community</Tag>
       </div>
     </div>
   </div>

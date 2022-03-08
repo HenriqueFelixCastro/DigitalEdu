@@ -1,10 +1,7 @@
 import React, {useRef, useEffect, useContext} from "react";
 import { Grid, Row, Column, Search } from "carbon-components-react";
-import { TableOfContents } from "@carbon/ibmdotcom-react";
 import { connect } from "react-redux";
-
 import VideoCard from "./VideoCard.js";
-import TutorialCard from "./TutorialCard.js";
 
 import { Context } from './Context';
 
@@ -66,20 +63,6 @@ const renderVideoCardColumns = (videos) => {
   ));
 };
 
-const renderTutorialCardColumns = (tutorials) => {
-  return tutorials ? tutorials.map((tutorial) => (
-    <Column lg={5}>
-      <TutorialCard
-        tutorialTitle={tutorial.tutorialTitle}
-        tutorialDescription={tutorial.tutorialDescription}
-        tutorialImg={tutorial.tutorialImg}
-        tutorialDuration={tutorial.tutorialDuration}
-      />
-    </Column>
-  )) : false;
-  
-};
-
 const filterCatalog = (value, selectedTrack, digitalContentSelected, digitalContentFiltered) => {
     if(value === ""){
       return digitalContentSelected(selectedTrack)
@@ -91,7 +74,6 @@ const filterCatalog = (value, selectedTrack, digitalContentSelected, digitalCont
 const DigitalContentCatalog = ({
   selectedTrack,
   videos,
-  tutorials,
   digitalContentSelected,
   digitalContentFiltered
 }) => {
@@ -111,7 +93,7 @@ const DigitalContentCatalog = ({
           <Column lg={4} style={stylesheet.trackTitleColumn}>
             <p style={stylesheet.trackTitle}>{selectedTrack}</p>
           </Column>
-          <Column lg={11}>
+          <Column lg={12}>
             <Search
               size={"xl"}
               onChange={(event) =>
@@ -126,45 +108,19 @@ const DigitalContentCatalog = ({
           </Column>
         </Row>
       </Grid>
-      
-      <Grid style={{background: "white", padding: "1rem 0"}} condensed>
-        <Row>
+
+      <Grid style={{background: "white"}} condensed>
+        <Row style={stylesheet.videoSection}>
           <Column lg={4}>
-            <h2>Videos</h2>
+            <h3 style={stylesheet.sectionTitle} id="videos">Videos</h3>
           </Column>
 
-          <Column lg={11}>
-            <Row style={{display: "flex", flexDirection: "row", flexWrap: "wrap", width: "100%"}}>
+          <Column lg={12}>
+            <Row condensed>
               {renderVideoCardColumns(videos)}
             </Row>
           </Column>
-
-      {/* 
-      WHEN THE TUTORIALS WILL READY
-      <TableOfContents
-        theme={"white"}
-        menuItems={[
-          {
-            title: "Videos",
-            id: "videos",
-          },
-
-          {
-            title: "Tutorials",
-            id: "tutorials",
-          },
-        ]}
-      >
-        <a name="videos"></a>
-        <h3 style={stylesheet.sectionTitle} id="videos">Videos</h3>
-
-        <Row narrow style={{position: 'relative', background: "yellow"}}>{renderVideoCardColumns(videos)}</Row>
-        
-        <a name="tutorials"></a>
-        {tutorials ? <SectionTutorial tutorial={tutorials}/> : null}
-      </TableOfContents> */}
-
-      </Row>
+        </Row>
       </Grid>
     </div>
   );
@@ -180,13 +136,3 @@ export default connect(mapStateToProps, {
   digitalContentSelected,
   digitalContentFiltered,
 })(DigitalContentCatalog);
-
-
-const SectionTutorial = (props) => {
-  return(
-    <>
-      <h3 style={stylesheet.sectionTitleTutorials}>Tutorials</h3>
-      <Row narrow style={{marginBottom: "5vh"}}>{renderTutorialCardColumns(props.tutorial)}</Row>
-    </>
-  )
-}

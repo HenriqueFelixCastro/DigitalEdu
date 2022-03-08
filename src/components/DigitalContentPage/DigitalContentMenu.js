@@ -72,18 +72,6 @@ const DigitalContentMenu = (props) => {
                   )
                 }
               />
-              {/* <Tab
-                style={stylesheet.tab}
-                id="quantum"
-                label="Quantum Computing"
-                onClick={() =>
-                  handleDigitalContentMenuClick(
-                    props.digitalContentSelected,
-                    DIGITAL_CONTENT_AVAILABLE.QUANTUM_COMPUTING
-                  )
-                }
-              /> */}
-
               <Tab
                 style={stylesheet.tab}
                 id="academic-week"
@@ -95,7 +83,6 @@ const DigitalContentMenu = (props) => {
                   )
                 }
               />
-
               <Tab
                 style={stylesheet.tab}
                 id="other"

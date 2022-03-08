@@ -43,14 +43,6 @@ const stylesheet = {
     position: 'relative',
   },
 
-  blockIframeContainer: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    cursor: 'pointer',
-    background: 'transparent'
-  },
-
   imageVideo:{
     display: "flex",
     position: "relative",
@@ -81,13 +73,11 @@ const VideoCard = (props) => {
   }
 
   return (
-    <div style={stylesheet.videoCard}>
-        {/* header */}
+    <main style={stylesheet.videoCard}>
         <div style={stylesheet.videoHeader}>
           <p>Vídeo</p>
         </div>
 
-        {/* image */}
         <div style={stylesheet.imageVideo}
           onClick={() => showViewerVideo()}>
           <img
@@ -99,13 +89,12 @@ const VideoCard = (props) => {
          <PlayOutline32 style={stylesheet.iconPlayVideo}/>
         </div>
 
-        {/* description */}
         <div style={{padding: "10px 12px"}}>
           <p style={stylesheet.videoTitle}>{props.videoTitle}</p>
           <p style={stylesheet.videoDescription}>{props.videoDescription}</p>
           <p style={stylesheet.videoDuration}>Duration: {props.videoDuration}</p>
         </div>
-    </div>
+    </main>
   );
 };
 

@@ -80,7 +80,7 @@ const HighlightedArticle = ({ push }) => {
       </div>
     );
   }
-  console.log(highlightedPost)
+
   return (
     <div style={stylesheet.container}>
       <Grid condensed>

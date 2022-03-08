@@ -98,33 +98,6 @@ const OtherArticles = ({ push }) => {
     <div style={stylesheet.container}>
       <Grid>
         <Row condensed>
-          {/* <Column lg={8} style={{ borderRight: "1px solid #707070", padding: "0 2vw 2vw 0"}}>
-            <div style={stylesheet.category}>
-              <UserSpeaker24 />
-              <p style={stylesheet.category.label}>Testimonial</p>
-            </div>
-            <Row>
-              <Column lg={8} style={stylesheet.testimonial}>
-                <h3 style={stylesheet.testimonial.text}>
-                  {nonHighlightedTestimonials[0].highlight}
-                </h3>
-                <p style={stylesheet.testimonial.authorName}>
-                  {nonHighlightedTestimonials[0].author.name}
-                </p>
-                <p style={stylesheet.testimonial.authorTitle}>
-                  {nonHighlightedTestimonials[0].author.title}
-                </p>
-              </Column>
-
-              <Column lg={8}>
-                <Image
-                  defaultSrc={nonHighlightedTestimonials[0].imageURL}
-                  alt="HighlightedArticle"
-                />
-              </Column>
-            </Row>
-          </Column> */}
-
           <Column lg={8}>
             <Row narrow>
               <Column 
@@ -173,55 +146,7 @@ const OtherArticles = ({ push }) => {
                     </Tag>
                     ))}
                 </div>
-              </Column>
-
-              {/* <Column 
-                lg={8} 
-                style={{padding: "0 1vw", cursor: 'pointer'}}
-                onClick={() => {
-                  push(
-                    `${process.env.PUBLIC_URL}/#community/blog/${nonHighlightedPosts[0].id}`
-                  );
-                }}
-              >
-                <div style={stylesheet.category}>
-                  <Blog24 />
-                  <p style={stylesheet.category.label}>Article</p>
-                </div>
-  
-                <Row>
-                  <Image
-                    defaultSrc={nonHighlightedPosts[1].imageURL}
-                    alt="HighlightedArticle"
-                  />
-                </Row>
-
-                <p style={stylesheet.articles.articleTitle}>
-                  {nonHighlightedPosts[0].title}
-                </p>
-
-                {nonHighlightedPosts[0].authors.map((author, idx) => (
-                  <p style={stylesheet.articles.articleInfo} key={idx}>
-                    {author.name}
-                  </p>
-                ))}
-
-                <p style={stylesheet.articles.articleInfo}>
-                  {nonHighlightedPosts[0].date}
-                </p>
-
-                <div style={stylesheet.articles.articleTags}>
-                  {nonHighlightedPosts[0].tags.map((tag, idx) => (
-                    <Tag
-                      style={stylesheet.articles.articleTags.tag}
-                      type={tag.color}
-                      key={idx}
-                    >
-                      {tag.text}
-                    </Tag>
-                    ))}
-                </div>
-              </Column> */}
+              </Column>           
             </Row>
           </Column>
         </Row>

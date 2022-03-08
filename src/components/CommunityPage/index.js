@@ -1,19 +1,17 @@
 import React from "react";
 
 import Hero from "./Hero";
-import SkillsSearch from "./SkillsSearch"
+import CommunitySearch from "./CommunitySearch"
 import HighlightedArticle from "./HighlightedArticle";
-import HighlightedTestimonial from "./HighlightedTestimonial";
 import OtherArticles from "./OtherArticles";
 import WorkWithUs from "./WorkWithUs";
 
 const CommunityPage = () => (
   <>
     <Hero />
-    <SkillsSearch />
+    <CommunitySearch />
     <HighlightedArticle />
     <OtherArticles />
-    {/* <HighlightedTestimonial /> */}
     <WorkWithUs />
   </>
 );

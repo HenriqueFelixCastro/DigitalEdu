@@ -7,12 +7,11 @@ import ArticleView from "./ArticleView";
 import VideoView from "./VideoView";
 
 const ContentViewPage = ({ pathname }) => (
-
   <>
     <Grid condensed>
       <Row>
         <Column lg={4}>
-          <LateralMenu teste={pathname}/>
+          <LateralMenu />
         </Column>
         <Column lg={12}>
           {pathname.search("blog") !== -1 && <ArticleView />}

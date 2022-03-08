@@ -2,32 +2,32 @@ import React from "react";
 
 const stylesheet = {
 
-    image: {
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        display: "block",
-    },
+  image: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    display: "block",
+  },
 
-    cardInfo: {
-        backgroundColor: "#262626",
-        padding: "2rem 1rem",
-        height: "min(35vh, 200px)"
-    },
+  cardInfo: {
+    backgroundColor: "#262626",
+    padding: "2rem 1rem",
+    height: "min(35vh, 200px)"
+  },
 
-    text: {
+  text: {
+    font: "normal normal normal 14px/18px IBM Plex Sans",
+    marginTop: "1rem",
+
+      title: {
+        font: "normal normal 600 16px/20px IBM Plex Sans",
+      },
+
+      textBr: {
         font: "normal normal normal 14px/18px IBM Plex Sans",
+        opacity: "1",
         marginTop: "1rem",
-
-        title: {
-            font: "normal normal 600 16px/20px IBM Plex Sans",
-        },
-
-        textBr: {
-            font: "normal normal normal 14px/18px IBM Plex Sans",
-            opacity: "1",
-            marginTop: "1rem",
-        }
+      }
     }
 }
 

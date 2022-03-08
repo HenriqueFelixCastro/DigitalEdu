@@ -1,7 +1,5 @@
 import React from "react";
 import { Grid, Row, Column } from "carbon-components-react";
-import { XAxis24 } from "@carbon/icons-react";
-import { HashLink } from "react-router-hash-link";
 
 const stylesheet = {
   hero: {

@@ -74,7 +74,6 @@ export const digitalContentFiltered = (value) => {
 
 export const blogPostSelected = (blogPostId) => {
   let blogPostFound = null;
-
   BLOG_POSTS.forEach((blogPost) => {
     if (blogPost.id === blogPostId) {
       blogPostFound = blogPost;

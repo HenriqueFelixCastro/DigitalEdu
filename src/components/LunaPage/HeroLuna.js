@@ -56,17 +56,13 @@ const HeroLuna = () => {
                       <h2 style={stylesheet.text.subtitle}>Latinamerica Universities Alliance.</h2>
                     </Column>
                 </Row>
-
                 <Row style={stylesheet.containerSecondLine}>
-
                   <Column sm={1} md={3} lg={4}>
                       <h1 style={stylesheet.text.titleLuna}>lu<strong>na.</strong>{" "}</h1>
                   </Column>
-
                   <Column sm={3} md={5} lg={11}>
                     <p style={stylesheet.text}>Work and link with Latin American universities, taking advantage of IBM resources and the talent of professors to develop high-impact projects to bring new opportunities for future professionals.</p>
                   </Column>
-              
               </Row>
           </Grid>
       </div>

@@ -30,10 +30,8 @@ const DigitalContentPage = ({ pathname, digitalContentSelected }) => {
         );
       case "data-science":
         return digitalContentSelected(DIGITAL_CONTENT_AVAILABLE.DATA_SCIENCE);
-      case "quantum":
-        return digitalContentSelected(
-          DIGITAL_CONTENT_AVAILABLE.QUANTUM_COMPUTING
-        );
+      case "academic-week":
+        return digitalContentSelected(DIGITAL_CONTENT_AVAILABLE.ACADEMIC_WEEK);
       case "others":
         return digitalContentSelected(
           DIGITAL_CONTENT_AVAILABLE.OTHER_TECHNOLOGIES

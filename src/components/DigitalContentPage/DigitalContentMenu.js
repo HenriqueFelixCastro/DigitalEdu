@@ -23,7 +23,7 @@ const selectedTrackToTabsId = (selectedTrack) => {
       return 1;
     case DIGITAL_CONTENT_AVAILABLE.DATA_SCIENCE:
       return 2;
-    case DIGITAL_CONTENT_AVAILABLE.QUANTUM_COMPUTING:
+    case DIGITAL_CONTENT_AVAILABLE.ACADEMIC_WEEK:
       return 3;
     case DIGITAL_CONTENT_AVAILABLE.OTHER_TECHNOLOGIES:
       return 4;
@@ -72,7 +72,7 @@ const DigitalContentMenu = (props) => {
                   )
                 }
               />
-              <Tab
+              {/* <Tab
                 style={stylesheet.tab}
                 id="quantum"
                 label="Quantum Computing"
@@ -82,7 +82,7 @@ const DigitalContentMenu = (props) => {
                     DIGITAL_CONTENT_AVAILABLE.QUANTUM_COMPUTING
                   )
                 }
-              />
+              /> */}
 
               <Tab
                 style={stylesheet.tab}

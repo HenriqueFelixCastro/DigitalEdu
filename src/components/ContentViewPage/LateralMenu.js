@@ -58,7 +58,7 @@ const LateralMenu = () => (
         <Tag style={stylesheet.tagDiv.tag}>Tutorials</Tag>
       </div>
       <div>
-        <Tag style={stylesheet.tagDiv.tag}>Job Market</Tag>
+        <Tag style={stylesheet.tagDiv.tag}>Community</Tag>
       </div>
     </div>
   </div>

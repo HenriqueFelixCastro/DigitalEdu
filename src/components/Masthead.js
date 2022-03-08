@@ -22,10 +22,10 @@ const mastheadLinks = [
             title: "Data Science",
             url: `${process.env.PUBLIC_URL}/#digital-content/data-science`,
           },
-          {
-            title: "Quantum Computing",
-            url: `${process.env.PUBLIC_URL}/#digital-content/quantum`,
-          },
+          // {
+          //   title: "Quantum Computing",
+          //   url: `${process.env.PUBLIC_URL}/#digital-content/quantum`,
+          // },
           {
             title: "Academic Week",
             url: `${process.env.PUBLIC_URL}/#digital-content/academic-week`,
@@ -39,20 +39,20 @@ const mastheadLinks = [
     ],
   },
   {
-    title: "Skills",
-    url: `${process.env.PUBLIC_URL}/#skills`,
+    title: "Community",
+    url: `${process.env.PUBLIC_URL}/#community`,
     hasMenu: false,
     hasMegapanel: false,
     menuSections: [],
   },
 
-  {
-    title: 'Use Cases',
-    url: `${process.env.PUBLIC_URL}/#use-cases`,
-    hasMenu: false,
-    hasMegapanel: false,
-    menuSections: [],
-  },
+  // {
+  //   title: 'Use Cases',
+  //   url: `${process.env.PUBLIC_URL}/#use-cases`,
+  //   hasMenu: false,
+  //   hasMegapanel: false,
+  //   menuSections: [],
+  // },
 
   {
     title: 'Luna.',

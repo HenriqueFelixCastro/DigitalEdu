@@ -1,6 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
+
 import { Grid, Row, Column, Search, Tag } from "carbon-components-react";
 
+import HighlightedArticle from "./HighlightedArticle";
+import OtherArticles from "./OtherArticles";
+
+import { BLOG_POSTS } from "../../database/blogPosts";
 import { TAGS } from '../../database/tags'
 
 const stylesheet = {
@@ -21,16 +26,30 @@ const stylesheet = {
   },
 };
 
-const CommunitySearch = () => (
-  <div style={stylesheet.container}>
-    <Grid narrow>
+const CommunitySearch = () => {
+
+  const [filteredData, setFilteredData] = useState(BLOG_POSTS);
+
+    const handleFilter = (event) => {
+        const searchWord = event.target.value;
+
+        const filtered = filteredData.filter((value) => {
+            return value.title.toLowerCase().includes(searchWord.toLowerCase()) ? value : false;
+        })
+
+        searchWord === "" ? setFilteredData(BLOG_POSTS) : setFilteredData(filtered)
+    }
+
+  return(
+    <>
       <Row>
         <Column lg={8}>
           <Search
             size={"xl"}
             placeholder={"Search topics, titles, tags and authors"}
             className="search-input"
-          />
+            onChange={handleFilter}
+          />    
         </Column>
         <Column lg={8}>
           <div style={stylesheet.tabsDiv}>
@@ -43,8 +62,16 @@ const CommunitySearch = () => (
           </div>
         </Column>
       </Row>
-    </Grid>
-  </div>
-);
+              
+      <Row>
+        {filteredData.map(post => (
+          post.isJobMarketHighlight ? <HighlightedArticle dataFiltered={filteredData} /> : null 
+        ))}
+
+        <OtherArticles dataFiltered={filteredData} />
+      </Row>
+    </>
+  )
+};
 
 export default CommunitySearch;

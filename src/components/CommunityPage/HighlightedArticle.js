@@ -57,9 +57,10 @@ const filterHighlightedPost = (blogPosts) => {
   return highlightedPosts;
 };
 
-const HighlightedArticle = ({ push }) => {
+const HighlightedArticle = ({ push, dataFiltered}) => {
+
   const [highlightedPost, setHighlightedPost] = useState(
-    filterHighlightedPost(BLOG_POSTS)
+    filterHighlightedPost(dataFiltered)
   );
 
   if (highlightedPost.length <= 0) {

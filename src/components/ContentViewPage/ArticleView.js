@@ -92,6 +92,7 @@ const ArticleView = ({ blogPost, pathname, blogPostSelected }) => {
     blogPostSelected(selectedPostId);
   }, [pathname, blogPostSelected]);
 
+
   if (blogPost && Object.keys(blogPost).length === 0) {
     return (
       <>
@@ -110,7 +111,7 @@ const ArticleView = ({ blogPost, pathname, blogPostSelected }) => {
     );
   }
 
-  if (!blogPost) {
+  if (!blogPost || blogPost.length > 1) {
     return (
       <>
         <Row style={stylesheet.categoryRow}>
@@ -135,6 +136,7 @@ const ArticleView = ({ blogPost, pathname, blogPostSelected }) => {
             <h3 style={stylesheet.categoryColumn.label}>Article</h3>
           </div>
         </Column>
+
         <Column lg={8}>
           <div style={stylesheet.categoryColumn}>
             <h3 style={stylesheet.categoryColumn.label}>Tags:</h3>
@@ -149,7 +151,6 @@ const ArticleView = ({ blogPost, pathname, blogPostSelected }) => {
                 </Tag> : null
                ))
             )}
-            
           </div>
         </Column>
 

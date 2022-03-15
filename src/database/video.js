@@ -353,7 +353,7 @@ export const ACADEMIC_WEEK_VIDEOS = [
     videoDescription:
       "Watson Studio Workshop + SPSS Modeler",
     videoDuration: "121m35s",
-    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail IoT.png`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Dat & AI.png`,
     id: "aw-1",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131317049",
   },
@@ -362,7 +362,7 @@ export const ACADEMIC_WEEK_VIDEOS = [
     videoDescription:
       "Cognos Workshop",
     videoDuration: "113m13s",
-    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail IoT.png`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Dat & AI.png`,
     id: "aw-2",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131317050",
   },
@@ -371,7 +371,7 @@ export const ACADEMIC_WEEK_VIDEOS = [
     videoDescription:
       "Concepts and Architectures",
     videoDuration: "69m33s",
-    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail IoT.png`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Dat & AI.png`,
     id: "aw-3",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131458695",
   },
@@ -381,7 +381,7 @@ export const ACADEMIC_WEEK_VIDEOS = [
     videoDescription:
       "Concepts and Architectures",
     videoDuration: "85m37s",
-    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail IoT.png`,
+    videoImg: `${process.env.PUBLIC_URL}/img/thumbnail Dat & AI.png`,
     id: "aw-4",
     embedWatsonMediaSrc: "https://video.ibm.com/embed/recorded/131317159",
   },

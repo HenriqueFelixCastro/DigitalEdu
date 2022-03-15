@@ -20,7 +20,7 @@ export const TAGS = [
     {
         id: 3,
         text: "Soft Skills",
-        color: "cool-grey"
+        color: "cool-gray"
     }
 
 ]

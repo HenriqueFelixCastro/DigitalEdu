@@ -90,6 +90,7 @@ const VideoView = ({ video, pathname, videoSelected }) => {
           <iframe
             width="100%"
             height="520px"
+            title={video.videoTitle}
             src={video.embedWatsonMediaSrc}
             scrolling="no"
             allowfullscreen

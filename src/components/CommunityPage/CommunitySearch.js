@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-import { Grid, Row, Column, Search, Tag } from "carbon-components-react";
+import { Row, Column, Search, Tag } from "carbon-components-react";
 
 import HighlightedArticle from "./HighlightedArticle";
 import OtherArticles from "./OtherArticles";
@@ -33,11 +33,14 @@ const CommunitySearch = () => {
     const handleFilter = (event) => {
         const searchWord = event.target.value;
 
-        const filtered = filteredData.filter((value) => {
+        if(searchWord){
+          const filtered = filteredData.filter((value) => {
             return value.title.toLowerCase().includes(searchWord.toLowerCase()) ? value : false;
-        })
-
-        searchWord === "" ? setFilteredData(BLOG_POSTS) : setFilteredData(filtered)
+          })
+          setFilteredData(filtered)
+        }else{
+          setFilteredData(BLOG_POSTS)
+        }
     }
 
   return(

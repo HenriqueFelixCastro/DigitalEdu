@@ -65,7 +65,7 @@ const HighlightedDepoimento = () => {
               <Row>
                   <Column lg={8}>
                     <Image
-                        defaultSrc={`${process.env.PUBLIC_URL}/img/luna/Group 10662 - 2.png`}
+                        defaultSrc={`${process.env.PUBLIC_URL}/img/Foto Dr. Juan.png`}
                         alt="HighlightedTestimonial"
                     />
                   </Column>

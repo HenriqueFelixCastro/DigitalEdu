@@ -3,15 +3,15 @@ export const BLOG_POSTS = [
     id: "0",
     title: "New year, new collaboration goals between IBM and  Universities.",
     authors: [
-      { name: "Alcely Strutz Barroso", title: "University Programme Leader" },
+      { name: "Alcely Strutz Barroso", title: "University Program Leader" },
     ],
     tags: [
-      { text: "Soft Skills", color: "blue" },
-      { text: "Trend", color: "cyan" },
+      { text: "Soft Skills"},
+      { text: "Trend"},
     ],
     date: "22 Feb 2022",
     duration: "10 minutes",
-    imageURL: `${process.env.PUBLIC_URL}/img/highlited_card.jpg`,
+    imageURL: `${process.env.PUBLIC_URL}/img/Foto Alcely-thumbail.png`,
     isJobMarketHighlight: true,
     paragraphsBeforeHighlight: [
       "Dear academic community,",
@@ -29,10 +29,10 @@ export const BLOG_POSTS = [
     id: "1",
     title: "Boosting talent: The collaboration between EGADE Business School and the IBM Academic Initiative.",
     authors: [{ name: "Jacob Escobar", title: "Director of the Master in Business Analytics", subtitle: "EGADE Business School Tecnológico de Monterrey" }],
-    tags: [{ text: "Career Skills", color: "purple" }],
+    tags: [{ text: "Careers"}],
     date: "3 Feb 2022",
     duration: "12 minutes",
-    imageURL: `${process.env.PUBLIC_URL}/img/highlited_card.jpg`,
+    imageURL: `${process.env.PUBLIC_URL}/img/students-meeting.jpg`,
     isJobMarketHighlight: false,
     paragraphsBeforeHighlight: [
       "The Master in Business Analytics at EGADE Business School arises with the goal of training future professionals who will be the agents of change in organizations, by combining strategic business thinking and the management of exponential technologies to innovate in the industry through data analytics.",
@@ -41,27 +41,4 @@ export const BLOG_POSTS = [
     ],
   },
 
-  {
-    id: "2",
-    title: "Blog Post Example 3",
-    authors: [
-      { name: "Author 1", title: "Author 1 Title" },
-      { name: "Author 2", title: "Author 2 Title" },
-      { name: "Author 3", title: "Author 3 Title" },
-    ],
-    tags: [{ text: "Soft Skills", color: "gray" }],
-    date: "04 Jul 2021",
-    duration: "42 minutes",
-    imageURL: `${process.env.PUBLIC_URL}/img/highlited_card.jpg`,
-    isJobMarketHighlight: false,
-    paragraphsBeforeHighlight: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    ],
-    highlight:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaH.",
-    paragraphsAfterHighlight: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat2.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat3.",
-    ],
-  },
 ];

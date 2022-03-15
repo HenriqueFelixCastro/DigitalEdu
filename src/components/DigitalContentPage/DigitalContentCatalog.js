@@ -64,11 +64,7 @@ const renderVideoCardColumns = (videos) => {
 };
 
 const filterCatalog = (value, selectedTrack, digitalContentSelected, digitalContentFiltered) => {
-    if(value === ""){
-      return digitalContentSelected(selectedTrack)
-    }else{
-      return digitalContentFiltered(value)
-    }
+    return value ? digitalContentFiltered(value) : digitalContentSelected(selectedTrack)
 }
 
 const DigitalContentCatalog = ({
@@ -84,7 +80,7 @@ const DigitalContentCatalog = ({
   useEffect(() => {
     setTopValue(refElement.current.offsetTop)
     visibleViewer === 'visible' ? refElement.current.style.filter = 'brightness(0.4)' : refElement.current.style.filter = 'none';
-  }, [visibleViewer])
+  }, [visibleViewer, setTopValue])
 
   return(
     <div ref={refElement}>

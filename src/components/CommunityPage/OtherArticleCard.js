@@ -56,13 +56,24 @@ const stylesheet = {
         },
       },
     },
+
+    imageCard:{
+      height: "30vh",
+      
+      image:{
+        display: "block",
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+      }
+    }
   };
 
 const OtherArticleCard = ({push, dataArticle}) => {
     console.log(dataArticle)
     return(
       <Column lg={4}
-        style={{padding: "1vw", borderRight: "1px solid #707070", cursor: "pointer"}}
+        style={{padding: "1vw", border: "1px solid #707070", cursor: "pointer"}}
         onClick={() => {
           push(
             `${process.env.PUBLIC_URL}/#community/blog/${dataArticle.id}`
@@ -73,13 +84,11 @@ const OtherArticleCard = ({push, dataArticle}) => {
           <Blog24 />
           <p style={stylesheet.category.label}>Article</p>
         </div>
-  
-        <Row>
-          <Image
-            defaultSrc={dataArticle.imageURL}
-            alt="HighlightedArticle"
-          />
-        </Row>
+
+        <div style={stylesheet.imageCard}>
+          <img src={dataArticle.imageURL} style={stylesheet.imageCard.image}/>
+        </div>
+       
   
         <p style={stylesheet.articles.articleTitle}>
           {dataArticle.title}

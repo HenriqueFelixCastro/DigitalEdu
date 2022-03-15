@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Grid, Row, Column, Tag } from "carbon-components-react";
-
-import { TESTIMONIALS } from "../../database/testimonial";
+import { Grid, Row} from "carbon-components-react";
 
 import OtherArticleCard from "./OtherArticleCard";
 
@@ -10,6 +8,9 @@ const stylesheet = {
     background: "#161616",
     color: "#fff",
     borderBottom: "1px solid #707070",
+    borderTop: "1px solid #707070",
+    width: "100%",
+    height: "100%"
   },
   category: {
     display: "flex",
@@ -66,36 +67,36 @@ const filterNonHighlightedPost = (blogPosts) => {
   return nonHighlightedPosts;
 };
 
-const filterNonHighlightedTestimonial = (testimonials) => {
-  let nonHighlightedTestimonials = [];
+// const filterNonHighlightedTestimonial = (testimonials) => {
+//   let nonHighlightedTestimonials = [];
 
-  testimonials.forEach((testimonial) => {
-    if (!testimonial.isJobMarketHighlight) {
-      nonHighlightedTestimonials.push(testimonial);
-    }
-  });
+//   testimonials.forEach((testimonial) => {
+//     if (!testimonial.isJobMarketHighlight) {
+//       nonHighlightedTestimonials.push(testimonial);
+//     }
+//   });
 
-  return nonHighlightedTestimonials;
-};
+//   return nonHighlightedTestimonials;
+// };
 
 const OtherArticles = ({ push, dataFiltered}) => {
   const [nonHighlightedPosts, setNonHighlightedPosts] = useState(filterNonHighlightedPost(dataFiltered));
-  const [nonHighlightedTestimonials, setNonHighlightedTestimonials] = useState(
-    filterNonHighlightedTestimonial(TESTIMONIALS)
-  );
+  // const [nonHighlightedTestimonials, setNonHighlightedTestimonials] = useState(
+  //   filterNonHighlightedTestimonial(TESTIMONIALS)
+  // );
 
   useEffect(() => {
     setNonHighlightedPosts(filterNonHighlightedPost(dataFiltered))
   }, [dataFiltered])
 
-  if (nonHighlightedPosts.length == 0 || nonHighlightedTestimonials.length < 1) {
+  if (nonHighlightedPosts.length === 0) {
     return <div></div>;
   }
 
   return (
     <div style={stylesheet.container}>
       <Grid>
-        <Row condensed > 
+        <Row> 
           {nonHighlightedPosts.map(article => (
             <OtherArticleCard dataArticle={article} />
           ))}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Grid, Row, Column, Tag } from "carbon-components-react";
 import { Image } from "@carbon/ibmdotcom-react";
 import { Blog24 } from "@carbon/icons-react";
@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 
 import { push } from "connected-react-router";
 
-import { BLOG_POSTS } from "../../database/blogPosts";
 import { TAGS } from '../../database/tags'
 
 const stylesheet = {
@@ -15,7 +14,7 @@ const stylesheet = {
     color: "#fff",
     borderTop: "1px solid #707070",
     borderBottom: "1px solid #707070",
-    padding: "6vh 0",
+    padding: "6vh 0"
   },
   category: {
     display: "flex",
@@ -59,9 +58,11 @@ const filterHighlightedPost = (blogPosts) => {
 
 const HighlightedArticle = ({ push, dataFiltered}) => {
 
-  const [highlightedPost, setHighlightedPost] = useState(
-    filterHighlightedPost(dataFiltered)
-  );
+  const highlightedPost = filterHighlightedPost(dataFiltered)
+
+  // const [highlightedPost, setHighlightedPost] = useState(
+  //   filterHighlightedPost(dataFiltered)
+  // );
 
   if (highlightedPost.length <= 0) {
     return (
@@ -85,9 +86,8 @@ const HighlightedArticle = ({ push, dataFiltered}) => {
   return (
     <div style={stylesheet.container}>
       <Grid condensed>
-        <Row>
+        <Row narrow>
           <Column
-            lg={8}
             style={{ display: "flex", flexDirection: "column", cursor: 'pointer'}}
             onClick={() => {
               push(
@@ -125,11 +125,11 @@ const HighlightedArticle = ({ push, dataFiltered}) => {
               </div>
             </div>
           </Column>
-          <Column lg={8}>
-            <Image
-              defaultSrc={highlightedPost[0].imageURL}
-              alt="HighlightedArticle"
-            />
+          <Column lg={5}>
+              <Image
+                defaultSrc={highlightedPost[0].imageURL}
+                alt="HighlightedArticle"
+              />    
           </Column>
         </Row>
       </Grid>

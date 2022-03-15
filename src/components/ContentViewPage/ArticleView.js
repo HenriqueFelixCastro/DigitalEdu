@@ -170,7 +170,7 @@ const ArticleView = ({ blogPost, pathname, blogPostSelected }) => {
       </Row>
 
       <Row style={stylesheet.imageRow}>
-        <Column>
+        <Column lg={12}>
           <Image defaultSrc={blogPost.imageURL} alt={blogPost.title} />
         </Column>
       </Row>

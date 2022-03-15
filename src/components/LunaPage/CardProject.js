@@ -33,15 +33,13 @@ const stylesheet = {
 
 const CardProject = (props) => {
     return(
-        <>
-            <div style={stylesheet.card}>
-                <img src={props.image} alt={'rest'} style={stylesheet.image} />
-                    <div style={stylesheet.cardInfo}>
-                        <h1 style={stylesheet.text.title}>{props.title}</h1>
-                        <p style={stylesheet.text}>{props.text}</p>
-                    </div>
-            </div>
-        </>
+      <div style={stylesheet.card}>
+        <img src={props.image} alt={'rest'} style={stylesheet.image} />
+          <div style={stylesheet.cardInfo}>
+              <h1 style={stylesheet.text.title}>{props.title}</h1>
+              <p style={stylesheet.text}>{props.text}</p>
+          </div>
+      </div>
     )
 }
 

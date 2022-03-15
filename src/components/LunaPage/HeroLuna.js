@@ -5,7 +5,7 @@ const stylesheet = {
   
     container: {
       color: "#fff",
-      padding: "8vh 0",
+      paddingTop: "8vh",
       background: `url("${process.env.PUBLIC_URL}/img/digital-content.jpg") center center / cover no-repeat transparent`,
       backgroundSize: "cover",
     },
@@ -33,17 +33,22 @@ const stylesheet = {
     },
 
     containerFirstLine: {
-      height: "50vh",
+      minHeight: "50vh",
+      height: 'auto',
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start"
     },
 
     containerSecondLine: {
-      height: "10vh",
+      minHeight: "10vh",
+      height: "auto",
       display: "flex",
+      paddingBottom: "8vh",
       justifyContent: "space-between",
     }
 
 }
-
 
 const HeroLuna = () => {
   return(
@@ -51,11 +56,10 @@ const HeroLuna = () => {
       <div style={stylesheet.container}>
           <Grid condensed>
                 <Row style={stylesheet.containerFirstLine}>
-                    <Column sm={3} md={4} lg={6}>
-                      <h1 style={stylesheet.text.title}>Discover Luna.{" "}</h1>
-                      <h2 style={stylesheet.text.subtitle}>Latinamerica Universities Alliance.</h2>
-                    </Column>
+                    <h1 style={stylesheet.text.title}>Discover Luna.{" "}</h1>
+                    <h2 style={stylesheet.text.subtitle}>Latinamerica Universities <br/> Alliance.</h2>
                 </Row>
+
                 <Row style={stylesheet.containerSecondLine}>
                   <Column sm={1} md={3} lg={4}>
                       <h1 style={stylesheet.text.titleLuna}>lu<strong>na.</strong>{" "}</h1>
